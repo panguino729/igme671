@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : Entity
+public class CameraFollow : MonoBehaviour
 {
+    public GameObject target;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +15,6 @@ public class Enemy : Entity
     // Update is called once per frame
     void Update()
     {
-        
+        transform.position = new Vector3(target.transform.position.x, transform.position.y, -10);
     }
 }
