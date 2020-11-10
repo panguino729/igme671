@@ -480,7 +480,7 @@ MonoBehaviour:
   attackDamage: 0
   health: 0
   moveDirection: {x: 0, y: 0}
-  moveMagnitude: 0
+  moveMagnitude: 5
   bullet: {fileID: 6714982739760605305, guid: 0d58a834f4e83de47b8a9aa48f449ba4, type: 3}
   bulletSpeed: 0
   fireInterval: 0
