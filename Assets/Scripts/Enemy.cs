@@ -19,6 +19,7 @@ public class Enemy : Entity
     // Start is called before the first frame update
     void Start()
     {
+        //Default values so that the enemy will always move - could be changed if we want to have a stationary/mostly stationary enemy
         if (moveDirection == new Vector2(0, 0))
         {
             moveDirection = new Vector2(1, 0);
@@ -27,10 +28,9 @@ public class Enemy : Entity
         {
             moveMagnitude = 15;
         }
-        lm = (1 << LayerMask.NameToLayer("Platform"));
         moveDirection = moveDirection.normalized;
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        rb = GetComponent<Rigidbody2D>();
+
+        //Offset is in the direction of movement, so that if the object is moving right, for example, it raycasts down on its right side to check if it has reached the edge of the platform
         if (moveDirection.x > 0)
         {
             xOffset = spriteRenderer.size.x;
@@ -39,6 +39,12 @@ public class Enemy : Entity
         {
             moveDirection.x = -spriteRenderer.size.x;
         }
+
+        lm = (1 << LayerMask.NameToLayer("Platform"));
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        rb = GetComponent<Rigidbody2D>();
+
     }
 
     // Update is called once per frame
