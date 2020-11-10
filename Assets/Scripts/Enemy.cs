@@ -66,16 +66,14 @@ public class Enemy : Entity
             float distance = 1;
             //The origin of the raycast - starts from the bottom left or right of object to determine  if the object is about to reach the edge of the platform
             Vector2 origin = new Vector2(transform.position.x + xOffset, transform.position.y - spriteRenderer.size.y);
-            rayHit = Physics2D.Raycast(origin, -Vector3.up, distance, lm); //Check if the object has reached the edge of the platform
-                                                                           //If the enemy reached the edge of the platform, reverses its direction
-            if (rayHit.collider != null)
-            {
-                Debug.Log("reached2");
-            }
+
+            //Raycast downward - collider of rayhit will be null if the object has reached the edge of the platform
+            rayHit = Physics2D.Raycast(origin, -Vector3.up, distance, lm); 
+
+            //If the enemy reached the edge of the platform, reverses its direction
             if (rayHit.collider == null)
             {
                 moveDirection = new Vector2(moveDirection.x * -1, moveDirection.y * -1);
-                Debug.Log("reached1");
             }
             rb.velocity = moveDirection * moveMagnitude;
         }
