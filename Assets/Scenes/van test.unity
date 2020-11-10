@@ -671,6 +671,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 0
+  health: 0
+  moveDirection: {x: 0, y: 0}
+  moveMagnitude: 0
   aimTrajectory: {x: 1, y: 0}
   bulletSpeed: 1
 --- !u!4 &2116997847
