@@ -1,20 +1,20 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
-public class Enemy : Entity
+public class RangedEnemy : MonoBehaviour
 {
-    public float health;
     private RaycastHit2D rayHit;
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rb;
-    private bool onPlatform;
     //The offset from the center of the enemy for the raycast - the raycast's origin is from the right of the enemy if the enemy is moving right, and vice versa.
     private float xOffset;
     //The layer of the platforms
     private LayerMask lm;
     //The direction in which the object moves - will be reversed
-    public Vector2 moveDirection;
+    public Vector2 moveDirection; 
     public float moveMagnitude; //The speed at which the object moves
     // Start is called before the first frame update
     void Start()
@@ -44,40 +44,29 @@ public class Enemy : Entity
     // Update is called once per frame
     void Update()
     {
-        Move();
+        
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
         //If the enemy is colliding with a platform, check if it has reached the edge of that platform
         if (collision.gameObject.tag.Equals("platform"))
         {
-            onPlatform = true;
-        }
-    }
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        onPlatform = false;
-    }
-    private void Move()
-    {
-        if (onPlatform)
-        {
             //The distance of the raycast - short so that it doesn't detect platforms below the initial one
             float distance = 1;
             //The origin of the raycast - starts from the bottom left or right of object to determine  if the object is about to reach the edge of the platform
-            Vector2 origin = new Vector2(transform.position.x + xOffset, transform.position.y - spriteRenderer.size.y);
+            Vector2 origin = new Vector2(transform.position.x + xOffset, transform.position.y - spriteRenderer.size.y); 
             rayHit = Physics2D.Raycast(origin, -Vector3.up, distance, lm); //Check if the object has reached the edge of the platform
-                                                                           //If the enemy reached the edge of the platform, reverses its direction
-            if (rayHit.collider != null)
+            //If the enemy reached the edge of the platform, reverses its direction
+            if(rayHit.collider != null)
             {
                 Debug.Log("reached2");
             }
-            if (rayHit.collider == null)
+            if(rayHit.collider == null)
             {
                 moveDirection = new Vector2(moveDirection.x * -1, moveDirection.y * -1);
                 Debug.Log("reached1");
             }
-            rb.velocity = moveDirection * moveMagnitude;
         }
+        rb.velocity = moveDirection * moveMagnitude;
     }
 }
