@@ -7,6 +7,8 @@ public class Entity : MonoBehaviour
     protected Rigidbody2D rigidbody;
     protected BoxCollider2D boxCollider;
 
+    public float attackDamage;
+
     // Start is called before the first frame update
     protected void Start()
     {
@@ -15,7 +17,7 @@ public class Entity : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         
     }
