@@ -19,6 +19,7 @@ public class Enemy : Entity
     // Start is called before the first frame update
     public void Start()
     {
+        base.Start();
         //Default values so that the enemy will always move - could be changed if we want to have a stationary/mostly stationary enemy
         if (moveDirection == new Vector2(0, 0))
         {
@@ -54,6 +55,7 @@ public class Enemy : Entity
     // Update is called once per frame
     public void Update()
     {
+        base.Update();
         Move();
     }
     private void OnCollisionStay2D(Collision2D collision)

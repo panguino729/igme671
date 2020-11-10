@@ -17,4 +17,8 @@ public class RangedEnemy : Enemy
     {
         base.Update();
     }
+    void Fire()
+    {
+
+    }
 }
