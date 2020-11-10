@@ -40,7 +40,10 @@ public class Enemy : Entity
         }
         else
         {
-            moveDirection.x = -(spriteRenderer.bounds.max.x - spriteRenderer.bounds.center.x); ;
+            moveDirection.x = -(spriteRenderer.bounds.max.x - spriteRenderer.bounds.center.x);
+
+            //If the enemy is moving left, makes it face left under the assumption that the enemy is facing right to begin with
+            transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
         }
 
         lm = (1 << LayerMask.NameToLayer("Platform"));
