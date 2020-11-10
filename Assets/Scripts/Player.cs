@@ -9,6 +9,7 @@ public class Player : Entity
     public float maxSpeed = 0.0f;
     public float airSpeedMult = 0.0f;
     public float jumpForce = 0.0f;
+    public float health = 0.0f;
 
     private bool grounded = true;
 
@@ -33,10 +34,10 @@ public class Player : Entity
             CheckGrounded();
         }
 
-
-
-
-        Debug.Log(grounded);
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            Attack();
+        }
     }
 
     private Vector2 GetDirection()
@@ -121,5 +122,12 @@ public class Player : Entity
                 }
             }
         }
+    }
+
+    private void Attack()
+    {
+        //play an animation
+
+        //
     }
 }
