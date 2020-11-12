@@ -10,7 +10,7 @@ public class Enemy : Entity
     private Rigidbody2D rb;
     private bool onPlatform;
     //The offset from the center of the enemy for the raycast - the raycast's origin is from the right of the enemy if the enemy is moving right, and vice versa.
-    private float xOffset;
+    protected float xOffset;
     //The layer of the platforms
     private LayerMask lm;
     //The direction in which the object moves - will be reversed
@@ -19,6 +19,7 @@ public class Enemy : Entity
     // Start is called before the first frame update
     public void Start()
     {
+        base.Start();
         //Default values so that the enemy will always move - could be changed if we want to have a stationary/mostly stationary enemy
         if (moveDirection == new Vector2(0, 0))
         {
@@ -54,6 +55,7 @@ public class Enemy : Entity
     // Update is called once per frame
     public void Update()
     {
+        base.Update();
         Move();
     }
     private void OnCollisionStay2D(Collision2D collision)
