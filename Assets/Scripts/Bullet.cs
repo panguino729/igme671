@@ -10,6 +10,8 @@ public class Bullet : MonoBehaviour
     public Vector2 bulletDirection;
     public float bulletSpeed;
     public float bulletDamage;
+    //When this is 0, the bullet will be deleted so that there aren't an ever increasing # of them - can be changed if bullets need to stay longer
+    public float timeLeft; 
     private Rigidbody2D rb;
 
 
@@ -17,6 +19,10 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        if(timeLeft == 0)
+        {
+            timeLeft = 3;
+        }
         if(bulletSpeed == 0)
         {
             bulletSpeed = 10;
@@ -28,7 +34,11 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //We should put something to delete bullets that are out of bounds eventually
+        timeLeft -= Time.deltaTime;
+        if(timeLeft <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

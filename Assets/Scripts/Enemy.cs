@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Enemy : Entity
 {
-    public float health;
     private RaycastHit2D rayHit;
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rb;
