@@ -28,7 +28,12 @@ public class Bullet : MonoBehaviour
             bulletSpeed = 10;
         }
         rb.velocity = bulletDirection * bulletSpeed;
-        transform.rotation = Quaternion.Euler(0, 0, math.atan2(bulletDirection.y, bulletDirection.x));
+        int added = 0; //Since atan2 will only return an angle in a range of 180 degrees, the bullet's rotation needs to be reversed if the angle is in the other 180 degrees.
+        if(bulletDirection.x > 0)
+        {
+            added = 180;
+        }
+         transform.rotation = Quaternion.Euler(0, 0, math.atan2(bulletDirection.y, bulletDirection.x) + 90 + added);
     }
 
     // Update is called once per frame
