@@ -17,14 +17,15 @@ public class UIManager : MonoBehaviour
     public GameObject healthBar;
     private SpriteRenderer healthBarRenderer;
     private float initialHealthBarScale; //The initial x scale of the health bar, so that it doesn't just scale it to one and takes into account whether or not we've scaled it in the scene
-    public float healthBarXPos; //The x position we want the health bar at, in case we don't want it at the far left of the screen
+    private float healthBarXPos; //The x position we want the health bar at, in case we don't want it at the far left of the screen
     public MenuState currentMenuState = MenuState.Game;
 
     // Start is called before the first frame update
     void Start()
     {
-        initialHealthBarScale = healthBar.transform.localScale.x;
         healthBarRenderer = healthBar.GetComponent<SpriteRenderer>();
+        healthBarXPos = healthBar.transform.position.x - healthBarRenderer.bounds.size.x / 2;
+        initialHealthBarScale = healthBar.transform.localScale.x;
         Time.timeScale = 1;
     }
 
