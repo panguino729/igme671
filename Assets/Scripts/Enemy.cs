@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class Enemy : Entity
 {
-    public float health;
     private RaycastHit2D rayHit;
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rb;
     private bool onPlatform;
     //The offset from the center of the enemy for the raycast - the raycast's origin is from the right of the enemy if the enemy is moving right, and vice versa.
-    private float xOffset;
+    protected float xOffset;
     //The layer of the platforms
     private LayerMask lm;
     //The direction in which the object moves - will be reversed
