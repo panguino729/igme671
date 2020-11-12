@@ -7,8 +7,7 @@ using UnityEngine.SceneManagement;
 public enum MenuState
 {
     Game,
-    Pause,
-    Spells
+    Pause
 }
 
 public class UIManager : MonoBehaviour
