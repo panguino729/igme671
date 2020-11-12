@@ -8,6 +8,7 @@ public class Entity : MonoBehaviour
     protected BoxCollider2D boxCollider;
 
     public float attackDamage;
+    public float health = 0.0f;
 
     // Start is called before the first frame update
     protected void Start()

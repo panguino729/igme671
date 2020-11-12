@@ -9,7 +9,8 @@ public class Player : Entity
     public float maxSpeed = 0.0f;
     public float airSpeedMult = 0.0f;
     public float jumpForce = 0.0f;
-    public float health = 0.0f;
+    public Transform attackPoint;
+    public float attackRange = 0.0f;
 
     private bool grounded = true;
 
@@ -34,7 +35,7 @@ public class Player : Entity
             CheckGrounded();
         }
 
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.E))
         {
             Attack();
         }
@@ -128,6 +129,15 @@ public class Player : Entity
     {
         //play an animation
 
-        //
+        //detect enemies
+        Collider2D[] hits = Physics2D.OverlapCircleAll(attackPoint.position, attackRange);
+
+        foreach(Collider2D hit in hits)
+        {
+            if(hit.gameObject.tag == "enemy")
+            {
+                hit.gameObject.GetComponent<Enemy>().health -= attackDamage;
+            }
+        }
     }
 }
