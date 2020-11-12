@@ -145,7 +145,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 0
-  health: 100
+  currHealth: 0
+  maxHealth: 30
   moveForce: 30
   maxSpeed: 5
   airSpeedMult: 0.5

@@ -44,8 +44,9 @@ public class Bullet : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //checks if the bullet hits the player, and reduces health accordingly
-        if(collision.gameObject.tag == "player")
+        if(collision.gameObject.tag == "Player")
         {
+            Debug.Log("Should lose health");
             collision.gameObject.GetComponent<Player>().currHealth -= bulletDamage;
         }
         if (collision.gameObject.tag != "enemy")
