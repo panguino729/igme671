@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6288815793996981231}
   - component: {fileID: 6288815793996981228}
   m_Layer: 0
-  m_Name: UIManager
+  m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 6288815793996981229}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.9277064, y: 0.6962837, z: -451.1315}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 50, y: 50, z: 50}
   m_Children:
   - {fileID: 6288815795012501839}
   - {fileID: 6288815795426747617}
