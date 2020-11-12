@@ -136,7 +136,7 @@ public class Player : Entity
         {
             if(hit.gameObject.tag == "enemy")
             {
-                hit.gameObject.GetComponent<Enemy>().health -= attackDamage;
+                hit.gameObject.GetComponent<Enemy>().currHealth -= attackDamage;
             }
         }
     }
