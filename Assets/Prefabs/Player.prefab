@@ -150,6 +150,6 @@ MonoBehaviour:
   moveForce: 30
   maxSpeed: 5
   airSpeedMult: 0.5
-  jumpForce: 200
+  jumpForce: 450
   attackPoint: {fileID: 0}
   attackRange: 0
