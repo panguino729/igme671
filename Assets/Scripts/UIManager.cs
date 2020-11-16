@@ -15,6 +15,7 @@ public class UIManager : MonoBehaviour
     public Player player;
     public GameObject healthBar;
     private SpriteRenderer healthBarRenderer;
+    private Rect healthBarRect;
     private float initialHealthBarScale; //The initial x scale of the health bar, so that it doesn't just scale it to one and takes into account whether or not we've scaled it in the scene
     private float healthBarXPos; //The x position we want the health bar at, in case we don't want it at the far left of the screen
     public MenuState currentMenuState = MenuState.Game;
@@ -22,8 +23,10 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        healthBarRenderer = healthBar.GetComponent<SpriteRenderer>();
-        healthBarXPos = healthBar.transform.position.x - healthBarRenderer.bounds.size.x / 2;
+        //healthBarRenderer = healthBar.GetComponent<SpriteRenderer>();
+        healthBarRect = healthBar.GetComponent<Rect>();
+        //healthBarXPos = healthBar.transform.position.x - healthBarRenderer.bounds.size.x / 2;
+        healthBarXPos = healthBar.transform.position.x - (healthBarRect.position.x - healthBarRect.width / 2);
         initialHealthBarScale = healthBar.transform.localScale.x;
         Time.timeScale = 1;
     }
@@ -31,7 +34,8 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PlayerHealth();
+        //PlayerHealth();
+        PlayerHealthImage();
     }
 
     /// <summary>
@@ -43,5 +47,12 @@ public class UIManager : MonoBehaviour
         float healthBarScale = player.currHealth / player.maxHealth;
         healthBar.transform.localScale = new Vector3(healthBarScale * initialHealthBarScale, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
         healthBar.transform.position = new Vector3(healthBarXPos + healthBarRenderer.bounds.size.x / 2, healthBar.transform.position.y, healthBar.transform.position.z);
+    }
+
+    public void PlayerHealthImage()
+    {
+        float healthBarScale = player.currHealth / player.maxHealth;
+        healthBar.transform.localScale = new Vector3(healthBarScale * initialHealthBarScale, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
+        healthBar.transform.position = new Vector3(healthBarXPos + (healthBarRect.position.x - healthBarRect.width / 2), healthBar.transform.position.y, healthBar.transform.position.z);
     }
 }
