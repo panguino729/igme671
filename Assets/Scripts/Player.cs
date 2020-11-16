@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Player : Entity
 {
+    //To allow for easy access of the player's position, etc.
+    public static GameObject player;
     public float moveForce = 0.0f;
     public float maxSpeed = 0.0f;
     public float airSpeedMult = 0.0f;
@@ -16,6 +18,7 @@ public class Player : Entity
 
     void Start()
     {
+        player = gameObject;
         base.Start();
     }
 
