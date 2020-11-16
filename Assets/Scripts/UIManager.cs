@@ -12,7 +12,7 @@ public enum MenuState
 
 public class UIManager : MonoBehaviour
 {
-    public Player player;
+    private Player player;
     public GameObject healthBar;
     private SpriteRenderer healthBarRenderer;
     private float initialHealthBarScale; //The initial x scale of the health bar, so that it doesn't just scale it to one and takes into account whether or not we've scaled it in the scene
@@ -22,6 +22,7 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = Player.player.GetComponent<Player>();
         healthBarRenderer = healthBar.GetComponent<SpriteRenderer>();
         healthBarXPos = healthBar.transform.position.x - healthBarRenderer.bounds.size.x / 2;
         initialHealthBarScale = healthBar.transform.localScale.x;
