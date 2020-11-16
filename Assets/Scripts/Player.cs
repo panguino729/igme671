@@ -76,7 +76,7 @@ public class Player : Entity
         size.x *= 0.05f;
 
         RaycastHit2D raycastHit2D = Physics2D.BoxCast(boxCollider.bounds.center, size, 0f, Vector2.down, .03f, Physics2D.AllLayers, 0, 0);
-        if (raycastHit2D.collider.gameObject.tag == "platform")
+        if (raycastHit2D.collider != null && raycastHit2D.collider.gameObject.tag == "platform")
         {
             grounded = true;
         }
