@@ -6,12 +6,11 @@ public class Enemy : Entity
 {
     private RaycastHit2D rayHit;
     private SpriteRenderer spriteRenderer;
-    private Rigidbody2D rb;
     private bool onPlatform;
     //The offset from the center of the enemy for the raycast - the raycast's origin is from the right of the enemy if the enemy is moving right, and vice versa.
     protected float xOffset;
     //The layer of the platforms
-    private LayerMask lm;
+    protected LayerMask lm;
     //The direction in which the object moves - will be reversed
     public Vector2 moveDirection;
     public float moveMagnitude; //The speed at which the object moves
@@ -32,7 +31,6 @@ public class Enemy : Entity
         moveDirection = moveDirection.normalized;
 
         spriteRenderer = GetComponent<SpriteRenderer>();
-        rb = GetComponent<Rigidbody2D>();
         //Offset is in the direction of movement, so that if the object is moving right, for example, it raycasts down on its right side to check if it has reached the edge of the platform
         if (moveDirection.x > 0)
         {
@@ -80,7 +78,7 @@ public class Enemy : Entity
             //The distance of the raycast - short so that it doesn't detect platforms below the initial one
             float distance = 1;
             //The origin of the raycast - starts from the bottom left or right of object to determine  if the object is about to reach the edge of the platform
-            Vector2 origin = new Vector2(transform.position.x + xOffset, transform.position.y - spriteRenderer.size.y);
+            Vector2 origin = new Vector2(transform.position.x + xOffset, transform.position.y - spriteRenderer.size.y / 2);
 
             //Raycast downward - collider of rayhit will be null if the object has reached the edge of the platform
             rayHit = Physics2D.Raycast(origin, -Vector3.up, distance, lm); 
@@ -92,7 +90,18 @@ public class Enemy : Entity
                 xOffset *= -1;
                 transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
             }
-            rb.velocity = moveDirection * moveMagnitude;
+            else
+            {
+                //Raycast in the direction of movement - if the enemy has reached a wall, reverses its direction
+                rayHit = Physics2D.Raycast(origin, new Vector3(rigidbody.velocity.x, 0, 0), distance, lm);
+                if(rayHit.collider != null)
+                {
+                    moveDirection = new Vector2(moveDirection.x * -1, moveDirection.y * -1);
+                    xOffset *= -1;
+                    transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+                }
+            }
+            rigidbody.velocity = moveDirection * moveMagnitude;
         }
     }
 }

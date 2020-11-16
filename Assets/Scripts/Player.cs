@@ -5,10 +5,13 @@ using UnityEngine;
 
 public class Player : Entity
 {
+    //To allow for easy access of the player's position, etc.
+    public static GameObject player;
     public float moveForce = 0.0f;
     public float maxSpeed = 0.0f;
     public float airSpeedMult = 0.0f;
     public float jumpForce = 0.0f;
+    public float initialXScale;
     public Transform attackPoint;
     public float attackRange = 0.0f;
 
@@ -16,6 +19,8 @@ public class Player : Entity
 
     void Start()
     {
+        initialXScale = transform.localScale.x;
+        player = gameObject;
         base.Start();
     }
 
@@ -46,10 +51,12 @@ public class Player : Entity
         Vector2 direction = new Vector2(0, 0); 
         if (Input.GetKey(KeyCode.A))
         {
+            transform.localScale = new Vector3(-initialXScale, transform.localScale.y, transform.localScale.z);
             direction.x--;
         }
         if (Input.GetKey(KeyCode.D))
         {
+            transform.localScale = new Vector3(initialXScale, transform.localScale.y, transform.localScale.z);
             direction.x++;
         }
         return direction;
@@ -69,8 +76,18 @@ public class Player : Entity
     private void CheckGrounded()
     {
         //cast a small box under the player to check if they are grounded
-        RaycastHit2D raycastHit2D = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0f, Vector2.down, .03f, Physics2D.AllLayers, 0, 0);
-        grounded =  raycastHit2D.collider != null;
+        Vector2 size = boxCollider.bounds.size;
+        size.x *= 0.05f;
+
+        RaycastHit2D raycastHit2D = Physics2D.BoxCast(boxCollider.bounds.center, size, 0f, Vector2.down, .03f, Physics2D.AllLayers, 0, 0);
+        if (raycastHit2D.collider != null && raycastHit2D.collider.gameObject.tag == "platform")
+        {
+            grounded = true;
+        }
+        else
+        {
+            grounded = false;
+        }
     }
 
     private void Move()
