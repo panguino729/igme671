@@ -44,7 +44,7 @@ public class RangedEnemy : Enemy
     {
         Bullet newBullet = Instantiate(bullet, new Vector3(transform.position.x + xOffset, transform.position.y, transform.position.z), Quaternion.identity).GetComponent<Bullet>();
         newBullet.bulletSpeed = bulletSpeed;
-        newBullet.bulletDirection = moveDirection;
+        newBullet.BulletDirection = moveDirection;
         newBullet.bulletDamage = attackDamage;
     }
 }
