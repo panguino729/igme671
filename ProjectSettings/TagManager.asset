@@ -23,7 +23,7 @@ TagManager:
   - MiddlegroundTrees
   - Foreground
   - GameAssets
-  - 
+  - MiddlegroundFog
   - 
   - 
   - 
@@ -55,6 +55,9 @@ TagManager:
     locked: 0
   - name: MiddlegroundTrees
     uniqueID: 12924063
+    locked: 0
+  - name: MiddlegroundFog
+    uniqueID: 652062235
     locked: 0
   - name: GameAssets
     uniqueID: 2855963277
