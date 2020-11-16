@@ -152,8 +152,10 @@ MonoBehaviour:
   maxSpeed: 5
   airSpeedMult: 0.5
   jumpForce: 450
+  initialXScale: 0
   attackPoint: {fileID: 1973908504987054185}
   attackRange: 0.2
+  friction: 0.9
 --- !u!1 &8439242163364917649
 GameObject:
   m_ObjectHideFlags: 0

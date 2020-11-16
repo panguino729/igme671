@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
@@ -14,6 +15,7 @@ public class Player : Entity
     public float initialXScale;
     public Transform attackPoint;
     public float attackRange = 0.0f;
+    public float friction = 0.0f;
 
     private bool grounded = true;
 
@@ -44,6 +46,8 @@ public class Player : Entity
         {
             Attack();
         }
+
+        Debug.Log(grounded);
     }
 
     private Vector2 GetDirection()
@@ -139,6 +143,11 @@ public class Player : Entity
                     rigidbody.AddForce(direction * moveForce * airSpeedMult);
                 }
             }
+        }
+        //apply friction
+        else if(grounded)
+        {
+            rigidbody.velocity = rigidbody.velocity * friction;
         }
     }
 
