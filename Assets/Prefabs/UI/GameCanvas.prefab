@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 5701961421905757941}
   currentMenuState: 0
 --- !u!1 &5701961421905757941
 GameObject:
@@ -240,7 +240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  healthBar: {fileID: 3749474837191675837}
+  healthBar: {fileID: 3008787561974106741}
   currentMenuState: 0
 --- !u!1 &8194363283000620183
 GameObject:
@@ -502,12 +502,6 @@ PrefabInstance:
 --- !u!4 &3749474837535075615 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6288815793996981231, guid: ee1944c0d59240240926055617bda16a,
-    type: 3}
-  m_PrefabInstance: {fileID: 7155819426385055472}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &3749474837191675837 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6288815795012501837, guid: ee1944c0d59240240926055617bda16a,
     type: 3}
   m_PrefabInstance: {fileID: 7155819426385055472}
   m_PrefabAsset: {fileID: 0}
