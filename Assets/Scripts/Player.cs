@@ -70,7 +70,14 @@ public class Player : Entity
     {
         //cast a small box under the player to check if they are grounded
         RaycastHit2D raycastHit2D = Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0f, Vector2.down, .03f, Physics2D.AllLayers, 0, 0);
-        grounded =  raycastHit2D.collider != null;
+        if (raycastHit2D.collider.gameObject.tag == "platform")
+        {
+            grounded = true;
+        }
+        else
+        {
+            grounded = false;
+        }
     }
 
     private void Move()
