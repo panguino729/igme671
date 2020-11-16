@@ -11,6 +11,7 @@ public class Player : Entity
     public float maxSpeed = 0.0f;
     public float airSpeedMult = 0.0f;
     public float jumpForce = 0.0f;
+    public float initialXScale;
     public Transform attackPoint;
     public float attackRange = 0.0f;
 
@@ -18,6 +19,7 @@ public class Player : Entity
 
     void Start()
     {
+        initialXScale = transform.localScale.x;
         player = gameObject;
         base.Start();
     }
@@ -49,10 +51,12 @@ public class Player : Entity
         Vector2 direction = new Vector2(0, 0); 
         if (Input.GetKey(KeyCode.A))
         {
+            transform.localScale = new Vector3(-initialXScale, transform.localScale.y, transform.localScale.z);
             direction.x--;
         }
         if (Input.GetKey(KeyCode.D))
         {
+            transform.localScale = new Vector3(initialXScale, transform.localScale.y, transform.localScale.z);
             direction.x++;
         }
         return direction;
