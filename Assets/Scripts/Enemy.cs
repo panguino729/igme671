@@ -78,7 +78,7 @@ public class Enemy : Entity
             //The distance of the raycast - short so that it doesn't detect platforms below the initial one
             float distance = 1;
             //The origin of the raycast - starts from the bottom left or right of object to determine  if the object is about to reach the edge of the platform
-            Vector2 origin = new Vector2(transform.position.x + xOffset, transform.position.y - spriteRenderer.size.y);
+            Vector2 origin = new Vector2(transform.position.x + xOffset, transform.position.y - spriteRenderer.size.y / 2);
 
             //Raycast downward - collider of rayhit will be null if the object has reached the edge of the platform
             rayHit = Physics2D.Raycast(origin, -Vector3.up, distance, lm); 
@@ -89,6 +89,17 @@ public class Enemy : Entity
                 moveDirection = new Vector2(moveDirection.x * -1, moveDirection.y * -1);
                 xOffset *= -1;
                 transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+            }
+            else
+            {
+                //Raycast in the direction of movement - if the enemy has reached a wall, reverses its direction
+                rayHit = Physics2D.Raycast(origin, new Vector3(rigidbody.velocity.x, 0, 0), distance, lm);
+                if(rayHit.collider != null)
+                {
+                    moveDirection = new Vector2(moveDirection.x * -1, moveDirection.y * -1);
+                    xOffset *= -1;
+                    transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+                }
             }
             rigidbody.velocity = moveDirection * moveMagnitude;
         }
