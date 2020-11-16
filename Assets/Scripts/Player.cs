@@ -3,10 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : Entity
 {
-    //To allow for easy access of the player's position, etc.
+    //To allow for easy access of the player's position, etc
     public static GameObject player;
     public float moveForce = 0.0f;
     public float maxSpeed = 0.0f;
@@ -28,6 +29,12 @@ public class Player : Entity
 
     void FixedUpdate()
     {
+        //If the player dies, reloads the scene
+        if(currHealth <= 0)
+        {
+            Scene currScene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(currScene.name);
+        }
         //move the player
         Move();
 
