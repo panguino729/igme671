@@ -17,8 +17,13 @@ public class Player : Entity
     public Transform attackPoint;
     public float attackRange = 0.0f;
     public float friction = 0.0f;
+    public float lungeForce = 0.0f;
 
     private bool grounded = true;
+    private bool lungeing = false;
+    private int lungeFrames = 15;
+    private int lungeCounter = 0;
+    private bool facing = true;
 
     void Start()
     {
@@ -36,7 +41,10 @@ public class Player : Entity
             SceneManager.LoadScene(currScene.name);
         }
         //move the player
-        Move();
+        if (!lungeing)
+        {
+            Move();
+        }
 
         //if player is grounded check for jumping
         if (grounded)
@@ -49,9 +57,20 @@ public class Player : Entity
             CheckGrounded();
         }
 
-        if(Input.GetKeyDown(KeyCode.E))
+        if(Input.GetMouseButtonDown(2))
         {
             Attack();
+        }
+
+        if (!lungeing && Input.GetMouseButtonDown(1))
+        {
+            lungeing = true;
+            lungeCounter = lungeFrames;
+        }
+
+        if (lungeing)
+        {
+            Lunge();
         }
 
         Debug.Log(grounded);
@@ -64,11 +83,13 @@ public class Player : Entity
         {
             transform.localScale = new Vector3(-initialXScale, transform.localScale.y, transform.localScale.z);
             direction.x--;
+            facing = false;
         }
         if (Input.GetKey(KeyCode.D))
         {
             transform.localScale = new Vector3(initialXScale, transform.localScale.y, transform.localScale.z);
             direction.x++;
+            facing = true;
         }
         return direction;
     }
@@ -171,6 +192,19 @@ public class Player : Entity
             {
                 hit.gameObject.GetComponent<Enemy>().currHealth -= attackDamage;
             }
+        }
+    }
+
+    private void Lunge()
+    {
+        //apply lunge force
+        rigidbody.velocity = new Vector2((facing? 1 : -1) * lungeForce, rigidbody.velocity.y);
+
+        //decrement frame counter
+        lungeCounter--;
+        if(lungeCounter == 0)
+        {
+            lungeing = false;
         }
     }
 }
