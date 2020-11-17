@@ -14,10 +14,12 @@ public class FlyingRangedEnemy : RangedEnemy
     public List<Vector3> path;
     //The index of the point in the path the enemy is seeking
     private int targetIndex;
+    private float initialXScale;
     // Start is called before the first frame update
     void Start()
     {
-        rigidbody = GetComponent<Rigidbody2D>(); 
+        rigidbody = GetComponent<Rigidbody2D>();
+        initialXScale = transform.localScale.x;
         if(range == 0)
         {
             range = 10;
@@ -91,7 +93,7 @@ public class FlyingRangedEnemy : RangedEnemy
     {
         //The vector from the current position to the target position
         Vector3 vToTarget = path[targetIndex] - gameObject.transform.position;
-        //If the 
+        //If the enemy reaches its target, changes its target to the next in the list
         if (vToTarget.magnitude <= 1)
         {
             if(targetIndex == path.Count - 1)
@@ -104,5 +106,14 @@ public class FlyingRangedEnemy : RangedEnemy
             }
         }
         rigidbody.velocity = vToTarget.normalized * moveMagnitude;
+        //Reverses the enemy's direction if applicable
+        if(rigidbody.velocity.x < 0)
+        {
+            transform.localScale = new Vector3(-initialXScale, transform.localScale.y, transform.localScale.z);
+        }
+        else
+        {
+            transform.localScale = new Vector3(initialXScale, transform.localScale.y, transform.localScale.z);
+        }
     }
 }

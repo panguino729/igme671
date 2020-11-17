@@ -706,12 +706,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 434497285}
---- !u!1 &1233188012 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5701961421905757941, guid: cb2996d4881754358a247755708d8c86,
-    type: 3}
-  m_PrefabInstance: {fileID: 1895366712}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1399848408
 GameObject:
   m_ObjectHideFlags: 0
@@ -1047,21 +1041,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1463687945934758307, guid: cb2996d4881754358a247755708d8c86,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 434497286}
-    - target: {fileID: 1463687945934758307, guid: cb2996d4881754358a247755708d8c86,
-        type: 3}
-      propertyPath: healthBar
-      value: 
-      objectReference: {fileID: 1233188012}
-    - target: {fileID: 3749474837535075612, guid: cb2996d4881754358a247755708d8c86,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 434497286}
     - target: {fileID: 5091418934755281813, guid: cb2996d4881754358a247755708d8c86,
         type: 3}
       propertyPath: player
@@ -1212,8 +1191,7 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5091418934755281813, guid: cb2996d4881754358a247755708d8c86, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb2996d4881754358a247755708d8c86, type: 3}
 --- !u!1 &2116997845
 GameObject:

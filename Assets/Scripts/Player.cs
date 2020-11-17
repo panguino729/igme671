@@ -1,11 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : Entity
 {
-    //To allow for easy access of the player's position, etc.
+    //To allow for easy access of the player's position, etc
     public static GameObject player;
     public float moveForce = 0.0f;
     public float maxSpeed = 0.0f;
@@ -14,6 +16,7 @@ public class Player : Entity
     public float initialXScale;
     public Transform attackPoint;
     public float attackRange = 0.0f;
+    public float friction = 0.0f;
 
     private bool grounded = true;
 
@@ -26,6 +29,12 @@ public class Player : Entity
 
     void FixedUpdate()
     {
+        //If the player dies, reloads the scene
+        if(currHealth <= 0)
+        {
+            Scene currScene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(currScene.name);
+        }
         //move the player
         Move();
 
@@ -44,6 +53,8 @@ public class Player : Entity
         {
             Attack();
         }
+
+        Debug.Log(grounded);
     }
 
     private Vector2 GetDirection()
@@ -139,6 +150,11 @@ public class Player : Entity
                     rigidbody.AddForce(direction * moveForce * airSpeedMult);
                 }
             }
+        }
+        //apply friction
+        else if(grounded)
+        {
+            rigidbody.velocity = rigidbody.velocity * friction;
         }
     }
 
