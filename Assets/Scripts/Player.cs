@@ -57,7 +57,7 @@ public class Player : Entity
             CheckGrounded();
         }
 
-        if(Input.GetMouseButtonDown(2))
+        if(Input.GetMouseButtonDown(0))
         {
             Attack();
         }
