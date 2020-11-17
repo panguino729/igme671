@@ -118,10 +118,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 0
-  currHealth: 1
-  maxHealth: 1
+  currHealth: 15
+  maxHealth: 15
   moveDirection: {x: 0, y: 0}
   moveMagnitude: 5
+  collisionDamage: 0
   bullet: {fileID: 6714982739760605305, guid: 0d58a834f4e83de47b8a9aa48f449ba4, type: 3}
   bulletSpeed: 0
   fireInterval: 0

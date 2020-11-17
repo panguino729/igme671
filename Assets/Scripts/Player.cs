@@ -9,6 +9,7 @@ public class Player : Entity
 {
     //To allow for easy access of the player's position, etc
     public static GameObject player;
+    public static Player pl;
     public float moveForce = 0.0f;
     public float maxSpeed = 0.0f;
     public float airSpeedMult = 0.0f;
@@ -27,6 +28,7 @@ public class Player : Entity
 
     void Start()
     {
+        pl = this;
         initialXScale = transform.localScale.x;
         player = gameObject;
         base.Start();
@@ -73,7 +75,6 @@ public class Player : Entity
             Lunge();
         }
 
-        Debug.Log(grounded);
     }
 
     private Vector2 GetDirection()
@@ -190,7 +191,7 @@ public class Player : Entity
         {
             if(hit.gameObject.tag == "enemy")
             {
-                hit.gameObject.GetComponent<Enemy>().currHealth -= attackDamage;
+                hit.gameObject.GetComponent<Enemy>().TakeDamage(attackDamage);
             }
         }
     }

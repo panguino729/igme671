@@ -14,9 +14,14 @@ public class Enemy : Entity
     //The direction in which the object moves - will be reversed
     public Vector2 moveDirection;
     public float moveMagnitude; //The speed at which the object moves
+    public int collisionDamage; //The damage the player takes upon collision with an enemy
     // Start is called before the first frame update
     public void Start()
     {
+        if(collisionDamage == 0)
+        {
+            collisionDamage = 1;
+        }
         base.Start();
         //Default values so that the enemy will always move - could be changed if we want to have a stationary/mostly stationary enemy
         if (moveDirection == new Vector2(0, 0))
@@ -34,10 +39,11 @@ public class Enemy : Entity
         //Offset is in the direction of movement, so that if the object is moving right, for example, it raycasts down on its right side to check if it has reached the edge of the platform
         if (moveDirection.x > 0)
         {
-            xOffset = spriteRenderer.bounds.max.x - spriteRenderer.bounds.center.x; ;
+            xOffset = spriteRenderer.bounds.max.x - spriteRenderer.bounds.center.x;
         }
         else
         {
+            xOffset = -(spriteRenderer.bounds.max.x - spriteRenderer.bounds.center.x);
             moveDirection.x = -(spriteRenderer.bounds.max.x - spriteRenderer.bounds.center.x);
 
             //If the enemy is moving left, makes it face left under the assumption that the enemy is facing right to begin with
@@ -66,10 +72,21 @@ public class Enemy : Entity
         {
             onPlatform = true;
         }
+        if (collision.gameObject.tag.Equals("Player"))
+        {
+            Player.pl.TakeDamage(collisionDamage);
+        }
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
         onPlatform = false;
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag.Equals("Player"))
+        {
+            Player.pl.TakeDamage(collisionDamage);
+        }
     }
     public void Move()
     {
