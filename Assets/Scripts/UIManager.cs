@@ -12,20 +12,21 @@ public enum MenuState
 
 public class UIManager : MonoBehaviour
 {
-    private Player player;
+    public Player player;
     public GameObject healthBar;
-    private SpriteRenderer healthBarRenderer;
-    private float initialHealthBarScale; //The initial x scale of the health bar, so that it doesn't just scale it to one and takes into account whether or not we've scaled it in the scene
-    private float healthBarXPos; //The x position we want the health bar at, in case we don't want it at the far left of the screen
+    public Slider healthBarSlider;
+
     public MenuState currentMenuState = MenuState.Game;
 
     // Start is called before the first frame update
     void Start()
     {
-        player = Player.player.GetComponent<Player>();
-        healthBarRenderer = healthBar.GetComponent<SpriteRenderer>();
-        healthBarXPos = healthBar.transform.position.x - healthBarRenderer.bounds.size.x / 2;
-        initialHealthBarScale = healthBar.transform.localScale.x;
+        player = player.GetComponent<Player>();
+        healthBarSlider = healthBar.GetComponent<Slider>();
+
+        healthBarSlider.maxValue = player.maxHealth;
+        healthBarSlider.value = player.maxHealth;
+
         Time.timeScale = 1;
     }
 
@@ -41,8 +42,6 @@ public class UIManager : MonoBehaviour
     /// <param name="player">Player entitiy</param>
     public void PlayerHealth()
     {
-        float healthBarScale = player.currHealth / player.maxHealth;
-        healthBar.transform.localScale = new Vector3(healthBarScale * initialHealthBarScale, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
-        healthBar.transform.position = new Vector3(healthBarXPos + healthBarRenderer.bounds.size.x / 2, healthBar.transform.position.y, healthBar.transform.position.z);
+        healthBarSlider.value = player.currHealth;
     }
 }
