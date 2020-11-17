@@ -72,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1439004019
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: -7124781682134005175, guid: 63c3e55de962b409ea571c369499c48c,
     type: 3}
@@ -156,6 +156,7 @@ MonoBehaviour:
   attackPoint: {fileID: 1973908504987054185}
   attackRange: 0.2
   friction: 0.9
+  lungeForce: 10
 --- !u!1 &8439242163364917649
 GameObject:
   m_ObjectHideFlags: 0
