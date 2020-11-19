@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5732037863343624465}
   - component: {fileID: 5732037863343624478}
   - component: {fileID: 5732037863343624479}
-  m_Layer: 14
+  m_Layer: 18
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -166,7 +166,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1973908504987054185}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: AttackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
