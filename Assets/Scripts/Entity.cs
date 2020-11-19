@@ -12,13 +12,9 @@ public class Entity : MonoBehaviour
     public float maxHealth = 1.0f;
     public bool isAttacking = false;
 
-    private SpriteRenderer spr;
-    private int iFrames = 0; //Invincibility frames after taking damage
-
     // Start is called before the first frame update
     protected void Start()
     {
-        spr = GetComponent<SpriteRenderer>();
         rigidbody = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();
         currHealth = maxHealth;
@@ -27,25 +23,6 @@ public class Entity : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-        if (spr.color == Color.red)
-        {
-            if (iFrames <= 0)
-            {
-                spr.color = Color.white;
-            }
-            else
-            {
-                iFrames--;
-            }
-        }
-    }
-    public void TakeDamage(float damage)
-    {
-        if (iFrames <= 0)
-        {
-            currHealth -= damage;
-            spr.color = Color.red;
-            iFrames = 40;
-        }
+        
     }
 }

@@ -7,6 +7,8 @@ TagManager:
   - enemy
   - platform
   - bullet
+  - showOnGame
+  - showOnPause
   layers:
   - Default
   - TransparentFX
@@ -27,6 +29,7 @@ TagManager:
   - Bullets
   - Enemies
   - Player
+
   - 
   - 
   - 
@@ -61,9 +64,6 @@ TagManager:
     locked: 0
   - name: GameAssets
     uniqueID: 2855963277
-    locked: 0
-  - name: Entities
-    uniqueID: 3708226185
     locked: 0
   - name: Foreground
     uniqueID: 339385175

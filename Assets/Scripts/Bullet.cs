@@ -13,6 +13,8 @@ public class Bullet : MonoBehaviour
     //When this is 0, the bullet will be deleted so that there aren't an ever increasing # of them - can be changed if bullets need to stay longer
     public float timeLeft; 
     private Rigidbody2D rb;
+    public bool isPlayers;
+
     public Vector2 BulletDirection
     {
         get
@@ -67,11 +69,17 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         //checks if the bullet hits the player, and reduces health accordingly
-        if (collision.gameObject.tag == "Player")
+        if (!isPlayers && collision.gameObject.tag == "Player")
         {
-            Player.pl.TakeDamage(bulletDamage);
+            collision.gameObject.GetComponent<Player>().currHealth -= bulletDamage;
+            Destroy(gameObject);
         }
-        if (collision.gameObject.tag != "enemy")
+        else if(isPlayers && collision.gameObject.tag == "enemy")
+        {
+            collision.gameObject.GetComponent<Enemy>().currHealth -= bulletDamage;
+            Destroy(gameObject);
+        }
+        else if (collision.gameObject.tag != "enemy" && collision.gameObject.tag != "Player")
         {
             Destroy(gameObject);
         }
