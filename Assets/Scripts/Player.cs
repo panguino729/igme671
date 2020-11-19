@@ -18,18 +18,24 @@ public class Player : Entity
     public float attackRange = 0.0f;
     public float friction = 0.0f;
     public float lungeForce = 0.0f;
+    public GameObject bullet;
+    public SpriteRenderer spriteRenderer;
+    public float bulletSpeed;
+    public int attackType = 0;
 
     private bool grounded = true;
     private bool lungeing = false;
     private int lungeFrames = 15;
     private int lungeCounter = 0;
     private bool facing = true;
+    private float xOffset;
 
     void Start()
     {
         initialXScale = transform.localScale.x;
         player = gameObject;
         base.Start();
+        xOffset = spriteRenderer.bounds.max.x - spriteRenderer.bounds.center.x;
     }
 
     void FixedUpdate()
@@ -59,6 +65,7 @@ public class Player : Entity
 
         if(Input.GetMouseButtonDown(0))
         {
+            xOffset = spriteRenderer.bounds.max.x - spriteRenderer.bounds.center.x;
             Attack();
         }
 
@@ -74,6 +81,12 @@ public class Player : Entity
         }
 
         Debug.Log(grounded);
+
+        //fix hover glitch
+        if(rigidbody.velocity.y != 0)
+        {
+            grounded = false;
+        }
     }
 
     private Vector2 GetDirection()
@@ -183,15 +196,26 @@ public class Player : Entity
     {
         //play an animation
 
-        //detect enemies
-        Collider2D[] hits = Physics2D.OverlapCircleAll(attackPoint.position, attackRange);
-
-        foreach(Collider2D hit in hits)
+        if (attackType == 0)
         {
-            if(hit.gameObject.tag == "enemy")
+            //detect enemies
+            Collider2D[] hits = Physics2D.OverlapCircleAll(attackPoint.position, attackRange);
+
+            foreach (Collider2D hit in hits)
             {
-                hit.gameObject.GetComponent<Enemy>().currHealth -= attackDamage;
+                if (hit.gameObject.tag == "enemy")
+                {
+                    hit.gameObject.GetComponent<Enemy>().currHealth -= attackDamage;
+                }
             }
+        }
+        if(attackType == 1)
+        {
+            Bullet newBullet = Instantiate(bullet, new Vector3(transform.position.x + xOffset, transform.position.y, transform.position.z), Quaternion.identity).GetComponent<Bullet>();
+            newBullet.bulletSpeed = bulletSpeed;
+            newBullet.BulletDirection = facing ? new Vector2(1,0) : new Vector2(-1,0);
+            newBullet.bulletDamage = attackDamage;
+            newBullet.isPlayers = true;
         }
     }
 

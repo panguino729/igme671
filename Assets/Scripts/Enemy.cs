@@ -34,7 +34,7 @@ public class Enemy : Entity
         //Offset is in the direction of movement, so that if the object is moving right, for example, it raycasts down on its right side to check if it has reached the edge of the platform
         if (moveDirection.x > 0)
         {
-            xOffset = spriteRenderer.bounds.max.x - spriteRenderer.bounds.center.x; ;
+            xOffset = spriteRenderer.bounds.max.x - spriteRenderer.bounds.center.x;
         }
         else
         {

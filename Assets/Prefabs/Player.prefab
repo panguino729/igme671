@@ -101,7 +101,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 6200000, guid: 771976f4bbb24a14db2f89d247f4bd84, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -151,12 +151,16 @@ MonoBehaviour:
   moveForce: 30
   maxSpeed: 5
   airSpeedMult: 0.5
-  jumpForce: 450
+  jumpForce: 700
   initialXScale: 0
   attackPoint: {fileID: 1973908504987054185}
   attackRange: 0.2
   friction: 0.9
   lungeForce: 10
+  bullet: {fileID: 6714982739760605305, guid: 0d58a834f4e83de47b8a9aa48f449ba4, type: 3}
+  spriteRenderer: {fileID: 5732037863343624464}
+  bulletSpeed: 7
+  attackType: 1
 --- !u!1 &8439242163364917649
 GameObject:
   m_ObjectHideFlags: 0
