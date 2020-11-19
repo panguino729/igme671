@@ -9,6 +9,7 @@ public class Player : Entity
 {
     //To allow for easy access of the player's position, etc
     public static GameObject player;
+    public static Player pl;
     public float moveForce = 0.0f;
     public float maxSpeed = 0.0f;
     public float airSpeedMult = 0.0f;
@@ -33,12 +34,10 @@ public class Player : Entity
     void Start()
     {
         animator = GetComponent<Animator>();
-        pl = this;
-        private float xOffset;
         initialXScale = transform.localScale.x;
         player = gameObject;
         base.Start();
-        xOffset = spriteRenderer.bounds.max.x - spriteRenderer.bounds.center.x;
+        //xOffset = spriteRenderer.bounds.max.x - spriteRenderer.bounds.center.x;
     }
 
     void FixedUpdate()
@@ -68,7 +67,7 @@ public class Player : Entity
 
         if(Input.GetMouseButtonDown(0))
         {
-            xOffset = spriteRenderer.bounds.max.x - spriteRenderer.bounds.center.x;
+            //xOffset = spriteRenderer.bounds.max.x - spriteRenderer.bounds.center.x;
             Attack();
         }
 
@@ -82,8 +81,6 @@ public class Player : Entity
         {
             Lunge();
         }
-
-        Debug.Log(grounded);
 
         //fix hover glitch
         if(rigidbody.velocity.y != 0)
@@ -200,10 +197,6 @@ public class Player : Entity
         //play an animation
         animator.SetBool("isAttacking", true);
         //detect enemies
-        Collider2D[] hits = Physics2D.OverlapCircleAll(attackPoint.position, attackRange);
-
-        foreach(Collider2D hit in hits)
-
         if (attackType == 0)
         {
             //detect enemies
@@ -219,7 +212,7 @@ public class Player : Entity
         }
         if(attackType == 1)
         {
-            Bullet newBullet = Instantiate(bullet, new Vector3(transform.position.x + xOffset, transform.position.y, transform.position.z), Quaternion.identity).GetComponent<Bullet>();
+            Bullet newBullet = Instantiate(bullet, new Vector3(transform.position.x /*+ xOffset*/, transform.position.y, transform.position.z), Quaternion.identity).GetComponent<Bullet>();
             newBullet.bulletSpeed = bulletSpeed;
             newBullet.BulletDirection = facing ? new Vector2(1,0) : new Vector2(-1,0);
             newBullet.bulletDamage = attackDamage;
