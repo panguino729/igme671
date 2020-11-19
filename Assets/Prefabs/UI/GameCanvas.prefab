@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 632926344493664619}
   m_Layer: 5
   m_Name: HealthBar
-  m_TagString: Untagged
+  m_TagString: showOnGame
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,7 +31,7 @@ RectTransform:
   - {fileID: 140995130693842612}
   - {fileID: 2408506865089616686}
   m_Father: {fileID: 8194363283000620187}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -88,6 +88,115 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &5435451914884248778
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7555737361150284296}
+  m_Layer: 0
+  m_Name: PauseMenu
+  m_TagString: showOnPause
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7555737361150284296
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5435451914884248778}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 65.68882, y: -19.93959, z: -254.18497}
+  m_LocalScale: {x: 1.3989071, y: 1.3989071, z: 1.3989071}
+  m_Children:
+  - {fileID: 4722866773858852678}
+  m_Father: {fileID: 8194363283000620187}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5705141860262362772
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4722866773858852678}
+  - component: {fileID: 8340154973718019263}
+  - component: {fileID: 2469552571122714587}
+  m_Layer: 5
+  m_Name: PauseText
+  m_TagString: showOnPause
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &4722866773858852678
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5705141860262362772}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 181.70253}
+  m_LocalScale: {x: 0.71484375, y: 0.71484375, z: 0.71484375}
+  m_Children: []
+  m_Father: {fileID: 7555737361150284296}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -46.957245, y: 14.253693}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &8340154973718019263
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5705141860262362772}
+  m_CullTransparentMesh: 0
+--- !u!114 &2469552571122714587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5705141860262362772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 40
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: PAUSED
 --- !u!1 &5958799341390678032
 GameObject:
   m_ObjectHideFlags: 0
@@ -101,7 +210,7 @@ GameObject:
   - component: {fileID: 2233398460396355628}
   m_Layer: 5
   m_Name: HealthBarImage
-  m_TagString: Untagged
+  m_TagString: showOnGame
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -208,6 +317,8 @@ MonoBehaviour:
   player: {fileID: 0}
   healthBar: {fileID: 4122198854966739535}
   healthBarSlider: {fileID: 632926344493664619}
+  gameObjects: []
+  pauseObjects: []
   currentMenuState: 0
 --- !u!1 &8194363283000620183
 GameObject:
@@ -241,6 +352,7 @@ RectTransform:
   m_Children:
   - {fileID: 8194363284126615321}
   - {fileID: 799067493329915259}
+  - {fileID: 7555737361150284296}
   - {fileID: 6338376419374970425}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -389,7 +501,7 @@ GameObject:
   - component: {fileID: 199905577012745869}
   m_Layer: 5
   m_Name: HealthBarBorder
-  m_TagString: Untagged
+  m_TagString: showOnGame
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
