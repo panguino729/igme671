@@ -25,9 +25,11 @@ public class Player : Entity
     private int lungeFrames = 15;
     private int lungeCounter = 0;
     private bool facing = true;
+    private Animator animator;
 
     void Start()
     {
+        animator = GetComponent<Animator>();
         pl = this;
         initialXScale = transform.localScale.x;
         player = gameObject;
@@ -183,7 +185,7 @@ public class Player : Entity
     private void Attack()
     {
         //play an animation
-
+        animator.SetBool("isAttacking", true);
         //detect enemies
         Collider2D[] hits = Physics2D.OverlapCircleAll(attackPoint.position, attackRange);
 
@@ -198,6 +200,10 @@ public class Player : Entity
 
     private void Lunge()
     {
+        //Ignore collisions with enemies during dash
+        Physics2D.IgnoreLayerCollision(18, 17, true);
+        //Ignore collisions with bullets during dash
+        Physics2D.IgnoreLayerCollision(18, 16, true);
         //apply lunge force
         rigidbody.velocity = new Vector2((facing? 1 : -1) * lungeForce, rigidbody.velocity.y);
 
@@ -205,6 +211,9 @@ public class Player : Entity
         lungeCounter--;
         if(lungeCounter == 0)
         {
+            //Make collisions happen after dash is done
+            Physics2D.IgnoreLayerCollision(18, 17, false);
+            Physics2D.IgnoreLayerCollision(18, 16, false);
             lungeing = false;
         }
     }

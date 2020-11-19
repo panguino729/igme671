@@ -35,6 +35,8 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Bullets ignore collisions with each other
+        Physics2D.IgnoreLayerCollision(16, 16, true);
         rb = GetComponent<Rigidbody2D>();
         if(timeLeft == 0)
         {

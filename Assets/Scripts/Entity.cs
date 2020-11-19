@@ -10,6 +10,7 @@ public class Entity : MonoBehaviour
     public float attackDamage;
     public float currHealth;
     public float maxHealth = 1.0f;
+    public bool isAttacking = false;
 
     private SpriteRenderer spr;
     private int iFrames = 0; //Invincibility frames after taking damage
