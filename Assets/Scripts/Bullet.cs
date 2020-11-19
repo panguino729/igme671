@@ -76,7 +76,6 @@ public class Bullet : MonoBehaviour
         {
             collision.gameObject.GetComponent<Enemy>().currHealth -= bulletDamage;
             Destroy(gameObject);
-            Player.pl.TakeDamage(bulletDamage);
         }
         else if (collision.gameObject.tag != "enemy" && collision.gameObject.tag != "Player")
         {

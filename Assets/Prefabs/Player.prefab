@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5732037863343624465}
   - component: {fileID: 5732037863343624478}
   - component: {fileID: 5732037863343624479}
-  m_Layer: 18
+  m_Layer: 14
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 231800d481958564495e74a198247429, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDamage: 5
+  attackDamage: 50
   currHealth: 0
   maxHealth: 30
   moveForce: 30
@@ -170,7 +170,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1973908504987054185}
-  m_Layer: 18
+  m_Layer: 0
   m_Name: AttackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -185,7 +185,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8439242163364917649}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.23, y: 0.0417, z: 0}
+  m_LocalPosition: {x: 0.2163, y: 0.0417, z: 0}
   m_LocalScale: {x: 0.33333334, y: 0.33333334, z: 1}
   m_Children: []
   m_Father: {fileID: 5732037863343624467}
