@@ -9,6 +9,7 @@ public class Player : Entity
 {
     //To allow for easy access of the player's position, etc
     public static GameObject player;
+    public static Player pl;
     public float moveForce = 0.0f;
     public float maxSpeed = 0.0f;
     public float airSpeedMult = 0.0f;
@@ -32,6 +33,7 @@ public class Player : Entity
 
     void Start()
     {
+        pl = this;
         initialXScale = transform.localScale.x;
         player = gameObject;
         base.Start();
@@ -79,8 +81,7 @@ public class Player : Entity
         {
             Lunge();
         }
-
-        Debug.Log(grounded);
+    }
 
         //fix hover glitch
         if(rigidbody.velocity.y != 0)
@@ -201,6 +202,12 @@ public class Player : Entity
             //detect enemies
             Collider2D[] hits = Physics2D.OverlapCircleAll(attackPoint.position, attackRange);
 
+        foreach(Collider2D hit in hits)
+        {
+            if(hit.gameObject.tag == "enemy")
+            {
+                hit.gameObject.GetComponent<Enemy>().TakeDamage(attackDamage);
+            }
             foreach (Collider2D hit in hits)
             {
                 if (hit.gameObject.tag == "enemy")
