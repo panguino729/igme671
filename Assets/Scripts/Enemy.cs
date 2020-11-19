@@ -18,7 +18,9 @@ public class Enemy : Entity
     // Start is called before the first frame update
     public void Start()
     {
-        if(collisionDamage == 0)
+        //Enemies ignore collisions with other enemies, so that multiple can be on the same platform
+        Physics2D.IgnoreLayerCollision(17, 17, true);
+        if (collisionDamage == 0)
         {
             collisionDamage = 1;
         }
