@@ -24,6 +24,10 @@ public class Player : Entity
     public float bulletSpeed;
     public int attackType = 0;
 
+    //The time it takes to go back to the walking animation after attacking
+    private float attackAnimationTime = 0.5f;
+    private float attackTimeLeft = 0.0f;
+    private bool isAttacking = false;
     private bool grounded = true;
     private bool lungeing = false;
     private int lungeFrames = 15;
@@ -42,6 +46,13 @@ public class Player : Entity
 
     void FixedUpdate()
     {
+        attackTimeLeft -= Time.deltaTime;
+        //Once the attack animation has finished playing, return the animation to normal
+        if(isAttacking && attackTimeLeft <= 0)
+        {
+            isAttacking = false;
+            animator.SetBool("isAttacking", false);
+        }
         //If the player dies, reloads the scene
         if(currHealth <= 0)
         {
@@ -196,6 +207,8 @@ public class Player : Entity
     {
         //play an animation
         animator.SetBool("isAttacking", true);
+        attackTimeLeft = attackAnimationTime;
+        isAttacking = true;
         //detect enemies
         if (attackType == 0)
         {
