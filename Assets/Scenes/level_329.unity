@@ -477,6 +477,25 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 803608960}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &367219511
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 367219505}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: df58506d7ee54f842a0b060676c69918, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &383543837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -844,7 +863,7 @@ PrefabInstance:
     - target: {fileID: 8180099496340948472, guid: d885ca06f2c133e4184174dc1595f181,
         type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d885ca06f2c133e4184174dc1595f181, type: 3}
@@ -914,6 +933,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5732037863343624478, guid: ed1bd71c3ef767940a0e6dc652461a1d,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5732037863343624479, guid: ed1bd71c3ef767940a0e6dc652461a1d,
         type: 3}
