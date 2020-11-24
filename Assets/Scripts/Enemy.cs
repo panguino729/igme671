@@ -17,6 +17,8 @@ public class Enemy : Entity
     // Start is called before the first frame update
     public void Start()
     {
+        //Enemies don't colide with each other
+        Physics2D.IgnoreLayerCollision(17, 17, true);
         base.Start();
         //Default values so that the enemy will always move - could be changed if we want to have a stationary/mostly stationary enemy
         if (moveDirection == new Vector2(0, 0))
