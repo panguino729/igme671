@@ -94,6 +94,7 @@ public class Enemy : Entity
             }
             else
             {
+                distance = 0.1f;
                 //Raycast in the direction of movement - if the enemy has reached a wall, reverses its direction. 
                 //The check is done at the bottom of the sprite - the enemy will get stuck on walls that only collide with its middle, head, etc.
                 rayHit = Physics2D.Raycast(origin, new Vector3(rigidbody.velocity.x, 0, 0), distance, lm);
