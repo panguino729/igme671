@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 809246906317951191}
   - component: {fileID: 809246906317951186}
   - component: {fileID: 809246906317951190}
-  m_Layer: 0
+  m_Layer: 17
   m_Name: RangedEnemy
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -120,6 +120,7 @@ MonoBehaviour:
   attackDamage: 0
   currHealth: 1
   maxHealth: 1
+  isAttacking: 0
   moveDirection: {x: 0, y: 0}
   moveMagnitude: 5
   bullet: {fileID: 6714982739760605305, guid: 0d58a834f4e83de47b8a9aa48f449ba4, type: 3}

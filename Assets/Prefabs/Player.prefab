@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5732037863343624465}
   - component: {fileID: 5732037863343624478}
   - component: {fileID: 5732037863343624479}
+  - component: {fileID: -7081499575564926576}
   m_Layer: 14
   m_Name: Player
   m_TagString: Player
@@ -72,7 +73,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1439004019
-  m_SortingLayer: 6
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -7124781682134005175, guid: 63c3e55de962b409ea571c369499c48c,
     type: 3}
@@ -148,6 +149,7 @@ MonoBehaviour:
   attackDamage: 50
   currHealth: 0
   maxHealth: 30
+  isAttacking: 0
   moveForce: 30
   maxSpeed: 5
   airSpeedMult: 0.5
@@ -160,7 +162,26 @@ MonoBehaviour:
   bullet: {fileID: 6714982739760605305, guid: 0d58a834f4e83de47b8a9aa48f449ba4, type: 3}
   spriteRenderer: {fileID: 5732037863343624464}
   bulletSpeed: 7
-  attackType: 1
+  attackType: 0
+--- !u!95 &-7081499575564926576
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5732037863343624476}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: df58506d7ee54f842a0b060676c69918, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8439242163364917649
 GameObject:
   m_ObjectHideFlags: 0
