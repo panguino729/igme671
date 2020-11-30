@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 0c3efb4dc878441b98c9321921d72018
+guid: 08ca4f579b6e04f288b8e6a2ac862205
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8988132034686496937
-    second: WardenAttack_0
+      213: -897036718147236107
+    second: WardenIdle_0
   - first:
-      213: -5425318782959690014
-    second: WardenAttack_1
+      213: -2846721149627676642
+    second: WardenIdle_1
   - first:
-      213: 6395732778883741422
-    second: WardenAttack_2
+      213: -2131346752529213744
+    second: WardenIdle_2
   - first:
-      213: -7765518977035849626
-    second: WardenAttack_3
+      213: -5732571787815265119
+    second: WardenIdle_3
   - first:
-      213: -7352051758082121853
-    second: WardenAttack_4
+      213: 7239788137813706654
+    second: WardenIdle_4
   - first:
-      213: 2066242854951158889
-    second: WardenAttack_5
+      213: -4906966260847584664
+    second: WardenIdle_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -153,7 +153,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: WardenAttack_0
+      name: WardenIdle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -167,14 +167,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a03cc1e6724cbc70800000000000000
-      internalID: 8988132034686496937
+      spriteID: 5fe0a588bd51d83f0800000000000000
+      internalID: -897036718147236107
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WardenAttack_1
+      name: WardenIdle_1
       rect:
         serializedVersion: 2
         x: 64
@@ -188,14 +188,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2eede6cbf4565b4b0800000000000000
-      internalID: -5425318782959690014
+      spriteID: e18c9dd623a6e78d0800000000000000
+      internalID: -2846721149627676642
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WardenAttack_2
+      name: WardenIdle_2
       rect:
         serializedVersion: 2
         x: 128
@@ -209,14 +209,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee6ffab831532c850800000000000000
-      internalID: 6395732778883741422
+      spriteID: 0d65052cb6feb62e0800000000000000
+      internalID: -2131346752529213744
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WardenAttack_3
+      name: WardenIdle_3
       rect:
         serializedVersion: 2
         x: 192
@@ -230,14 +230,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 660393542a55b3490800000000000000
-      internalID: -7765518977035849626
+      spriteID: 1ac58d9d450d170b0800000000000000
+      internalID: -5732571787815265119
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WardenAttack_4
+      name: WardenIdle_4
       rect:
         serializedVersion: 2
         x: 256
@@ -251,14 +251,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38f9a3df0e348f990800000000000000
-      internalID: -7352051758082121853
+      spriteID: e97097b04f4e87460800000000000000
+      internalID: 7239788137813706654
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: WardenAttack_5
+      name: WardenIdle_5
       rect:
         serializedVersion: 2
         x: 320
@@ -272,8 +272,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9648d0ddde4ccac10800000000000000
-      internalID: 2066242854951158889
+      spriteID: 86a5a591f24f6ebb0800000000000000
+      internalID: -4906966260847584664
       vertices: []
       indices: 
       edges: []
