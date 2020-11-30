@@ -44,6 +44,21 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: ParallaxBG
+    uniqueID: 744424271
+    locked: 0
+  - name: ParallaxMG
+    uniqueID: 2903574957
+    locked: 0
+  - name: ParallaxFG
+    uniqueID: 2149993325
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 174551037
+    locked: 0
+  - name: UIFG
+    uniqueID: 2125674603
     locked: 0
