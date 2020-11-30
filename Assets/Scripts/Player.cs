@@ -25,9 +25,8 @@ public class Player : Entity
     public int attackType = 0;
 
     //The time it takes to go back to the walking animation after attacking
-    private float attackAnimationTime = 0.5f;
+    private float attackAnimationTime = 1.0f;
     private float attackTimeLeft = 0.0f;
-    private bool isAttacking = false;
     private bool grounded = true;
     private bool lungeing = false;
     private int lungeFrames = 15;
@@ -46,7 +45,7 @@ public class Player : Entity
 
     void FixedUpdate()
     {
-        if(rigidbody.velocity.x <= 0.1 || !grounded)
+        if(Math.Abs(rigidbody.velocity.x) <= 0.1 || !grounded)
         {
             animator.SetBool("isIdle", true);
         }
