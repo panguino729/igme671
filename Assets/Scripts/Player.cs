@@ -32,7 +32,6 @@ public class Player : Entity
     private int lungeFrames = 15;
     private int lungeCounter = 0;
     private bool facing = true;
-    private Animator animator;
 
     void Start()
     {
