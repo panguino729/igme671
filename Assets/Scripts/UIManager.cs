@@ -21,6 +21,8 @@ public class UIManager : MonoBehaviour
 
     public MenuState currentMenuState = MenuState.Game;
 
+    public int currLevel = 0;
+
     // Start is called before the first frame update
     void Start()
     {
