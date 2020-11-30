@@ -46,6 +46,14 @@ public class Player : Entity
 
     void FixedUpdate()
     {
+        if(rigidbody.velocity.x <= 0.1 || !grounded)
+        {
+            animator.SetBool("isIdle", true);
+        }
+        else
+        {
+            animator.SetBool("isIdle", false);
+        }
         attackTimeLeft -= Time.deltaTime;
         //Once the attack animation has finished playing, return the animation to normal
         if(isAttacking && attackTimeLeft <= 0)
