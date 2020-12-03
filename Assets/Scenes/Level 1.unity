@@ -210,12 +210,12 @@ PrefabInstance:
     - target: {fileID: 5732037863343624467, guid: ed1bd71c3ef767940a0e6dc652461a1d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.604633
+      value: -9.11
       objectReference: {fileID: 0}
     - target: {fileID: 5732037863343624467, guid: ed1bd71c3ef767940a0e6dc652461a1d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.32934868
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 5732037863343624467, guid: ed1bd71c3ef767940a0e6dc652461a1d,
         type: 3}
@@ -480,6 +480,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 548588822320272443, guid: ecaa12db253975a4697006b6c036c856,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecaa12db253975a4697006b6c036c856, type: 3}
 --- !u!1001 &586135705
@@ -638,7 +643,7 @@ PrefabInstance:
     - target: {fileID: 548588822320272441, guid: ecaa12db253975a4697006b6c036c856,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 548588822320272441, guid: ecaa12db253975a4697006b6c036c856,
         type: 3}
@@ -1414,10 +1419,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 606569220686760332, guid: 746b259a00cd65a4d92b34c7b9a2cc23,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 606569220686760334, guid: 746b259a00cd65a4d92b34c7b9a2cc23,
         type: 3}
       propertyPath: m_Name
       value: Exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 606569220686760334, guid: 746b259a00cd65a4d92b34c7b9a2cc23,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 606569220686761587, guid: 746b259a00cd65a4d92b34c7b9a2cc23,
         type: 3}
