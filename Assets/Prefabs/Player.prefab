@@ -163,7 +163,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 5732037863343624464}
   bulletSpeed: 7
   attackType: 0
-  lungeCooldown: 15
+  lungeCooldown: 10
 --- !u!95 &-7081499575564926576
 Animator:
   serializedVersion: 3
