@@ -23,6 +23,7 @@ public class Player : Entity
     public SpriteRenderer spriteRenderer;
     public float bulletSpeed;
     public int attackType = 0;
+    public int lungeCooldown;
 
     //The time it takes to go back to the walking animation after attacking
     private float attackAnimationTime = 0.5f;
@@ -30,11 +31,16 @@ public class Player : Entity
     private bool grounded = true;
     private bool lungeing = false;
     private int lungeFrames = 7;
+    private int currLungeCooldown = 0;
     private int lungeCounter = 0;
     private bool facing = true;
 
     void Start()
     {
+        if(lungeCooldown == 0)
+        {
+            lungeCooldown = 10;
+        }
         animator = GetComponent<Animator>();
         initialXScale = transform.localScale.x;
         player = gameObject;
@@ -44,6 +50,10 @@ public class Player : Entity
 
     void FixedUpdate()
     {
+        if(lungeCooldown > 0)
+        {
+            lungeCooldown--;
+        }
         if(Math.Abs(rigidbody.velocity.x) <= 0.1 || !grounded)
         {
             animator.SetBool("isIdle", true);
@@ -88,8 +98,9 @@ public class Player : Entity
             Attack();
         }
 
-        if (!lungeing && Input.GetMouseButtonDown(1))
+        if (!lungeing && Input.GetMouseButtonDown(1) && currLungeCooldown <= 0)
         {
+            currLungeCooldown = lungeCooldown;
             lungeing = true;
             lungeCounter = lungeFrames;
         }

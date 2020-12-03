@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5732037863343624478}
   - component: {fileID: 5732037863343624479}
   - component: {fileID: -7081499575564926576}
-  m_Layer: 14
+  m_Layer: 18
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -163,6 +163,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 5732037863343624464}
   bulletSpeed: 7
   attackType: 0
+  lungeCooldown: 15
 --- !u!95 &-7081499575564926576
 Animator:
   serializedVersion: 3
@@ -191,7 +192,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1973908504987054185}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: AttackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
