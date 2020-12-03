@@ -12,6 +12,9 @@ public class RangedEnemy : Enemy
     public float fireInterval;
     public float time;
 
+    private float attackAnimationTime = 0.7f;
+    private float attackTimeLeft = 0.0f;
+
     private void Start()
     {
         if(attackDamage == 0)
@@ -31,9 +34,21 @@ public class RangedEnemy : Enemy
     }
     private void Update()
     {
+        attackTimeLeft -= Time.deltaTime;
+        if(attackTimeLeft <= 0 && isAttacking)
+        {
+            isAttacking = false;
+            animator.SetBool("isAttacking", false);
+        }
         time -= Time.deltaTime;
+        //Animation plays somewhat before the attack to choreograph it
+        if(time <= 0.4)
+        {
+            isAttacking = true;
+            animator.SetBool("isAttacking", true);
+        }
         //Causes the ranged enemy to fire in the direction it's moving on a set time interval
-        if(time <= 0)
+        if (time <= 0)
         {
             Fire();
             time = fireInterval;

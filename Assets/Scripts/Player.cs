@@ -23,19 +23,24 @@ public class Player : Entity
     public SpriteRenderer spriteRenderer;
     public float bulletSpeed;
     public int attackType = 0;
+    public int lungeCooldown;
 
     //The time it takes to go back to the walking animation after attacking
-    private float attackAnimationTime = 1.0f;
+    private float attackAnimationTime = 0.5f;
     private float attackTimeLeft = 0.0f;
     private bool grounded = true;
     private bool lungeing = false;
-    private int lungeFrames = 15;
+    private int lungeFrames = 7;
+    private int currLungeCooldown = 0;
     private int lungeCounter = 0;
     private bool facing = true;
-    private Animator animator;
 
     void Start()
     {
+        if(lungeCooldown == 0)
+        {
+            lungeCooldown = 10;
+        }
         animator = GetComponent<Animator>();
         initialXScale = transform.localScale.x;
         player = gameObject;
@@ -45,6 +50,10 @@ public class Player : Entity
 
     void FixedUpdate()
     {
+        if(lungeCooldown > 0)
+        {
+            lungeCooldown--;
+        }
         if(Math.Abs(rigidbody.velocity.x) <= 0.1 || !grounded)
         {
             animator.SetBool("isIdle", true);
@@ -89,8 +98,9 @@ public class Player : Entity
             Attack();
         }
 
-        if (!lungeing && Input.GetMouseButtonDown(1))
+        if (!lungeing && Input.GetMouseButtonDown(1) && currLungeCooldown <= 0)
         {
+            currLungeCooldown = lungeCooldown;
             lungeing = true;
             lungeCounter = lungeFrames;
         }
@@ -226,7 +236,7 @@ public class Player : Entity
             {
                 if (hit.gameObject.tag == "enemy")
                 {
-                    hit.gameObject.GetComponent<Enemy>().currHealth -= attackDamage;
+                    hit.gameObject.GetComponent<Enemy>().TakeDamage(attackDamage);
                 }
             }
         }
@@ -253,6 +263,7 @@ public class Player : Entity
         lungeCounter--;
         if(lungeCounter == 0)
         {
+            rigidbody.velocity = new Vector2(0, rigidbody.velocity.y);
             //Make collisions happen after dash is done
             Physics2D.IgnoreLayerCollision(18, 17, false);
             Physics2D.IgnoreLayerCollision(18, 16, false);
