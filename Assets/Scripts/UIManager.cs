@@ -118,4 +118,6 @@ public class UIManager : MonoBehaviour
     {
         healthBarSlider.value = player.currHealth;
     }
+
+    
 }

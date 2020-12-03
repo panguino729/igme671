@@ -158,7 +158,7 @@ MonoBehaviour:
   attackPoint: {fileID: 1973908504987054185}
   attackRange: 0.2
   friction: 0.9
-  lungeForce: 10
+  lungeForce: 30
   bullet: {fileID: 6714982739760605305, guid: 0d58a834f4e83de47b8a9aa48f449ba4, type: 3}
   spriteRenderer: {fileID: 5732037863343624464}
   bulletSpeed: 7
