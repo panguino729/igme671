@@ -37,7 +37,8 @@ public class Player : Entity
 
     void Start()
     {
-        if(lungeCooldown == 0)
+        Physics2D.IgnoreLayerCollision(18, 19, true);
+        if (lungeCooldown == 0)
         {
             lungeCooldown = 10;
         }

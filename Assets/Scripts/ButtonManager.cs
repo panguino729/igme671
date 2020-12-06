@@ -8,6 +8,8 @@ public class ButtonManager : MonoBehaviour
     private List<string> levels;
     private static int levelIndex = 1;
 
+    [SerializeField] private GameObject uI;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,5 +35,15 @@ public class ButtonManager : MonoBehaviour
     {
         SceneManager.LoadScene(levels[levelIndex]);
         levelIndex++;
+    }
+
+    public void OnResume()
+    {
+        uI.GetComponent<UIManager>().ButtonPress("resume");
+    }
+
+    public void OnQuit()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }
