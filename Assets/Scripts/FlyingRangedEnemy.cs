@@ -18,6 +18,7 @@ public class FlyingRangedEnemy : RangedEnemy
     // Start is called before the first frame update
     void Start()
     {
+        spr = GetComponent<SpriteRenderer>(); 
         rigidbody = GetComponent<Rigidbody2D>();
         initialXScale = transform.localScale.x;
         if(range == 0)

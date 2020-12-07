@@ -27,7 +27,7 @@ public class Player : Entity
 
     //The time it takes to go back to the walking animation after attacking
     private float attackAnimationTime = 0.5f;
-    private float attackTimeLeft = 0.0f;
+    private float attackTimeLeft = 0.5f;
     private bool grounded = true;
     private bool lungeing = false;
     private int lungeFrames = 7;
