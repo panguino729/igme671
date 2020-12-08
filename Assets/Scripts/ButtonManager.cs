@@ -29,10 +29,12 @@ public class ButtonManager : MonoBehaviour
         levels.Add("Level 2");
         levels.Add("Level 3");
         levels.Add("Level 4");
+        levels.Add("End Scene");
     }
 
     public void OnNext()
     {
+        Debug.Log(levelIndex);
         SceneManager.LoadScene(levels[levelIndex]);
         levelIndex++;
     }

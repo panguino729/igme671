@@ -12,6 +12,7 @@ public class FlyingRangedEnemy : RangedEnemy
     //Enemy will move between points on a path - if 1 is input, moves between that point and a point to its left. 
     //If none are put in, moves between its starting location and a point to the left of that.
     public List<Vector3> path;
+    public AudioSource attackAudioSource;
     //The index of the point in the path the enemy is seeking
     private int targetIndex;
     private float initialXScale;
@@ -80,6 +81,7 @@ public class FlyingRangedEnemy : RangedEnemy
         //If there is no platform in the way, fires
         if (toPlayer.collider == null)
         {
+            attackAudioSource.Play();
             Bullet newBullet = Instantiate(bullet, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity).GetComponent<Bullet>();
             newBullet.bulletSpeed = bulletSpeed;
             newBullet.BulletDirection = (Player.player.transform.position - gameObject.transform.position).normalized;

@@ -11,6 +11,7 @@ public class RangedEnemy : Enemy
 
     public float fireInterval;
     public float time;
+    public AudioSource attackAudioSource;
 
     private float attackAnimationTime = 0.7f;
     private float attackTimeLeft = 0.0f;
@@ -57,6 +58,7 @@ public class RangedEnemy : Enemy
     }
     void Fire()
     {
+        attackAudioSource.Play();
         Bullet newBullet = Instantiate(bullet, new Vector3(transform.position.x + xOffset, transform.position.y, transform.position.z), Quaternion.identity).GetComponent<Bullet>();
         newBullet.bulletSpeed = bulletSpeed;
         newBullet.BulletDirection = moveDirection;
