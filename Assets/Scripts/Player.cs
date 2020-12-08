@@ -24,6 +24,9 @@ public class Player : Entity
     public float bulletSpeed;
     public int attackType = 0;
     public int lungeCooldown;
+    public AudioSource jumpAudioSource;
+    public AudioSource attackAudioSource;
+    public AudioSource lungeAudioSource;
 
     //The time it takes to go back to the walking animation after attacking
     private float attackAnimationTime = 0.5f;
@@ -101,6 +104,7 @@ public class Player : Entity
 
         if (!lungeing && Input.GetMouseButtonDown(1) && currLungeCooldown <= 0)
         {
+            lungeAudioSource.Play();
             currLungeCooldown = lungeCooldown;
             animator.SetBool("isDodging", true);
             lungeing = true;
@@ -142,6 +146,7 @@ public class Player : Entity
         //the player is on the ground and presses jump
         if(grounded && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space)))
         {
+            jumpAudioSource.Play();
             rigidbody.AddForce(new Vector2(0, jumpForce));
             
             grounded = false;
@@ -226,6 +231,7 @@ public class Player : Entity
 
     private void Attack()
     {
+        attackAudioSource.Play();
         //play an animation
         animator.SetBool("isAttacking", true);
         attackTimeLeft = attackAnimationTime;
