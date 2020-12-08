@@ -33,6 +33,7 @@ public class ButtonManager : MonoBehaviour
 
     public void OnNext()
     {
+        Debug.Log(levelIndex);
         SceneManager.LoadScene(levels[levelIndex]);
         levelIndex++;
     }
