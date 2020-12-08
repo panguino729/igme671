@@ -102,6 +102,7 @@ public class Player : Entity
         if (!lungeing && Input.GetMouseButtonDown(1) && currLungeCooldown <= 0)
         {
             currLungeCooldown = lungeCooldown;
+            animator.SetBool("isDodging", true);
             lungeing = true;
             lungeCounter = lungeFrames;
         }
@@ -144,6 +145,7 @@ public class Player : Entity
             rigidbody.AddForce(new Vector2(0, jumpForce));
             
             grounded = false;
+            animator.SetBool("isJumping", true);
         }
     }
 
@@ -157,6 +159,7 @@ public class Player : Entity
         if (raycastHit2D.collider != null && raycastHit2D.collider.gameObject.tag == "platform")
         {
             grounded = true;
+            animator.SetBool("isJumping", false);
         }
         else
         {
@@ -269,6 +272,7 @@ public class Player : Entity
             Physics2D.IgnoreLayerCollision(18, 17, false);
             Physics2D.IgnoreLayerCollision(18, 16, false);
             lungeing = false;
+            animator.SetBool("isDodging", false);
         }
     }
 }
