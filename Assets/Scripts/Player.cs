@@ -23,16 +23,28 @@ public class Player : Entity
     public SpriteRenderer spriteRenderer;
     public float bulletSpeed;
     public int attackType = 0;
+    public int lungeCooldown;
+    public AudioSource jumpAudioSource;
+    public AudioSource attackAudioSource;
+    public AudioSource lungeAudioSource;
 
+    //The time it takes to go back to the walking animation after attacking
+    private float attackAnimationTime = 0.5f;
+    private float attackTimeLeft = 0.5f;
     private bool grounded = true;
     private bool lungeing = false;
-    private int lungeFrames = 15;
+    private int lungeFrames = 7;
+    private int currLungeCooldown = 0;
     private int lungeCounter = 0;
     private bool facing = true;
-    private Animator animator;
 
     void Start()
     {
+        Physics2D.IgnoreLayerCollision(18, 19, true);
+        if (lungeCooldown == 0)
+        {
+            lungeCooldown = 10;
+        }
         animator = GetComponent<Animator>();
         initialXScale = transform.localScale.x;
         player = gameObject;
@@ -42,6 +54,25 @@ public class Player : Entity
 
     void FixedUpdate()
     {
+        if(lungeCooldown > 0)
+        {
+            lungeCooldown--;
+        }
+        if(Math.Abs(rigidbody.velocity.x) <= 0.1 || !grounded)
+        {
+            animator.SetBool("isIdle", true);
+        }
+        else
+        {
+            animator.SetBool("isIdle", false);
+        }
+        attackTimeLeft -= Time.deltaTime;
+        //Once the attack animation has finished playing, return the animation to normal
+        if(isAttacking && attackTimeLeft <= 0)
+        {
+            isAttacking = false;
+            animator.SetBool("isAttacking", false);
+        }
         //If the player dies, reloads the scene
         if(currHealth <= 0)
         {
@@ -71,8 +102,11 @@ public class Player : Entity
             Attack();
         }
 
-        if (!lungeing && Input.GetMouseButtonDown(1))
+        if (!lungeing && Input.GetMouseButtonDown(1) && currLungeCooldown <= 0)
         {
+            lungeAudioSource.Play();
+            currLungeCooldown = lungeCooldown;
+            animator.SetBool("isDodging", true);
             lungeing = true;
             lungeCounter = lungeFrames;
         }
@@ -112,9 +146,11 @@ public class Player : Entity
         //the player is on the ground and presses jump
         if(grounded && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space)))
         {
+            jumpAudioSource.Play();
             rigidbody.AddForce(new Vector2(0, jumpForce));
             
             grounded = false;
+            animator.SetBool("isJumping", true);
         }
     }
 
@@ -128,6 +164,7 @@ public class Player : Entity
         if (raycastHit2D.collider != null && raycastHit2D.collider.gameObject.tag == "platform")
         {
             grounded = true;
+            animator.SetBool("isJumping", false);
         }
         else
         {
@@ -194,8 +231,11 @@ public class Player : Entity
 
     private void Attack()
     {
+        attackAudioSource.Play();
         //play an animation
         animator.SetBool("isAttacking", true);
+        attackTimeLeft = attackAnimationTime;
+        isAttacking = true;
         //detect enemies
         if (attackType == 0)
         {
@@ -206,7 +246,7 @@ public class Player : Entity
             {
                 if (hit.gameObject.tag == "enemy")
                 {
-                    hit.gameObject.GetComponent<Enemy>().currHealth -= attackDamage;
+                    hit.gameObject.GetComponent<Enemy>().TakeDamage(attackDamage);
                 }
             }
         }
@@ -233,10 +273,12 @@ public class Player : Entity
         lungeCounter--;
         if(lungeCounter == 0)
         {
+            rigidbody.velocity = new Vector2(0, rigidbody.velocity.y);
             //Make collisions happen after dash is done
             Physics2D.IgnoreLayerCollision(18, 17, false);
             Physics2D.IgnoreLayerCollision(18, 16, false);
             lungeing = false;
+            animator.SetBool("isDodging", false);
         }
     }
 }

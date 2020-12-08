@@ -12,12 +12,14 @@ public class Entity : MonoBehaviour
     public float maxHealth = 1.0f;
     public bool isAttacking = false;
 
-    private SpriteRenderer spr;
+    protected Animator animator;
+    protected SpriteRenderer spr;
     private int iFrames = 0; //Invincibility frames after taking damage
 
     // Start is called before the first frame update
     protected void Start()
     {
+        animator = GetComponent<Animator>();
         spr = GetComponent<SpriteRenderer>();
         rigidbody = GetComponent<Rigidbody2D>();
         boxCollider = GetComponent<BoxCollider2D>();

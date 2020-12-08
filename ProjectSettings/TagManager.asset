@@ -9,6 +9,7 @@ TagManager:
   - bullet
   - showOnGame
   - showOnPause
+  - trap
   layers:
   - Default
   - TransparentFX
@@ -29,8 +30,7 @@ TagManager:
   - Bullets
   - Enemies
   - Player
-
-  - 
+  - FlyingRangedEnemy
   - 
   - 
   - 
@@ -44,30 +44,21 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: ParallaxBG
+    uniqueID: 744424271
+    locked: 0
+  - name: ParallaxMG
+    uniqueID: 2903574957
+    locked: 0
+  - name: ParallaxFG
+    uniqueID: 2149993325
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: BackgroundSky
-    uniqueID: 91082985
-    locked: 0
-  - name: BackgroundTrees
-    uniqueID: 4244036433
-    locked: 0
-  - name: MiddlegroundLight
-    uniqueID: 2676619273
-    locked: 0
-  - name: MiddlegroundTrees
-    uniqueID: 12924063
-    locked: 0
-  - name: MiddlegroundFog
-    uniqueID: 652062235
-    locked: 0
-  - name: GameAssets
-    uniqueID: 2855963277
-    locked: 0
-  - name: Foreground
-    uniqueID: 339385175
-    locked: 0
   - name: UI
-    uniqueID: 1204896067
+    uniqueID: 174551037
+    locked: 0
+  - name: UIFG
+    uniqueID: 2125674603
     locked: 0

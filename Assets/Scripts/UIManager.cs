@@ -118,4 +118,16 @@ public class UIManager : MonoBehaviour
     {
         healthBarSlider.value = player.currHealth;
     }
+
+    /// <summary>
+    /// Checks which button was pressed
+    /// </summary>
+    /// <param name="name">Name of button pressed</param>
+    public void ButtonPress(string name)
+    {
+        if (name == "resume")
+        {
+            MenuControl(pauseObjects, MenuState.Game);
+        }
+    }
 }
