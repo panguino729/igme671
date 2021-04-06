@@ -38,7 +38,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 792794003866235804}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 37727ece633153849a0cfe594220f5bb, type: 3}
@@ -256,6 +256,7 @@ MonoBehaviour:
   bulletSpeed: 0
   fireInterval: 0
   time: 0
+  rangedAttackPath: event:/SFX/rangedAttack
   attackAudioSource: {fileID: 7148360478812557650}
 --- !u!61 &809246906317951190
 BoxCollider2D:

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
+using FMOD.Studio;
 
 public class RangedEnemy : Enemy
 {
@@ -11,6 +12,13 @@ public class RangedEnemy : Enemy
 
     public float fireInterval;
     public float time;
+
+    // Audio
+    [FMODUnity.EventRef]
+    public string rangedAttackPath;
+
+    private EventInstance rangedAttack;
+
     public AudioSource attackAudioSource;
 
     private float attackAnimationTime = 0.7f;
@@ -18,6 +26,8 @@ public class RangedEnemy : Enemy
 
     private void Start()
     {
+        rangedAttack = FMODUnity.RuntimeManager.CreateInstance(rangedAttackPath);
+
         if(attackDamage == 0)
         {
             attackDamage = 5;
@@ -59,6 +69,7 @@ public class RangedEnemy : Enemy
     void Fire()
     {
         //attackAudioSource.Play();
+        rangedAttack.start();
         Bullet newBullet = Instantiate(bullet, new Vector3(transform.position.x + xOffset, transform.position.y, transform.position.z), Quaternion.identity).GetComponent<Bullet>();
         newBullet.bulletSpeed = bulletSpeed;
         newBullet.BulletDirection = moveDirection;

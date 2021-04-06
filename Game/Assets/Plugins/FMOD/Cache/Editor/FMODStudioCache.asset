@@ -1,5 +1,51 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9137499686523139409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/portal
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/portal
+  guid: 8faa0d36033b494fa6b79585b63a4bf4
+  Banks:
+  - {fileID: 4134563936519794455}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-6636626757313106819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/wind
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/wind
+  guid: d258885b8b64534d9651694a6ff291e2
+  Banks:
+  - {fileID: 4134563936519794455}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &-4496185669781773643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23,6 +69,29 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-1944441380581620262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/playerMeleeAttack
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/playerMeleeAttack
+  guid: b6387b0de980f9429be4ca2e7a6332c7
+  Banks:
+  - {fileID: 4134563936519794455}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1175
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39,15 +108,20 @@ MonoBehaviour:
   - {fileID: 2953384724953765414}
   - {fileID: 4134563936519794455}
   EditorEvents:
-  - {fileID: 7982049409917102205}
-  - {fileID: 2167411080256118621}
-  - {fileID: -4496185669781773643}
+  - {fileID: 7809280834872525456}
+  - {fileID: 5689304184628691032}
+  - {fileID: 7427120576018644276}
+  - {fileID: 7330385046691469491}
+  - {fileID: -9137499686523139409}
+  - {fileID: -1944441380581620262}
+  - {fileID: -6636626757313106819}
+  - {fileID: 6623340362821679221}
   EditorParameters: []
   MasterBanks:
   - {fileID: 4134563936519794455}
   StringsBanks:
   - {fileID: 2953384724953765414}
-  stringsBankWriteTime: 637532710900000000
+  stringsBankWriteTime: 637532721850000000
   cacheVersion: 6
 --- !u!114 &2167411080256118621
 MonoBehaviour:
@@ -87,11 +161,11 @@ MonoBehaviour:
   Path: FMOD/gameSounds/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637532710900000000
+  lastModified: 637532721850000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 824
+    Value: 1096
   Exists: 1
 --- !u!114 &4134563936519794455
 MonoBehaviour:
@@ -108,10 +182,125 @@ MonoBehaviour:
   Path: FMOD/gameSounds/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637532710900000000
+  lastModified: 637532721850000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &5689304184628691032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/playerDash
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/playerDash
+  guid: 4aadb5d6e8f1a2469ab4323f94a21d26
+  Banks:
+  - {fileID: 4134563936519794455}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 426
+--- !u!114 &6623340362821679221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/buttonClick
+  m_EditorClassIdentifier: 
+  Path: event:/UI/buttonClick
+  guid: e42dba937d2bcd4b8f3b626fb12cbc99
+  Banks:
+  - {fileID: 4134563936519794455}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &7330385046691469491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/playerJump
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/playerJump
+  guid: 8ae801df44aa484781ecc56fc5175668
+  Banks:
+  - {fileID: 4134563936519794455}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 497
+--- !u!114 &7427120576018644276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/rangedAttack
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/rangedAttack
+  guid: 5f31c078dc40794f9717236a6462f80a
+  Banks:
+  - {fileID: 4134563936519794455}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 599
+--- !u!114 &7809280834872525456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/whispers
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/whispers
+  guid: 249474133c8fd7438402c6b51d92718b
+  Banks:
+  - {fileID: 4134563936519794455}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &7982049409917102205
 MonoBehaviour:
   m_ObjectHideFlags: 0

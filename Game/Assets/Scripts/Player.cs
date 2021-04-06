@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using FMOD.Studio;
 
 public class Player : Entity
 {
@@ -24,6 +25,19 @@ public class Player : Entity
     public float bulletSpeed;
     public int attackType = 0;
     public int lungeCooldown;
+
+    // Audio
+    [FMODUnity.EventRef]
+    public string playerAttackPath;
+    [FMODUnity.EventRef]
+    public string playerJumpPath;
+    [FMODUnity.EventRef]
+    public string playerDashPath;
+
+    private EventInstance playerAttack;
+    private EventInstance playerJump;
+    private EventInstance playerDash;
+
     public AudioSource jumpAudioSource;
     public AudioSource attackAudioSource;
     public AudioSource lungeAudioSource;
@@ -40,6 +54,10 @@ public class Player : Entity
 
     void Start()
     {
+        playerAttack = FMODUnity.RuntimeManager.CreateInstance(playerAttackPath);
+        playerJump = FMODUnity.RuntimeManager.CreateInstance(playerJumpPath);
+        playerDash = FMODUnity.RuntimeManager.CreateInstance(playerDashPath);
+
         Physics2D.IgnoreLayerCollision(18, 19, true);
         if (lungeCooldown == 0)
         {
@@ -104,7 +122,8 @@ public class Player : Entity
 
         if (!lungeing && Input.GetMouseButtonDown(1) && currLungeCooldown <= 0)
         {
-            lungeAudioSource.Play();
+            //lungeAudioSource.Play();
+            playerDash.start();
             currLungeCooldown = lungeCooldown;
             animator.SetBool("isDodging", true);
             lungeing = true;
@@ -147,6 +166,7 @@ public class Player : Entity
         if(grounded && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space)))
         {
             //jumpAudioSource.Play();
+            playerJump.start();
             rigidbody.AddForce(new Vector2(0, jumpForce));
             
             grounded = false;
@@ -232,6 +252,7 @@ public class Player : Entity
     private void Attack()
     {
         //attackAudioSource.Play();
+        playerAttack.start();
         //play an animation
         animator.SetBool("isAttacking", true);
         attackTimeLeft = attackAnimationTime;
