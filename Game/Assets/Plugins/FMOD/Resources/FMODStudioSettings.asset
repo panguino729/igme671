@@ -560,7 +560,10 @@ MonoBehaviour:
   Plugins: []
   MasterBanks:
   - Master
-  Banks: []
+  Banks:
+  - Ambience
+  - SFX
+  - UI
   BanksToLoad:
   - Ambience.bank
   - Master.bank

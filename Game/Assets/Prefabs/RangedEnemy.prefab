@@ -256,7 +256,7 @@ MonoBehaviour:
   bulletSpeed: 0
   fireInterval: 0
   time: 0
-  rangedAttackPath: event:/SFX/rangedAttack
+  rangedAttackPath: event:/SFX/Ranged/rangedAttack
   attackAudioSource: {fileID: 7148360478812557650}
 --- !u!61 &809246906317951190
 BoxCollider2D:

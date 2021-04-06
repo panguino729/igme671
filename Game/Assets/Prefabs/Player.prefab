@@ -294,9 +294,9 @@ MonoBehaviour:
   bulletSpeed: 7
   attackType: 0
   lungeCooldown: 10
-  playerAttackPath: event:/SFX/playerMeleeAttack
-  playerJumpPath: event:/SFX/playerJump
-  playerDashPath: event:/SFX/playerDash
+  playerAttackPath: event:/SFX/Player/playerMeleeAttack
+  playerJumpPath: event:/SFX/Player/playerJump
+  playerDashPath: event:/SFX/Player/playerDash
   jumpAudioSource: {fileID: 4126773038598515441}
   attackAudioSource: {fileID: 499518576908811323}
   lungeAudioSource: {fileID: 8466473950353495931}
