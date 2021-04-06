@@ -197,6 +197,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 499518576908811323, guid: ed1bd71c3ef767940a0e6dc652461a1d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4126773038598515441, guid: ed1bd71c3ef767940a0e6dc652461a1d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5732037863343624464, guid: ed1bd71c3ef767940a0e6dc652461a1d,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -205,7 +215,7 @@ PrefabInstance:
     - target: {fileID: 5732037863343624464, guid: ed1bd71c3ef767940a0e6dc652461a1d,
         type: 3}
       propertyPath: m_SortingLayer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5732037863343624467, guid: ed1bd71c3ef767940a0e6dc652461a1d,
         type: 3}
@@ -266,6 +276,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8466473950353495931, guid: ed1bd71c3ef767940a0e6dc652461a1d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed1bd71c3ef767940a0e6dc652461a1d, type: 3}
@@ -732,6 +747,11 @@ PrefabInstance:
     - target: {fileID: 809246906317951189, guid: b9abeb7fad0711147bd1995972d6bd24,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7148360478812557650, guid: b9abeb7fad0711147bd1995972d6bd24,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1257,7 +1277,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1988382670}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1988382672
 Camera:
   m_ObjectHideFlags: 0
