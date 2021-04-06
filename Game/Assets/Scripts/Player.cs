@@ -146,7 +146,7 @@ public class Player : Entity
         //the player is on the ground and presses jump
         if(grounded && (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.Space)))
         {
-            jumpAudioSource.Play();
+            //jumpAudioSource.Play();
             rigidbody.AddForce(new Vector2(0, jumpForce));
             
             grounded = false;
@@ -231,7 +231,7 @@ public class Player : Entity
 
     private void Attack()
     {
-        attackAudioSource.Play();
+        //attackAudioSource.Play();
         //play an animation
         animator.SetBool("isAttacking", true);
         attackTimeLeft = attackAnimationTime;

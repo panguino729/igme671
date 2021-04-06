@@ -58,7 +58,7 @@ public class RangedEnemy : Enemy
     }
     void Fire()
     {
-        attackAudioSource.Play();
+        //attackAudioSource.Play();
         Bullet newBullet = Instantiate(bullet, new Vector3(transform.position.x + xOffset, transform.position.y, transform.position.z), Quaternion.identity).GetComponent<Bullet>();
         newBullet.bulletSpeed = bulletSpeed;
         newBullet.BulletDirection = moveDirection;

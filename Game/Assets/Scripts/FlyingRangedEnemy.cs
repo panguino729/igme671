@@ -81,7 +81,7 @@ public class FlyingRangedEnemy : RangedEnemy
         //If there is no platform in the way, fires
         if (toPlayer.collider == null)
         {
-            attackAudioSource.Play();
+            //attackAudioSource.Play();
             Bullet newBullet = Instantiate(bullet, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity).GetComponent<Bullet>();
             newBullet.bulletSpeed = bulletSpeed;
             newBullet.BulletDirection = (Player.player.transform.position - gameObject.transform.position).normalized;
