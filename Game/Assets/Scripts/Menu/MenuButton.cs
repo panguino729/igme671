@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using FMOD.Studio;
 
 public class MenuButton : MonoBehaviour
 {
@@ -15,8 +16,20 @@ public class MenuButton : MonoBehaviour
     [Header("Menu Change Button")]
     public Transform nextMenuPos;
 
+    // Audio
+    [FMODUnity.EventRef]
+    public string buttonClickPath;
+
+    private EventInstance buttonClick;
+
+    public void Start()
+    {
+        buttonClick = FMODUnity.RuntimeManager.CreateInstance(buttonClickPath);
+    }
+
     public void ButtonClicked()
     {
+        buttonClick.start();
         switch(buttonType)
         {
             case MenuButtonType.Level:

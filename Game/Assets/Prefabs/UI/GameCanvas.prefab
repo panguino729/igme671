@@ -300,6 +300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uI: {fileID: 6719465532070397577}
+  buttonClickPath: event:/UI/buttonClick
 --- !u!1 &4122198854966739535
 GameObject:
   m_ObjectHideFlags: 0
@@ -565,6 +566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uI: {fileID: 6719465532070397577}
+  buttonClickPath: event:/UI/buttonClick
 --- !u!1 &5705141860262362772
 GameObject:
   m_ObjectHideFlags: 0

@@ -54,10 +54,11 @@ public class Enemy : Entity
     // Update is called once per frame
     public void Update()
     {
-        if(currHealth <= 0)
-        {
-            Destroy(gameObject);
-        }
+        //if(currHealth <= 0)
+        //{
+        //    Debug.Log("Base Enemy defeat");
+        //    Destroy(gameObject);
+        //}
         base.Update();
         Move();
     }

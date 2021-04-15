@@ -257,6 +257,7 @@ MonoBehaviour:
   fireInterval: 0
   time: 0
   rangedAttackPath: event:/SFX/Ranged/rangedAttack
+  rangedDefeatPath: event:/SFX/Demon/demonDefeat
   attackAudioSource: {fileID: 7148360478812557650}
 --- !u!61 &809246906317951190
 BoxCollider2D:

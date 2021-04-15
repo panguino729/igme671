@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{1c30b1b2-65af-4e18-887d-d2df4333aea4}">
+		<property name="name">
+			<value>portalProximity</value>
+		</property>
+		<relationship name="folder">
+			<destination>{2cd7b64a-5d16-4368-b9bd-2b24f0967647}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{09cd851a-f3a6-4fa7-b5c6-9b8e2e2330f0}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{09cd851a-f3a6-4fa7-b5c6-9b8e2e2330f0}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

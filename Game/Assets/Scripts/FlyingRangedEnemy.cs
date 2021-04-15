@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMOD.Studio;
 
 public class FlyingRangedEnemy : RangedEnemy
 {
@@ -16,6 +17,15 @@ public class FlyingRangedEnemy : RangedEnemy
     //The index of the point in the path the enemy is seeking
     private int targetIndex;
     private float initialXScale;
+
+    // Audio
+    [FMODUnity.EventRef]
+    public string flyingAttackPath;
+    public string flyingDefeatPath;
+
+    private EventInstance flyingAttack;
+    private EventInstance flyingDefeat;
+
     // Start is called before the first frame update
     void Start()
     {

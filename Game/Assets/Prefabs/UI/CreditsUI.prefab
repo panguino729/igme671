@@ -835,6 +835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uI: {fileID: 7896642835254717020}
+  buttonClickPath: event:/UI/buttonClick
 --- !u!1 &8517932355477589473
 GameObject:
   m_ObjectHideFlags: 0

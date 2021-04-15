@@ -16,8 +16,11 @@ public class RangedEnemy : Enemy
     // Audio
     [FMODUnity.EventRef]
     public string rangedAttackPath;
+    [FMODUnity.EventRef]
+    public string rangedDefeatPath;
 
     private EventInstance rangedAttack;
+    private EventInstance rangedDefeat;
 
     public AudioSource attackAudioSource;
 
@@ -27,6 +30,7 @@ public class RangedEnemy : Enemy
     private void Start()
     {
         rangedAttack = FMODUnity.RuntimeManager.CreateInstance(rangedAttackPath);
+        rangedDefeat = FMODUnity.RuntimeManager.CreateInstance(rangedDefeatPath);
 
         if(attackDamage == 0)
         {
@@ -45,6 +49,13 @@ public class RangedEnemy : Enemy
     }
     private void Update()
     {
+        if (currHealth <= 0)
+        {
+            rangedDefeat.start();
+            Destroy(gameObject);
+            Debug.Log("ranged defeat");
+        }
+
         attackTimeLeft -= Time.deltaTime;
         if(attackTimeLeft <= 0 && isAttacking)
         {

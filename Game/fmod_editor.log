@@ -6,7 +6,7 @@
 [LOG] OutputCoreAudio::init                    : Maximum hardware read size: 1024 samples, Software buffer size: 512 samples, Number of software buffers: 4.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0x7fcc644fbc08 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0x7fcc007ce208 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -15,14 +15,20 @@
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] SoundI::release                          :  (0x7fcbf7ac95d8)
-[LOG] SoundI::release                          :     enemyattacksound (0x7fcbf7ac9748)
-[LOG] SoundI::release                          :  (0x7fcbf78ac528)
-[LOG] SoundI::release                          :     lungesound (0x7fcbf78ab3b8)
-[LOG] SoundI::release                          :  (0x7fcbf7ac9a88)
-[LOG] SoundI::release                          :     attacksound (0x7fcbf7ac9bf8)
-[LOG] SoundI::release                          :  (0x7fcbf67a8b38)
-[LOG] SoundI::release                          :     jumpsound (0x7fcbf67a8ca8)
+[LOG] SoundI::release                          :  (0x7fcbf6ecd158)
+[LOG] SoundI::release                          :     enemyattacksound (0x7fcbf6eb04d8)
+[LOG] SoundI::release                          :  (0x7fcbf6edf868)
+[LOG] SoundI::release                          :     jumpsound (0x7fcbf6ed5fb8)
+[LOG] SoundI::release                          :  (0x7fcbf69fe3b8)
+[LOG] SoundI::release                          :     lungesound (0x7fcbf69ea038)
+[LOG] SoundI::release                          :  (0x7fcbf69f2ee8)
+[LOG] SoundI::release                          :     demonDefeat (0x7fcbf69e91f8)
+[LOG] SoundI::release                          :  (0x7fcbf6ed7468)
+[LOG] SoundI::release                          :     attacksound (0x7fcbf6ec3958)
+[LOG] SoundI::release                          :  (0x7fcbf6ed2798)
+[LOG] SoundI::release                          :     portalEnterChimes (0x7fcbf6eb0cc8)
+[LOG] SoundI::release                          :  (0x7fcbf6ec16e8)
+[LOG] SoundI::release                          :     buttonClick (0x7fcbf6ea12c8)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
@@ -33,3 +39,10 @@
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] SystemI::close                           : Closed.
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)

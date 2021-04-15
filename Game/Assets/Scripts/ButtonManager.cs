@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using FMOD.Studio;
 
 public class ButtonManager : MonoBehaviour
 {
@@ -10,9 +11,17 @@ public class ButtonManager : MonoBehaviour
 
     [SerializeField] private GameObject uI;
 
+    // Audio
+    [FMODUnity.EventRef]
+    public string buttonClickPath;
+
+    private EventInstance buttonClick;
+
     // Start is called before the first frame update
     void Start()
     {
+        buttonClick = FMODUnity.RuntimeManager.CreateInstance(buttonClickPath);
+
         InitLevels();
     }
 
@@ -34,6 +43,7 @@ public class ButtonManager : MonoBehaviour
 
     public void OnNext()
     {
+        buttonClick.start();
         Debug.Log(levelIndex);
         SceneManager.LoadScene(levels[levelIndex]);
         levelIndex++;
@@ -41,11 +51,13 @@ public class ButtonManager : MonoBehaviour
 
     public void OnResume()
     {
+        buttonClick.start();
         uI.GetComponent<UIManager>().ButtonPress("resume");
     }
 
     public void OnQuit()
     {
+        buttonClick.start();
         SceneManager.LoadScene("MainMenu");
     }
 }

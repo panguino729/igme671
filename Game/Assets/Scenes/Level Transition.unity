@@ -416,6 +416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uI: {fileID: 0}
+  buttonClickPath: event:/UI/buttonClick
 --- !u!4 &926892147
 Transform:
   m_ObjectHideFlags: 0

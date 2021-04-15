@@ -285,17 +285,17 @@ PrefabInstance:
     - target: {fileID: 5732037863343624479, guid: ed1bd71c3ef767940a0e6dc652461a1d,
         type: 3}
       propertyPath: playerAttackPath
-      value: event:/SFX/playerMeleeAttack
+      value: event:/SFX/Player/playerMeleeAttack
       objectReference: {fileID: 0}
     - target: {fileID: 5732037863343624479, guid: ed1bd71c3ef767940a0e6dc652461a1d,
         type: 3}
       propertyPath: playerJumpPath
-      value: event:/SFX/playerJump
+      value: event:/SFX/Player/playerJump
       objectReference: {fileID: 0}
     - target: {fileID: 5732037863343624479, guid: ed1bd71c3ef767940a0e6dc652461a1d,
         type: 3}
       propertyPath: playerDashPath
-      value: event:/SFX/playerDash
+      value: event:/SFX/Player/playerDash
       objectReference: {fileID: 0}
     - target: {fileID: 8466473950353495931, guid: ed1bd71c3ef767940a0e6dc652461a1d,
         type: 3}
