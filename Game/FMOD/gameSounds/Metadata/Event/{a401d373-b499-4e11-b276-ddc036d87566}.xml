@@ -5,7 +5,7 @@
 			<value>demonDefeat</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{20da4b31-3f54-416e-9ea7-49b7535091be}</destination>
@@ -113,7 +113,6 @@
 	<object class="MixerBusEffectChain" id="{26a221f3-15c0-4072-a5ce-48ad44ad7eb9}">
 		<relationship name="effects">
 			<destination>{2ef43e1c-d5ae-471a-9c88-11a2167b9f0e}</destination>
-			<destination>{1b58c3b5-0e84-45c0-82dc-11d7d69299f8}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{e1a236b2-d951-498e-9513-15ebb9a72385}" />
@@ -125,6 +124,5 @@
 	</object>
 	<object class="MixerBusPanner" id="{a9deafd6-cb6a-4e57-b984-187cb8fec15a}" />
 	<object class="MixerBusFader" id="{2ef43e1c-d5ae-471a-9c88-11a2167b9f0e}" />
-	<object class="SpatialiserEffect" id="{1b58c3b5-0e84-45c0-82dc-11d7d69299f8}" />
 	<object class="MixerBusFader" id="{202835ad-9b03-4557-906a-2a9c3eca8898}" />
 </objects>

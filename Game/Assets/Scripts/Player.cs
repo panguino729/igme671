@@ -38,10 +38,6 @@ public class Player : Entity
     private EventInstance playerJump;
     private EventInstance playerDash;
 
-    public AudioSource jumpAudioSource;
-    public AudioSource attackAudioSource;
-    public AudioSource lungeAudioSource;
-
     //The time it takes to go back to the walking animation after attacking
     private float attackAnimationTime = 0.5f;
     private float attackTimeLeft = 0.5f;

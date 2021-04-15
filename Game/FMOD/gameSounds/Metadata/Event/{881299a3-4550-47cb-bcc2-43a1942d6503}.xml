@@ -5,7 +5,7 @@
 			<value>rangedWalk</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>0</value>
 		</property>
 		<relationship name="folder">
 			<destination>{dc82f2e3-34ad-4a60-8e06-521fdb9d69d9}</destination>
@@ -98,7 +98,6 @@
 	<object class="MixerBusEffectChain" id="{2a62fdd1-a771-48d3-b5e7-87ba6311bcf5}">
 		<relationship name="effects">
 			<destination>{433d552a-5f13-4717-aecb-ee6e7be80a0b}</destination>
-			<destination>{c1e4aae3-d07c-444b-9cc6-c7ef68383e53}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{85a91225-7d81-42ac-b8e8-55457476183f}" />
@@ -110,6 +109,5 @@
 	</object>
 	<object class="MixerBusPanner" id="{8a6b836f-a802-4bb0-ad33-b282963c95e9}" />
 	<object class="MixerBusFader" id="{433d552a-5f13-4717-aecb-ee6e7be80a0b}" />
-	<object class="SpatialiserEffect" id="{c1e4aae3-d07c-444b-9cc6-c7ef68383e53}" />
 	<object class="MixerBusFader" id="{908d50ef-c43c-41ad-83bc-764207ed704f}" />
 </objects>

@@ -5,7 +5,7 @@
 			<value>rangedDefeat</value>
 		</property>
 		<property name="outputFormat">
-			<value>2</value>
+			<value>0</value>
 		</property>
 		<relationship name="folder">
 			<destination>{dc82f2e3-34ad-4a60-8e06-521fdb9d69d9}</destination>
@@ -98,7 +98,6 @@
 	<object class="MixerBusEffectChain" id="{ef4798c8-e3b7-4ea1-95ca-1644d70418b4}">
 		<relationship name="effects">
 			<destination>{de15315d-1594-4cd2-9d55-a4c741108151}</destination>
-			<destination>{a714a1cd-f28d-4d1c-b1fc-679df48f7d8b}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{14246387-e4ea-4b70-8523-ed88f04476ea}" />
@@ -110,6 +109,5 @@
 	</object>
 	<object class="MixerBusPanner" id="{d90cce4a-7229-49a7-9297-52cbb1d33ee4}" />
 	<object class="MixerBusFader" id="{de15315d-1594-4cd2-9d55-a4c741108151}" />
-	<object class="SpatialiserEffect" id="{a714a1cd-f28d-4d1c-b1fc-679df48f7d8b}" />
 	<object class="MixerBusFader" id="{dc51b576-a4b3-472f-8e19-42d4f50b6d13}" />
 </objects>

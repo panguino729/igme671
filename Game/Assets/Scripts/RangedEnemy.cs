@@ -22,8 +22,6 @@ public class RangedEnemy : Enemy
     private EventInstance rangedAttack;
     private EventInstance rangedDefeat;
 
-    public AudioSource attackAudioSource;
-
     private float attackAnimationTime = 0.7f;
     private float attackTimeLeft = 0.0f;
 
