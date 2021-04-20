@@ -21,14 +21,21 @@ public class FlyingRangedEnemy : RangedEnemy
     // Audio
     [FMODUnity.EventRef]
     public string flyingAttackPath;
+    [FMODUnity.EventRef]
     public string flyingDefeatPath;
+    [FMODUnity.EventRef]
+    public string flyingMovementPath;
 
     private EventInstance flyingAttack;
     private EventInstance flyingDefeat;
+    private EventInstance flyingMovement;
 
     // Start is called before the first frame update
     void Start()
     {
+        flyingMovement = FMODUnity.RuntimeManager.CreateInstance(flyingMovementPath);
+        flyingMovement.start();
+
         spr = GetComponent<SpriteRenderer>(); 
         rigidbody = GetComponent<Rigidbody2D>();
         initialXScale = transform.localScale.x;
@@ -69,6 +76,7 @@ public class FlyingRangedEnemy : RangedEnemy
     {
         if (currHealth <= 0)
         {
+            flyingMovement.stop(STOP_MODE.IMMEDIATE);
             Destroy(gameObject);
         }
         Move();

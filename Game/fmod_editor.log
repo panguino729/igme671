@@ -6,7 +6,7 @@
 [LOG] OutputCoreAudio::init                    : Maximum hardware read size: 1024 samples, Software buffer size: 512 samples, Number of software buffers: 4.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0x7fe00f8db208 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0x7fe00980fa08 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -15,24 +15,42 @@
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] SoundI::release                          :  (0x7fe0082db488)
-[LOG] SoundI::release                          :     enemyattacksound (0x7fe008245e08)
-[LOG] SoundI::release                          :  (0x7fe01801eac8)
-[LOG] SoundI::release                          :     rangedDefeat (0x7fe0082cdde8)
-[LOG] SoundI::release                          :  (0x7fe0082d90d8)
-[LOG] SoundI::release                          :     playerHealth (0x7fe018006b58)
-[LOG] SoundI::release                          :  (0x7fe0082e7f68)
-[LOG] SoundI::release                          :     rangedDamage (0x7fe0082cbf68)
-[LOG] SoundI::release                          :  (0x7fe0180a9c28)
-[LOG] SoundI::release                          :     jumpsound (0x7fe0082d6008)
-[LOG] SoundI::release                          :  (0x7fe0082e65c8)
-[LOG] SoundI::release                          :     lungesound (0x7fe0082e31e8)
-[LOG] SoundI::release                          :  (0x7fe0180ace78)
-[LOG] SoundI::release                          :     attacksound (0x7fe0082de3c8)
-[LOG] SoundI::release                          :  (0x7fe008210728)
-[LOG] SoundI::release                          :     portalEnterChimes (0x7fe00829d148)
-[LOG] SoundI::release                          :  (0x7fe018076e68)
-[LOG] SoundI::release                          :     buttonClick (0x7fe0082c0788)
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 107296
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 15680
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x700008587954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1544562ce
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x154456385
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1544563b2
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x154456456
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7fdfdaae8ad8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='flyingMovement', format=5, channels=2, frequency=48000, lengthbytes=8512, lengthpcm=29459, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.303177.
+[LOG] SoundI::release                          :  (0x7fe00e615888)
+[LOG] SoundI::release                          :     rangedAttack (0x7fe00e6d6cf8)
+[LOG] SoundI::release                          :  (0x7fdfdb3fc8c8)
+[LOG] SoundI::release                          :     rangedDefeat (0x7fe00e6e5ed8)
+[LOG] SoundI::release                          :  (0x7fe00e39c678)
+[LOG] SoundI::release                          :     flyingMovement (0x7fdfdaf765d8)
+[LOG] SoundI::release                          :  (0x7fe00e669f48)
+[LOG] SoundI::release                          :     playerHealth (0x7fe00e632a28)
+[LOG] SoundI::release                          :  (0x7fe00e6b7fa8)
+[LOG] SoundI::release                          :     rangedDamage (0x7fe00e6d2898)
+[LOG] SoundI::release                          :  (0x7fe00e678d48)
+[LOG] SoundI::release                          :     playerJump (0x7fe00e674ff8)
+[LOG] SoundI::release                          :  (0x7fe00e688438)
+[LOG] SoundI::release                          :     playerDash (0x7fe00e686588)
+[LOG] SoundI::release                          :  (0x7fe00e6a4708)
+[LOG] SoundI::release                          :     playerMeleeAttack (0x7fe00e6c7e08)
+[LOG] SoundI::release                          :  (0x7fe00e64e758)
+[LOG] SoundI::release                          :     portalEnterChimes (0x7fe00e6b49a8)
+[LOG] SoundI::release                          :  (0x7fdfdb359998)
+[LOG] SoundI::release                          :     buttonClick (0x7fe00e6faa68)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
@@ -43,3 +61,12 @@
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] SystemI::close                           : Closed.
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)

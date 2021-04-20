@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="MixerGroup" id="{ef133ddd-8da5-4dda-aa8c-08950a51f358}">
+		<property name="volume">
+			<value>-6</value>
+		</property>
+		<property name="name">
+			<value>Flying</value>
+		</property>
+		<property name="maxInstances">
+			<value>6</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{33cfe54d-6e0d-4ae3-8439-24c78f52c830}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{c491f4f5-026d-49aa-829b-e6b0f424fca8}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{a2776f42-fae8-4f5a-9d7f-4d9cba225753}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{33cfe54d-6e0d-4ae3-8439-24c78f52c830}">
+		<relationship name="effects">
+			<destination>{2368f704-6713-44e0-af81-116b03309931}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{c491f4f5-026d-49aa-829b-e6b0f424fca8}" />
+	<object class="MixerBusFader" id="{2368f704-6713-44e0-af81-116b03309931}" />
+</objects>
