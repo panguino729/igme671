@@ -299,6 +299,7 @@ MonoBehaviour:
   playerDashPath: event:/SFX/Player/playerDash
   playerHealthPath: event:/SFX/Player/playerHealth
   playerHealthParamPath: playerHealth
+  whispersPath: event:/Ambience/whispers
 --- !u!95 &-7081499575564926576
 Animator:
   serializedVersion: 3

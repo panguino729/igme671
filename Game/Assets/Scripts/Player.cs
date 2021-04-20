@@ -38,10 +38,15 @@ public class Player : Entity
     [FMODUnity.ParamRef]
     public string playerHealthParamPath;
 
+    [FMODUnity.EventRef]
+    public string whispersPath;
+
     private EventInstance playerAttack;
     private EventInstance playerJump;
     private EventInstance playerDash;
 	private EventInstance playerHealth;
+
+    private EventInstance whispers;
 
     EventDescription playerHealthD;
     PARAMETER_DESCRIPTION playerHealthPD;
@@ -64,7 +69,10 @@ public class Player : Entity
         playerDash = FMODUnity.RuntimeManager.CreateInstance(playerDashPath);
 		playerHealth = FMODUnity.RuntimeManager.CreateInstance(playerHealthPath);
 
+        whispers = FMODUnity.RuntimeManager.CreateInstance(whispersPath);
+
 		playerHealth.start();
+        whispers.start();
 
         playerHealthD = FMODUnity.RuntimeManager.GetEventDescription(playerHealthPath);
         playerHealthD.getParameterDescriptionByName(playerHealthParamPath, out playerHealthPD);
@@ -325,6 +333,9 @@ public class Player : Entity
     {
         playerHealth.stop(STOP_MODE.IMMEDIATE);
         playerHealth.release();
+
+        whispers.stop(STOP_MODE.ALLOWFADEOUT);
+        whispers.release();
         Debug.Log("stop sound");
     }
 }
