@@ -141,6 +141,7 @@ GameObject:
   - component: {fileID: 5732037863343624478}
   - component: {fileID: 5732037863343624479}
   - component: {fileID: -7081499575564926576}
+  - component: {fileID: -7995779540110229929}
   m_Layer: 18
   m_Name: Player
   m_TagString: Player
@@ -297,9 +298,8 @@ MonoBehaviour:
   playerAttackPath: event:/SFX/Player/playerMeleeAttack
   playerJumpPath: event:/SFX/Player/playerJump
   playerDashPath: event:/SFX/Player/playerDash
-  jumpAudioSource: {fileID: 4126773038598515441}
-  attackAudioSource: {fileID: 499518576908811323}
-  lungeAudioSource: {fileID: 8466473950353495931}
+  playerHealthPath: event:/SFX/Player/playerHealth
+  playerHealthParamPath: playerHealth
 --- !u!95 &-7081499575564926576
 Animator:
   serializedVersion: 3
@@ -319,6 +319,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-7995779540110229929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5732037863343624476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 744a208c85da6d04c861d81b992e4ead, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Emitters: []
+  TriggerEvent: 0
 --- !u!1 &5790779289026416116
 GameObject:
   m_ObjectHideFlags: 0

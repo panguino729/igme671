@@ -33,10 +33,19 @@ public class Player : Entity
     public string playerJumpPath;
     [FMODUnity.EventRef]
     public string playerDashPath;
+	[FMODUnity.EventRef]
+	public string playerHealthPath;
+    [FMODUnity.ParamRef]
+    public string playerHealthParamPath;
 
     private EventInstance playerAttack;
     private EventInstance playerJump;
     private EventInstance playerDash;
+	private EventInstance playerHealth;
+
+    EventDescription playerHealthD;
+    PARAMETER_DESCRIPTION playerHealthPD;
+    PARAMETER_ID playerHealthPID;
 
     //The time it takes to go back to the walking animation after attacking
     private float attackAnimationTime = 0.5f;
@@ -53,6 +62,14 @@ public class Player : Entity
         playerAttack = FMODUnity.RuntimeManager.CreateInstance(playerAttackPath);
         playerJump = FMODUnity.RuntimeManager.CreateInstance(playerJumpPath);
         playerDash = FMODUnity.RuntimeManager.CreateInstance(playerDashPath);
+		playerHealth = FMODUnity.RuntimeManager.CreateInstance(playerHealthPath);
+
+		playerHealth.start();
+
+        playerHealthD = FMODUnity.RuntimeManager.GetEventDescription(playerHealthPath);
+        playerHealthD.getParameterDescriptionByName(playerHealthParamPath, out playerHealthPD);
+        playerHealthPID = playerHealthPD.id;
+        Debug.Log("playerid: " + playerHealthD);
 
         Physics2D.IgnoreLayerCollision(18, 19, true);
         if (lungeCooldown == 0)
@@ -64,10 +81,16 @@ public class Player : Entity
         player = gameObject;
         base.Start();
         //xOffset = spriteRenderer.bounds.max.x - spriteRenderer.bounds.center.x;
+
+        Debug.Log("Max: " + maxHealth + " Curr: " + currHealth);
     }
 
     void FixedUpdate()
     {
+        //playerHealth.setParameterByName("playerHealth", (currHealth / maxHealth
+        playerHealth.setParameterByID(playerHealthPID, (float)(currHealth / maxHealth));
+		Debug.Log((currHealth / maxHealth));
+
         if(lungeCooldown > 0)
         {
             lungeCooldown--;
@@ -91,6 +114,8 @@ public class Player : Entity
         if(currHealth <= 0)
         {
             Scene currScene = SceneManager.GetActiveScene();
+            playerHealth.stop(STOP_MODE.IMMEDIATE);
+            playerHealth.release();
             SceneManager.LoadScene(currScene.name);
         }
         //move the player
@@ -297,5 +322,11 @@ public class Player : Entity
             lungeing = false;
             animator.SetBool("isDodging", false);
         }
+    }
+
+    public void StopSound()
+    {
+        playerHealth.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        playerHealth.release();
     }
 }

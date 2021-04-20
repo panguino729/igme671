@@ -1391,6 +1391,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Exit
       objectReference: {fileID: 0}
+    - target: {fileID: 606569220686760335, guid: 746b259a00cd65a4d92b34c7b9a2cc23,
+        type: 3}
+      propertyPath: pl
+      value: 
+      objectReference: {fileID: 30778779}
     - target: {fileID: 606569220686761587, guid: 746b259a00cd65a4d92b34c7b9a2cc23,
         type: 3}
       propertyPath: m_LocalPosition.x

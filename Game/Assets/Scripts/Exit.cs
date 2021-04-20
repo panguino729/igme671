@@ -8,6 +8,8 @@ public class Exit : MonoBehaviour
 {
     public static int levelNum;
 
+    [SerializeField] private Player pl;
+
     // Audio
     [FMODUnity.EventRef]
     public string portalEnterPath;
@@ -33,6 +35,7 @@ public class Exit : MonoBehaviour
         if(col.gameObject.tag == "Player")
         {
             portalEnter.start();
+            pl.StopSound();
             SceneManager.LoadScene(5);
         }
     }
