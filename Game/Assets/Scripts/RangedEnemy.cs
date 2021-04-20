@@ -18,9 +18,12 @@ public class RangedEnemy : Enemy
     public string rangedAttackPath;
     [FMODUnity.EventRef]
     public string rangedDefeatPath;
+    [FMODUnity.EventRef]
+    public string rangedDamagePath;
 
     private EventInstance rangedAttack;
     private EventInstance rangedDefeat;
+    private EventInstance rangedDamage;
 
     private float attackAnimationTime = 0.7f;
     private float attackTimeLeft = 0.0f;
@@ -29,6 +32,7 @@ public class RangedEnemy : Enemy
     {
         rangedAttack = FMODUnity.RuntimeManager.CreateInstance(rangedAttackPath);
         rangedDefeat = FMODUnity.RuntimeManager.CreateInstance(rangedDefeatPath);
+        rangedDamage = FMODUnity.RuntimeManager.CreateInstance(rangedDamagePath);
 
         if(attackDamage == 0)
         {
@@ -83,5 +87,11 @@ public class RangedEnemy : Enemy
         newBullet.bulletSpeed = bulletSpeed;
         newBullet.BulletDirection = moveDirection;
         newBullet.bulletDamage = attackDamage;
+    }
+
+    void TakeDamage(float attackDamage)
+    {
+        rangedDamage.start();
+        base.TakeDamage(attackDamage);
     }
 }

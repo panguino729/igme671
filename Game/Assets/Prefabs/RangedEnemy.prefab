@@ -258,6 +258,7 @@ MonoBehaviour:
   time: 0
   rangedAttackPath: event:/SFX/Ranged/rangedAttack
   rangedDefeatPath: event:/SFX/Ranged/rangedDefeat
+  rangedDamagePath: event:/SFX/Ranged/rangedDamage
 --- !u!61 &809246906317951190
 BoxCollider2D:
   m_ObjectHideFlags: 0

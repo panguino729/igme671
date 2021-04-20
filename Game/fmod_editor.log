@@ -6,7 +6,7 @@
 [LOG] OutputCoreAudio::init                    : Maximum hardware read size: 1024 samples, Software buffer size: 512 samples, Number of software buffers: 4.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0x7fe05a42dc08 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0x7fe00f8db208 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -15,22 +15,24 @@
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] SoundI::release                          :  (0x7fdfdaaa2278)
-[LOG] SoundI::release                          :     enemyattacksound (0x7fdfdaa7ef28)
-[LOG] SoundI::release                          :  (0x7fe0083a8028)
-[LOG] SoundI::release                          :     jumpsound (0x7fe0083d9ba8)
-[LOG] SoundI::release                          :  (0x7fe008361b08)
-[LOG] SoundI::release                          :     rangedDefeat (0x7fe0083a08c8)
-[LOG] SoundI::release                          :  (0x7fdfdaac01e8)
-[LOG] SoundI::release                          :     lungesound (0x7fdfdaabe8e8)
-[LOG] SoundI::release                          :  (0x7fdfdaa171d8)
-[LOG] SoundI::release                          :     attacksound (0x7fdfdaa14d18)
-[LOG] SoundI::release                          :  (0x7fdfdaa55d48)
-[LOG] SoundI::release                          :     portalEnterChimes (0x7fdfdaa464d8)
-[LOG] SoundI::release                          :  (0x7fdfdaa6b148)
-[LOG] SoundI::release                          :     playerHealth (0x7fdfdaa672f8)
-[LOG] SoundI::release                          :  (0x7fe008382598)
-[LOG] SoundI::release                          :     buttonClick (0x7fe008391db8)
+[LOG] SoundI::release                          :  (0x7fe0082db488)
+[LOG] SoundI::release                          :     enemyattacksound (0x7fe008245e08)
+[LOG] SoundI::release                          :  (0x7fe01801eac8)
+[LOG] SoundI::release                          :     rangedDefeat (0x7fe0082cdde8)
+[LOG] SoundI::release                          :  (0x7fe0082d90d8)
+[LOG] SoundI::release                          :     playerHealth (0x7fe018006b58)
+[LOG] SoundI::release                          :  (0x7fe0082e7f68)
+[LOG] SoundI::release                          :     rangedDamage (0x7fe0082cbf68)
+[LOG] SoundI::release                          :  (0x7fe0180a9c28)
+[LOG] SoundI::release                          :     jumpsound (0x7fe0082d6008)
+[LOG] SoundI::release                          :  (0x7fe0082e65c8)
+[LOG] SoundI::release                          :     lungesound (0x7fe0082e31e8)
+[LOG] SoundI::release                          :  (0x7fe0180ace78)
+[LOG] SoundI::release                          :     attacksound (0x7fe0082de3c8)
+[LOG] SoundI::release                          :  (0x7fe008210728)
+[LOG] SoundI::release                          :     portalEnterChimes (0x7fe00829d148)
+[LOG] SoundI::release                          :  (0x7fe018076e68)
+[LOG] SoundI::release                          :     buttonClick (0x7fe0082c0788)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients

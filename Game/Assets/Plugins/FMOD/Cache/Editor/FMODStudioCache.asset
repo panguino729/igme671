@@ -135,6 +135,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 0
+--- !u!114 &-6283905342692199567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/playerHealth
+  m_EditorClassIdentifier: 
+  Name: playerHealth
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 4245740075
+    data2: 3788727234
+  Exists: 0
 --- !u!114 &-5008767886279279299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -413,7 +433,7 @@ MonoBehaviour:
   Path: FMOD/gameSounds/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 637544823720000000
+  lastModified: 637544849730000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -440,6 +460,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2443
+--- !u!114 &-572087013589644212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/whispers/portalProximity
+  m_EditorClassIdentifier: 
+  Name: portalProximity
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-271370501815710210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -529,7 +569,7 @@ MonoBehaviour:
   - {fileID: 4134563936519794455}
   StringsBanks:
   - {fileID: 2953384724953765414}
-  stringsBankWriteTime: 637544823720000000
+  stringsBankWriteTime: 637544849730000000
   cacheVersion: 6
 --- !u!114 &524740372244396474
 MonoBehaviour:
@@ -589,7 +629,7 @@ MonoBehaviour:
   Path: FMOD/gameSounds/Build/Desktop/UI.bank
   Name: UI
   StudioPath: bank:/UI
-  lastModified: 637544823720000000
+  lastModified: 637544849730000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -763,7 +803,7 @@ MonoBehaviour:
   Path: FMOD/gameSounds/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637544823720000000
+  lastModified: 637544849730000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -807,7 +847,7 @@ MonoBehaviour:
   Path: FMOD/gameSounds/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 637544823720000000
+  lastModified: 637544849730000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -826,10 +866,30 @@ MonoBehaviour:
   Path: FMOD/gameSounds/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637544823720000000
+  lastModified: 637544849730000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &4234135087027315341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/whispers/portalProximity
+  m_EditorClassIdentifier: 
+  Name: portalProximity
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &5130940164830617147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -849,6 +909,26 @@ MonoBehaviour:
   ID:
     data1: 0
     data2: 0
+  Exists: 0
+--- !u!114 &5538623353454954040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/playerHealth
+  m_EditorClassIdentifier: 
+  Name: playerHealth
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 4245740075
+    data2: 3788727234
   Exists: 0
 --- !u!114 &5689304184628691032
 MonoBehaviour:
@@ -1088,7 +1168,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 1946420108541875195}
+  - {fileID: -572087013589644212}
   MinDistance: 0
   MaxDistance: 0
   Length: 20307

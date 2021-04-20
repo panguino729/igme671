@@ -81,15 +81,13 @@ public class Player : Entity
         player = gameObject;
         base.Start();
         //xOffset = spriteRenderer.bounds.max.x - spriteRenderer.bounds.center.x;
-
-        Debug.Log("Max: " + maxHealth + " Curr: " + currHealth);
     }
 
     void FixedUpdate()
     {
         //playerHealth.setParameterByName("playerHealth", (currHealth / maxHealth
         playerHealth.setParameterByID(playerHealthPID, (float)(currHealth / maxHealth));
-		Debug.Log((currHealth / maxHealth));
+		//ebug.Log((currHealth / maxHealth));
 
         if(lungeCooldown > 0)
         {
@@ -114,8 +112,7 @@ public class Player : Entity
         if(currHealth <= 0)
         {
             Scene currScene = SceneManager.GetActiveScene();
-            playerHealth.stop(STOP_MODE.IMMEDIATE);
-            playerHealth.release();
+            StopSound();
             SceneManager.LoadScene(currScene.name);
         }
         //move the player
@@ -326,7 +323,8 @@ public class Player : Entity
 
     public void StopSound()
     {
-        playerHealth.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        playerHealth.stop(STOP_MODE.IMMEDIATE);
         playerHealth.release();
+        Debug.Log("stop sound");
     }
 }
