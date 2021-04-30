@@ -35,6 +35,10 @@ public class Player : Entity
     public string playerDashPath;
 	[FMODUnity.EventRef]
 	public string playerHealthPath;
+    [FMODUnity.EventRef]
+    public string playerLandPath;
+    [FMODUnity.EventRef]
+    public string playerRangedAttackPath;
 
     [FMODUnity.EventRef]
     public string whispersPath;
@@ -43,6 +47,8 @@ public class Player : Entity
     private EventInstance playerJump;
     private EventInstance playerDash;
 	private EventInstance playerHealth;
+    private EventInstance playerLand;
+    private EventInstance playerRangedAttack;
 
     private EventInstance whispers;
 
@@ -66,6 +72,9 @@ public class Player : Entity
         playerJump = FMODUnity.RuntimeManager.CreateInstance(playerJumpPath);
         playerDash = FMODUnity.RuntimeManager.CreateInstance(playerDashPath);
 		playerHealth = FMODUnity.RuntimeManager.CreateInstance(playerHealthPath);
+        playerLand = FMODUnity.RuntimeManager.CreateInstance(playerLandPath);
+        playerRangedAttack = FMODUnity.RuntimeManager.CreateInstance(playerRangedAttackPath);
+
 
         playerHealth.getDescription(out playerHealthD);
         playerHealthD.getParameterDescriptionByName("playerHealth", out playerHealthPD);
@@ -211,6 +220,7 @@ public class Player : Entity
         if (raycastHit2D.collider != null && raycastHit2D.collider.gameObject.tag == "platform")
         {
             grounded = true;
+            playerLand.start();
             animator.SetBool("isJumping", false);
         }
         else
@@ -279,7 +289,6 @@ public class Player : Entity
     private void Attack()
     {
         //attackAudioSource.Play();
-        playerAttack.start();
         //play an animation
         animator.SetBool("isAttacking", true);
         attackTimeLeft = attackAnimationTime;
@@ -287,6 +296,8 @@ public class Player : Entity
         //detect enemies
         if (attackType == 0)
         {
+            playerAttack.start();
+
             //detect enemies
             Collider2D[] hits = Physics2D.OverlapCircleAll(attackPoint.position, attackRange);
 
@@ -300,6 +311,8 @@ public class Player : Entity
         }
         if(attackType == 1)
         {
+            playerRangedAttack.start();
+
             Bullet newBullet = Instantiate(bullet, new Vector3(transform.position.x /*+ xOffset*/, transform.position.y, transform.position.z), Quaternion.identity).GetComponent<Bullet>();
             newBullet.bulletSpeed = bulletSpeed;
             newBullet.BulletDirection = facing ? new Vector2(1,0) : new Vector2(-1,0);

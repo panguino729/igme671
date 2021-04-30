@@ -299,6 +299,8 @@ MonoBehaviour:
   playerJumpPath: event:/SFX/Player/playerJump
   playerDashPath: event:/SFX/Player/playerDash
   playerHealthPath: event:/SFX/Player/playerHealth
+  playerLandPath: event:/SFX/Player/playerLand
+  playerRangedAttackPath: event:/SFX/Player/playerRangedAttack
   whispersPath: event:/Ambience/whispers
 --- !u!95 &-7081499575564926576
 Animator:

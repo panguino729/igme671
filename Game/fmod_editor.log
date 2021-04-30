@@ -6,7 +6,7 @@
 [LOG] OutputCoreAudio::init                    : Maximum hardware read size: 1024 samples, Software buffer size: 512 samples, Number of software buffers: 4.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0x7fb8de9c9e08 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0x7fb8de5d3008 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -15,28 +15,53 @@
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] SoundI::release                          :  (0x7fb85c1d5528)
-[LOG] SoundI::release                          :     517868__plumforestpodcast__whisper (0x7fb85c1d5698)
-[LOG] SoundI::release                          :  (0x7fb85c1d7938)
-[LOG] SoundI::release                          :     446083__sophiemezam__whispers (0x7fb85c1d7aa8)
-[LOG] SoundI::release                          :  (0x7fb85c1d8278)
-[LOG] SoundI::release                          :     rangedAttack (0x7fb85c1d6a98)
-[LOG] SoundI::release                          :  (0x7fb85c1d6dd8)
-[LOG] SoundI::release                          :     rangedDefeat (0x7fb85c1d6f48)
-[LOG] SoundI::release                          :  (0x7fb85c1d8448)
-[LOG] SoundI::release                          :     playerHealth (0x7fb85c1d85b8)
-[LOG] SoundI::release                          :  (0x7fb85c1da458)
-[LOG] SoundI::release                          :     rangedDamage (0x7fb85c1da5c8)
-[LOG] SoundI::release                          :  (0x7fb85c1d8bd8)
-[LOG] SoundI::release                          :     playerJump (0x7fb85c1d8d48)
-[LOG] SoundI::release                          :  (0x7fb85c1d9908)
-[LOG] SoundI::release                          :     playerDash (0x7fb85c1d9a78)
-[LOG] SoundI::release                          :  (0x7fb85c1d9458)
-[LOG] SoundI::release                          :     playerMeleeAttack (0x7fb85c1d95c8)
-[LOG] SoundI::release                          :  (0x7fb85c1d7dc8)
-[LOG] SoundI::release                          :     portalEnterChimes (0x7fb85c1d7f38)
-[LOG] SoundI::release                          :  (0x7fb85c1d7288)
-[LOG] SoundI::release                          :     buttonClick (0x7fb85c1d73f8)
+[LOG] SystemI::createSound                     : filename = FMOD/gameSounds/Build/Desktop/Ambience.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Affinity: 0x8000000000000003, Priority: 0xFFFF7FFC, Stack Size: 114688, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
+[LOG] SystemI::createSound                     : setdata soundi = 0x7fb84c7ffb88 : node = 0x7fb84c739560
+[LOG] SystemI::createSound                     : add node to async list : head = 0x7fb84c73b768.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7fb84c7ffb88
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD/gameSounds/Build/Desktop/Ambience.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 491936
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 5216
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7fb84c739670
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='316797__dimbark1__ghostly-whispers', format=5, channels=1, frequency=48000, lengthbytes=161632, lengthpcm=897989, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.176941.
+[LOG] Thread::initThread                       :     Init FMOD file thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFC, Stack Size: 49152, Semaphore: No, Sleep Time: 10, Looping: Yes.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7fb84c7ffb88
+[LOG] SoundI::release                          : 316797__dimbark1__ghostly-whispers (0x7fb84c7ffb88)
+[LOG] SoundI::release                          :     316797__dimbark1__ghostly-whispers (0x7fb88c1b7288)
+[LOG] SoundI::release                          :     316797__dimbark1__ghostly-whispers (0x7fb84e9d4b08)
+[LOG] SoundI::release                          :  (0x7fb84c7b6b68)
+[LOG] SoundI::release                          :     517868__plumforestpodcast__whisper (0x7fb84c7b22e8)
+[LOG] SoundI::release                          :  (0x7fb84c7ceaa8)
+[LOG] SoundI::release                          :     446083__sophiemezam__whispers (0x7fb84c7b6ce8)
+[LOG] SoundI::release                          :  (0x7fb84c7e5568)
+[LOG] SoundI::release                          :     rangedAttack (0x7fb84c7c3128)
+[LOG] SoundI::release                          :  (0x7fb84c7e4e08)
+[LOG] SoundI::release                          :     rangedDefeat (0x7fb84c7bb2e8)
+[LOG] SoundI::release                          :  (0x7fb85e7099b8)
+[LOG] SoundI::release                          :     playerHealth (0x7fb85e709b28)
+[LOG] SoundI::release                          :  (0x7fb88c1f4eb8)
+[LOG] SoundI::release                          :     rangedDamage (0x7fb88c1d5b78)
+[LOG] SoundI::release                          :  (0x7fb85e770e68)
+[LOG] SoundI::release                          :     playerJump (0x7fb85e70b5c8)
+[LOG] SoundI::release                          :  (0x7fb85e7709b8)
+[LOG] SoundI::release                          :     playerDash (0x7fb85e770b28)
+[LOG] SoundI::release                          :  (0x7fb85e7a0a38)
+[LOG] SoundI::release                          :     playerMeleeAttack (0x7fb85e790a38)
+[LOG] SoundI::release                          :  (0x7fb84c7e8258)
+[LOG] SoundI::release                          :     playerLand (0x7fb84c7c8968)
+[LOG] SoundI::release                          :  (0x7fb84c7f59c8)
+[LOG] SoundI::release                          :     playerRangedAttack (0x7fb84c7c9448)
+[LOG] SoundI::release                          :  (0x7fb85e709e68)
+[LOG] SoundI::release                          :     portalEnterChimes (0x7fb85e709fd8)
+[LOG] SoundI::release                          :  (0x7fb84c7d4928)
+[LOG] SoundI::release                          :     buttonClick (0x7fb84c7b7d68)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
@@ -47,12 +72,3 @@
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] SystemI::close                           : Closed.
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
