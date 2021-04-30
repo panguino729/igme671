@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{8903798b-b2b8-4f1c-9dae-e1ce28a4525f}">
+		<property name="assetPath">
+			<value>flyingDamage.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.40836734693877552</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f46910d8-9c60-47d8-b119-c148097e7177}</destination>
+		</relationship>
+	</object>
+</objects>

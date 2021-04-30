@@ -115,7 +115,8 @@ MonoBehaviour:
   path: []
   attackAudioSource: {fileID: 1237277965398489790}
   flyingAttackPath: event:/SFX/Ranged/rangedAttack
-  flyingDefeatPath: 
+  flyingDefeatPath: event:/SFX/Flying/flyingDefeat
+  flyingDamagePath: event:/SFX/Flying/flyingDamage
   flyingMovementPath: event:/SFX/Flying/flyingMovement
 --- !u!50 &3496417960186345823
 Rigidbody2D:

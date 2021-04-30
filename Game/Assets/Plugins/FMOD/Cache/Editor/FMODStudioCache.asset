@@ -1,5 +1,25 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9140612515564018727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/playerHealth
+  m_EditorClassIdentifier: 
+  Name: playerHealth
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 4245740075
+    data2: 3788727234
+  Exists: 0
 --- !u!114 &-9137499686523139409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23,6 +43,46 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-8928027025676347611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/whispers/Portal Distance
+  m_EditorClassIdentifier: 
+  Name: Portal Distance
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &-8924436334886825344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/playerHealth
+  m_EditorClassIdentifier: 
+  Name: playerHealth
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 4245740075
+    data2: 3788727234
+  Exists: 0
 --- !u!114 &-8701281449341576773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46,6 +106,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 599
+--- !u!114 &-8672150206449948047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/playerHealth
+  m_EditorClassIdentifier: 
+  Name: playerHealth
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 4245740075
+    data2: 3788727234
+  Exists: 0
 --- !u!114 &-8266450553860391582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,6 +149,46 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-8164945421779542338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/playerHealth
+  m_EditorClassIdentifier: 
+  Name: playerHealth
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 4245740075
+    data2: 3788727234
+  Exists: 0
+--- !u!114 &-8080327884270828327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/whispers/Portal Distance
+  m_EditorClassIdentifier: 
+  Name: Portal Distance
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &-7903135667138870702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,6 +232,66 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 613
+--- !u!114 &-7513501685076505859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/whispers/Portal Distance
+  m_EditorClassIdentifier: 
+  Name: Portal Distance
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &-7277342632639978587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/playerHealth
+  m_EditorClassIdentifier: 
+  Name: playerHealth
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 4245740075
+    data2: 3788727234
+  Exists: 0
+--- !u!114 &-6855446223097395862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/playerHealth/playerHealth
+  m_EditorClassIdentifier: 
+  Name: playerHealth
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &-6636626757313106819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,6 +315,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-6385703224641845130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/playerHealth
+  m_EditorClassIdentifier: 
+  Name: playerHealth
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 4245740075
+    data2: 3788727234
+  Exists: 0
 --- !u!114 &-6356145013073966908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,6 +374,46 @@ MonoBehaviour:
   ID:
     data1: 4245740075
     data2: 3788727234
+  Exists: 0
+--- !u!114 &-5665047330327566483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/playerHealth
+  m_EditorClassIdentifier: 
+  Name: playerHealth
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 4245740075
+    data2: 3788727234
+  Exists: 0
+--- !u!114 &-5011720078733956804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/whispers/Portal Distance
+  m_EditorClassIdentifier: 
+  Name: Portal Distance
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
   Exists: 0
 --- !u!114 &-5008767886279279299
 MonoBehaviour:
@@ -304,6 +544,46 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &-2758756411118188590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/whispers/Portal Distance
+  m_EditorClassIdentifier: 
+  Name: Portal Distance
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &-2383983176258294776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/playerHealth
+  m_EditorClassIdentifier: 
+  Name: playerHealth
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 4245740075
+    data2: 3788727234
+  Exists: 0
 --- !u!114 &-2292544707561204273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -513,7 +793,7 @@ MonoBehaviour:
   Path: FMOD/gameSounds/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 637544919710000000
+  lastModified: 637553364880000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -662,7 +942,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 407
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -704,12 +984,14 @@ MonoBehaviour:
   - {fileID: 7496774753724513981}
   - {fileID: 2867497063103442364}
   - {fileID: 7237638295608278732}
+  - {fileID: 6275148985724331192}
+  - {fileID: 2454616037655160998}
   EditorParameters: []
   MasterBanks:
   - {fileID: 4134563936519794455}
   StringsBanks:
   - {fileID: 2953384724953765414}
-  stringsBankWriteTime: 637544919710000000
+  stringsBankWriteTime: 637553364880000000
   cacheVersion: 6
 --- !u!114 &524740372244396474
 MonoBehaviour:
@@ -769,7 +1051,7 @@ MonoBehaviour:
   Path: FMOD/gameSounds/Build/Desktop/UI.bank
   Name: UI
   StudioPath: bank:/UI
-  lastModified: 637544919710000000
+  lastModified: 637553364880000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -816,7 +1098,47 @@ MonoBehaviour:
     data1: 4245740075
     data2: 3788727234
   Exists: 0
+--- !u!114 &1364596723605293934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/whispers/Portal Distance
+  m_EditorClassIdentifier: 
+  Name: Portal Distance
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &1523681551830204322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/playerHealth
+  m_EditorClassIdentifier: 
+  Name: playerHealth
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 4245740075
+    data2: 3788727234
+  Exists: 0
+--- !u!114 &1669455972870436698
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -858,7 +1180,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 686
 --- !u!114 &1909779632324268016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -942,6 +1264,29 @@ MonoBehaviour:
     data1: 4245740075
     data2: 3788727234
   Exists: 0
+--- !u!114 &2454616037655160998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Power Up/powerUp
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Power Up/powerUp
+  guid: 953b73c532c57f4ca32c4448f4fcfc8b
+  Banks:
+  - {fileID: 4075502723002225029}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 354
 --- !u!114 &2867497063103442364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1003,12 +1348,32 @@ MonoBehaviour:
   Path: FMOD/gameSounds/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637544919710000000
+  lastModified: 637553364880000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 2202
+    Value: 2316
   Exists: 1
+--- !u!114 &3198076483301555183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/whispers/Portal Distance
+  m_EditorClassIdentifier: 
+  Name: Portal Distance
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &3666769598733552150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1031,7 +1396,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 408
 --- !u!114 &4075502723002225029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1047,7 +1412,7 @@ MonoBehaviour:
   Path: FMOD/gameSounds/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 637544919710000000
+  lastModified: 637553364880000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -1066,7 +1431,7 @@ MonoBehaviour:
   Path: FMOD/gameSounds/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637544919710000000
+  lastModified: 637553364880000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -1106,6 +1471,66 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &4300863898337651102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/playerHealth
+  m_EditorClassIdentifier: 
+  Name: playerHealth
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 4245740075
+    data2: 3788727234
+  Exists: 0
+--- !u!114 &4400879729381843203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/whispers/Portal Distance
+  m_EditorClassIdentifier: 
+  Name: Portal Distance
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
+--- !u!114 &4566312179839242921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/whispers/Portal Distance
+  m_EditorClassIdentifier: 
+  Name: Portal Distance
+  Min: 0
+  Max: 1
+  Default: 1
   ID:
     data1: 0
     data2: 0
@@ -1212,6 +1637,29 @@ MonoBehaviour:
     data1: 4245740075
     data2: 3788727234
   Exists: 0
+--- !u!114 &6275148985724331192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI/mainMenuMusic
+  m_EditorClassIdentifier: 
+  Path: event:/UI/mainMenuMusic
+  guid: 2119cda09cc9894d914c68b8da424af3
+  Banks:
+  - {fileID: 632160575814016113}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 202000
 --- !u!114 &6623340362821679221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1235,6 +1683,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 5
+--- !u!114 &6971577007455506868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/playerHealth
+  m_EditorClassIdentifier: 
+  Name: playerHealth
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 4245740075
+    data2: 3788727234
+  Exists: 0
 --- !u!114 &7237638295608278732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1257,7 +1725,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 1987
+  Length: 2261
 --- !u!114 &7265326897933596954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1427,7 +1895,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 568
 --- !u!114 &7809280834872525456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1448,10 +1916,30 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -1062621206928820784}
+  - {fileID: 8413879468448370171}
   MinDistance: 0
   MaxDistance: 0
-  Length: 20307
+  Length: 20529
+--- !u!114 &7893716363435294552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/whispers/Portal Distance
+  m_EditorClassIdentifier: 
+  Name: Portal Distance
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 0
 --- !u!114 &7970874316337381105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1517,7 +2005,47 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 665
+--- !u!114 &8382008759460556540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/playerHealth
+  m_EditorClassIdentifier: 
+  Name: playerHealth
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 4245740075
+    data2: 3788727234
+  Exists: 0
+--- !u!114 &8413879468448370171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/whispers/Portal Distance
+  m_EditorClassIdentifier: 
+  Name: Portal Distance
+  Min: 0
+  Max: 1
+  Default: 1
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &8955180973871181420
 MonoBehaviour:
   m_ObjectHideFlags: 0

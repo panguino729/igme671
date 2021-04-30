@@ -128,6 +128,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1302478233076951353, guid: 2ea0d2be779164a76bfc85612b71e031,
+        type: 3}
+      propertyPath: buttonClickPath
+      value: event:/UI/buttonClick
+      objectReference: {fileID: 0}
     - target: {fileID: 2604076042409499970, guid: 2ea0d2be779164a76bfc85612b71e031,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -308,6 +313,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4709099749243975800, guid: 2ea0d2be779164a76bfc85612b71e031,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5774288315374629803, guid: 2ea0d2be779164a76bfc85612b71e031,
         type: 3}
       propertyPath: m_Colors.m_HighlightedColor.r
@@ -396,6 +406,7 @@ GameObject:
   - component: {fileID: 1558313077}
   - component: {fileID: 1558313076}
   - component: {fileID: 1558313075}
+  - component: {fileID: 1558313078}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -468,6 +479,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1558313078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558313074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/UI/mainMenuMusic
+  PlayEvent: 1
+  StopEvent: 2
+  AllowFadeout: 1
+  TriggerOnce: 1
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1001 &2075907029
 PrefabInstance:
   m_ObjectHideFlags: 0

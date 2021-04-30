@@ -13,6 +13,8 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] private Player pl;
 
     // Audio
+    private Bus sfxBus;
+
     [FMODUnity.EventRef]
     public string buttonClickPath;
 
@@ -21,6 +23,8 @@ public class ButtonManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        sfxBus = FMODUnity.RuntimeManager.GetBus("bus:/SFX");
+
         buttonClick = FMODUnity.RuntimeManager.CreateInstance(buttonClickPath);
 
         InitLevels();
@@ -59,7 +63,7 @@ public class ButtonManager : MonoBehaviour
     public void OnQuit()
     {
         buttonClick.start();
-        pl.StopSound();
+        sfxBus.stopAllEvents(STOP_MODE.IMMEDIATE);
         SceneManager.LoadScene("MainMenu");
     }
 }

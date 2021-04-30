@@ -27,6 +27,8 @@ public class Player : Entity
     public int lungeCooldown;
 
     // Audio
+    private Bus sfxBus;
+
     [FMODUnity.EventRef]
     public string playerAttackPath;
     [FMODUnity.EventRef]
@@ -39,6 +41,8 @@ public class Player : Entity
     public string playerLandPath;
     [FMODUnity.EventRef]
     public string playerRangedAttackPath;
+    [FMODUnity.EventRef]
+    public string playerDamagePath;
 
     [FMODUnity.EventRef]
     public string whispersPath;
@@ -49,6 +53,7 @@ public class Player : Entity
 	private EventInstance playerHealth;
     private EventInstance playerLand;
     private EventInstance playerRangedAttack;
+    private EventInstance playerDamage;
 
     private EventInstance whispers;
 
@@ -68,12 +73,15 @@ public class Player : Entity
 
     void Start()
     {
+        sfxBus = FMODUnity.RuntimeManager.GetBus("bus:/SFX");
+
         playerAttack = FMODUnity.RuntimeManager.CreateInstance(playerAttackPath);
         playerJump = FMODUnity.RuntimeManager.CreateInstance(playerJumpPath);
         playerDash = FMODUnity.RuntimeManager.CreateInstance(playerDashPath);
 		playerHealth = FMODUnity.RuntimeManager.CreateInstance(playerHealthPath);
         playerLand = FMODUnity.RuntimeManager.CreateInstance(playerLandPath);
         playerRangedAttack = FMODUnity.RuntimeManager.CreateInstance(playerRangedAttackPath);
+        playerDamage = FMODUnity.RuntimeManager.CreateInstance(playerDamagePath);
 
 
         playerHealth.getDescription(out playerHealthD);
@@ -343,6 +351,12 @@ public class Player : Entity
         }
     }
 
+    public void TakeDamage(float damage)
+    {
+        playerDamage.start();
+        base.TakeDamage(damage);
+    }
+
     public void StopSound()
     {
         playerHealth.stop(STOP_MODE.IMMEDIATE);
@@ -350,6 +364,9 @@ public class Player : Entity
 
         whispers.stop(STOP_MODE.ALLOWFADEOUT);
         whispers.release();
+
+        //sfxBus.stopAllEvents(STOP_MODE.ALLOWFADEOUT);
+
         Debug.Log("stop sound");
     }
 }

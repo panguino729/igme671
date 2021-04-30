@@ -24,16 +24,22 @@ public class FlyingRangedEnemy : RangedEnemy
     [FMODUnity.EventRef]
     public string flyingDefeatPath;
     [FMODUnity.EventRef]
+    public string flyingDamagePath;
+    [FMODUnity.EventRef]
     public string flyingMovementPath;
 
     private EventInstance flyingAttack;
     private EventInstance flyingDefeat;
+    private EventInstance flyingDamage;
     private EventInstance flyingMovement;
 
     // Start is called before the first frame update
     void Start()
     {
         flyingMovement = FMODUnity.RuntimeManager.CreateInstance(flyingMovementPath);
+        flyingDamage = FMODUnity.RuntimeManager.CreateInstance(flyingDamagePath);
+        flyingDefeat = FMODUnity.RuntimeManager.CreateInstance(flyingDefeatPath);
+
         flyingMovement.start();
 
         spr = GetComponent<SpriteRenderer>(); 
@@ -77,6 +83,7 @@ public class FlyingRangedEnemy : RangedEnemy
         if (currHealth <= 0)
         {
             flyingMovement.stop(STOP_MODE.IMMEDIATE);
+            flyingDefeat.start();
             Destroy(gameObject);
         }
         Move();
@@ -136,5 +143,11 @@ public class FlyingRangedEnemy : RangedEnemy
         {
             transform.localScale = new Vector3(initialXScale, transform.localScale.y, transform.localScale.z);
         }
+    }
+
+    public void TakeDamage(float damage)
+    {
+        flyingDamage.start();
+        base.TakeDamage(damage);
     }
 }

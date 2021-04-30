@@ -202,26 +202,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 499518576908811323, guid: ed1bd71c3ef767940a0e6dc652461a1d,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4126773038598515441, guid: ed1bd71c3ef767940a0e6dc652461a1d,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5732037863343624464, guid: ed1bd71c3ef767940a0e6dc652461a1d,
-        type: 3}
-      propertyPath: m_SortingLayerID
-      value: -586741111
-      objectReference: {fileID: 0}
-    - target: {fileID: 5732037863343624464, guid: ed1bd71c3ef767940a0e6dc652461a1d,
-        type: 3}
-      propertyPath: m_SortingLayer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5732037863343624467, guid: ed1bd71c3ef767940a0e6dc652461a1d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -282,33 +262,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 5732037863343624479, guid: ed1bd71c3ef767940a0e6dc652461a1d,
-        type: 3}
-      propertyPath: eventPath
-      value: event:/SFX/playerMeleeAttack
-      objectReference: {fileID: 0}
-    - target: {fileID: 5732037863343624479, guid: ed1bd71c3ef767940a0e6dc652461a1d,
-        type: 3}
-      propertyPath: playerAttackPath
-      value: event:/SFX/Player/playerMeleeAttack
-      objectReference: {fileID: 0}
-    - target: {fileID: 5732037863343624479, guid: ed1bd71c3ef767940a0e6dc652461a1d,
-        type: 3}
-      propertyPath: playerJumpPath
-      value: event:/SFX/Player/playerJump
-      objectReference: {fileID: 0}
-    - target: {fileID: 5732037863343624479, guid: ed1bd71c3ef767940a0e6dc652461a1d,
-        type: 3}
-      propertyPath: playerDashPath
-      value: event:/SFX/Player/playerDash
-      objectReference: {fileID: 0}
-    - target: {fileID: 8466473950353495931, guid: ed1bd71c3ef767940a0e6dc652461a1d,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: -7995779540110229929, guid: ed1bd71c3ef767940a0e6dc652461a1d, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed1bd71c3ef767940a0e6dc652461a1d, type: 3}
 --- !u!1001 &548264452
 PrefabInstance:
@@ -1309,7 +1263,6 @@ GameObject:
   - component: {fileID: 1988382672}
   - component: {fileID: 1988382671}
   - component: {fileID: 1988382674}
-  - component: {fileID: 1988382675}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1395,20 +1348,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1301021041}
---- !u!114 &1988382675
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1988382670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attenuationObject: {fileID: 1301021041}
-  ListenerNumber: -1
 --- !u!1001 &2066935159
 PrefabInstance:
   m_ObjectHideFlags: 0

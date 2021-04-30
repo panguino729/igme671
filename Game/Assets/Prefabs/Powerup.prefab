@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerupType: 1
+  powerUpPath: event:/SFX/Power Up/powerUp
 --- !u!212 &708021912541173424
 SpriteRenderer:
   m_ObjectHideFlags: 0

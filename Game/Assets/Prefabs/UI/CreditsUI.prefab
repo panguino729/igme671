@@ -768,6 +768,7 @@ MonoBehaviour:
   buttonType: 2
   sceneToLoad: MainMenu
   nextMenuPos: {fileID: 0}
+  buttonClickPath: event:/UI/buttonClick
 --- !u!114 &4182231709465128796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -835,6 +836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uI: {fileID: 7896642835254717020}
+  pl: {fileID: 0}
   buttonClickPath: event:/UI/buttonClick
 --- !u!1 &8517932355477589473
 GameObject:
