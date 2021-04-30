@@ -6,7 +6,7 @@
 [LOG] OutputCoreAudio::init                    : Maximum hardware read size: 1024 samples, Software buffer size: 512 samples, Number of software buffers: 4.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0x7fe008b13208 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0x7fb8de9c9e08 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -15,6 +15,43 @@
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] SoundI::release                          :  (0x7fb85c1d5528)
+[LOG] SoundI::release                          :     517868__plumforestpodcast__whisper (0x7fb85c1d5698)
+[LOG] SoundI::release                          :  (0x7fb85c1d7938)
+[LOG] SoundI::release                          :     446083__sophiemezam__whispers (0x7fb85c1d7aa8)
+[LOG] SoundI::release                          :  (0x7fb85c1d8278)
+[LOG] SoundI::release                          :     rangedAttack (0x7fb85c1d6a98)
+[LOG] SoundI::release                          :  (0x7fb85c1d6dd8)
+[LOG] SoundI::release                          :     rangedDefeat (0x7fb85c1d6f48)
+[LOG] SoundI::release                          :  (0x7fb85c1d8448)
+[LOG] SoundI::release                          :     playerHealth (0x7fb85c1d85b8)
+[LOG] SoundI::release                          :  (0x7fb85c1da458)
+[LOG] SoundI::release                          :     rangedDamage (0x7fb85c1da5c8)
+[LOG] SoundI::release                          :  (0x7fb85c1d8bd8)
+[LOG] SoundI::release                          :     playerJump (0x7fb85c1d8d48)
+[LOG] SoundI::release                          :  (0x7fb85c1d9908)
+[LOG] SoundI::release                          :     playerDash (0x7fb85c1d9a78)
+[LOG] SoundI::release                          :  (0x7fb85c1d9458)
+[LOG] SoundI::release                          :     playerMeleeAttack (0x7fb85c1d95c8)
+[LOG] SoundI::release                          :  (0x7fb85c1d7dc8)
+[LOG] SoundI::release                          :     portalEnterChimes (0x7fb85c1d7f38)
+[LOG] SoundI::release                          :  (0x7fb85c1d7288)
+[LOG] SoundI::release                          :     buttonClick (0x7fb85c1d73f8)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)

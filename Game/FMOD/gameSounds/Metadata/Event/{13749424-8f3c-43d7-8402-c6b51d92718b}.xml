@@ -136,6 +136,9 @@
 		<property name="looping">
 			<value>true</value>
 		</property>
+		<relationship name="modulators">
+			<destination>{5b8837a8-bff3-4406-aebf-71ac0572b48b}</destination>
+		</relationship>
 		<relationship name="triggerConditions">
 			<destination>{934c2340-18f4-4b31-bea0-aa8ead907ead}</destination>
 		</relationship>
@@ -144,6 +147,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{5b9c4a16-c060-48bb-b053-838dd41827c6}">
+		<property name="volume">
+			<value>-6.5</value>
+		</property>
 		<property name="name">
 			<value>whisper1</value>
 		</property>
@@ -158,12 +164,21 @@
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{2f0d85ff-d224-4f35-be77-8d70c9f022fc}">
+		<property name="triggerProbabilityEnabled">
+			<value>true</value>
+		</property>
+		<property name="triggerProbability">
+			<value>55</value>
+		</property>
 		<property name="length">
 			<value>20.307687074829932</value>
 		</property>
 		<property name="looping">
 			<value>true</value>
 		</property>
+		<relationship name="modulators">
+			<destination>{890600ce-0e45-4280-86c1-540864d5b3a9}</destination>
+		</relationship>
 		<relationship name="triggerConditions">
 			<destination>{97cdad8a-8f00-45e9-bcf6-ae0b330f732e}</destination>
 		</relationship>
@@ -172,6 +187,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{eeefbbda-3815-42a8-b232-5247f5de4564}">
+		<property name="volume">
+			<value>-14</value>
+		</property>
 		<property name="name">
 			<value>whisper2</value>
 		</property>
@@ -186,12 +204,24 @@
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{f6ca880f-93ec-437f-8399-71c7444b0a1d}">
+		<property name="triggerProbabilityEnabled">
+			<value>true</value>
+		</property>
+		<property name="triggerProbability">
+			<value>46</value>
+		</property>
+		<property name="start">
+			<value>1.5</value>
+		</property>
 		<property name="length">
-			<value>20.307687074829932</value>
+			<value>17</value>
 		</property>
 		<property name="looping">
 			<value>true</value>
 		</property>
+		<relationship name="modulators">
+			<destination>{e1a9bf66-ab8c-4399-8b10-9fda5b898edb}</destination>
+		</relationship>
 		<relationship name="triggerConditions">
 			<destination>{9b5c4111-874a-4fa3-95a6-ece6569e6711}</destination>
 		</relationship>
@@ -200,6 +230,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{9c5f51bf-b9e0-47e1-95d8-4e71fa190fe6}">
+		<property name="volume">
+			<value>-14.5</value>
+		</property>
 		<property name="name">
 			<value>whisper3</value>
 		</property>
@@ -214,12 +247,27 @@
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{2d76ae18-b06f-4978-9d84-b4eba94a32e0}">
+		<property name="triggerProbabilityEnabled">
+			<value>true</value>
+		</property>
+		<property name="triggerProbability">
+			<value>58.5</value>
+		</property>
+		<property name="start">
+			<value>6.5</value>
+		</property>
 		<property name="length">
-			<value>20.307687074829932</value>
+			<value>14.029569160997733</value>
+		</property>
+		<property name="timelockedOffset">
+			<value>3</value>
 		</property>
 		<property name="looping">
 			<value>true</value>
 		</property>
+		<relationship name="modulators">
+			<destination>{7ece8406-80a8-4a7a-b8e7-5e81e1ebe1f0}</destination>
+		</relationship>
 		<relationship name="triggerConditions">
 			<destination>{06744661-c439-4f0d-ac9b-4317649c14dd}</destination>
 		</relationship>
@@ -228,6 +276,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{c056a95a-cad7-43b1-b848-f81cc88fd5e6}">
+		<property name="volume">
+			<value>-15.5</value>
+		</property>
 		<property name="name">
 			<value>whispers4</value>
 		</property>
@@ -262,6 +313,14 @@
 	</object>
 	<object class="MixerBusPanner" id="{30e59688-df50-4367-8ed5-83177332fd8a}" />
 	<object class="MixerBusFader" id="{b75e1dcf-97b9-4ed3-ab90-69011f25b892}" />
+	<object class="RandomizerModulator" id="{5b8837a8-bff3-4406-aebf-71ac0572b48b}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>pitch</value>
+		</property>
+		<property name="amount">
+			<value>19.5</value>
+		</property>
+	</object>
 	<object class="ParameterCondition" id="{934c2340-18f4-4b31-bea0-aa8ead907ead}">
 		<property name="minimum">
 			<value>0</value>
@@ -279,6 +338,14 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{9e57465f-b2d7-472e-9370-deb5ede1dcf6}" />
+	<object class="RandomizerModulator" id="{890600ce-0e45-4280-86c1-540864d5b3a9}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>pitch</value>
+		</property>
+		<property name="amount">
+			<value>14.5</value>
+		</property>
+	</object>
 	<object class="ParameterCondition" id="{97cdad8a-8f00-45e9-bcf6-ae0b330f732e}">
 		<property name="minimum">
 			<value>0.31499999761581421</value>
@@ -296,9 +363,17 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{c494879d-c25b-4fe8-bb5d-dfcf49a710c9}" />
+	<object class="RandomizerModulator" id="{e1a9bf66-ab8c-4399-8b10-9fda5b898edb}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>pitch</value>
+		</property>
+		<property name="amount">
+			<value>12</value>
+		</property>
+	</object>
 	<object class="ParameterCondition" id="{9b5c4111-874a-4fa3-95a6-ece6569e6711}">
 		<property name="minimum">
-			<value>0.55000001192092896</value>
+			<value>0.71000003814697266</value>
 		</property>
 		<property name="maximum">
 			<value>1</value>
@@ -313,9 +388,17 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{42e20f9a-f19a-4dca-8b78-2b1b60638bca}" />
+	<object class="RandomizerModulator" id="{7ece8406-80a8-4a7a-b8e7-5e81e1ebe1f0}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>pitch</value>
+		</property>
+		<property name="amount">
+			<value>14.5</value>
+		</property>
+	</object>
 	<object class="ParameterCondition" id="{06744661-c439-4f0d-ac9b-4317649c14dd}">
 		<property name="minimum">
-			<value>0.81999999284744263</value>
+			<value>0.90999996662139893</value>
 		</property>
 		<property name="maximum">
 			<value>1</value>

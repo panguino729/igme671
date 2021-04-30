@@ -10,6 +10,7 @@ public class ButtonManager : MonoBehaviour
     private static int levelIndex = 1;
 
     [SerializeField] private GameObject uI;
+    [SerializeField] private Player pl;
 
     // Audio
     [FMODUnity.EventRef]
@@ -58,6 +59,7 @@ public class ButtonManager : MonoBehaviour
     public void OnQuit()
     {
         buttonClick.start();
+        pl.StopSound();
         SceneManager.LoadScene("MainMenu");
     }
 }

@@ -141,6 +141,7 @@ GameObject:
   - component: {fileID: 5732037863343624478}
   - component: {fileID: 5732037863343624479}
   - component: {fileID: -7081499575564926576}
+  - component: {fileID: 1301021044}
   m_Layer: 18
   m_Name: Player
   m_TagString: Player
@@ -202,7 +203,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1439004019
+  m_SortingLayerID: -586741111
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -7124781682134005175, guid: 63c3e55de962b409ea571c369499c48c,
@@ -298,7 +299,6 @@ MonoBehaviour:
   playerJumpPath: event:/SFX/Player/playerJump
   playerDashPath: event:/SFX/Player/playerDash
   playerHealthPath: event:/SFX/Player/playerHealth
-  playerHealthParamPath: playerHealth
   whispersPath: event:/Ambience/whispers
 --- !u!95 &-7081499575564926576
 Animator:
@@ -319,6 +319,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1301021044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5732037863343624476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 5732037863343624476}
+  ListenerNumber: -1
 --- !u!1 &5790779289026416116
 GameObject:
   m_ObjectHideFlags: 0

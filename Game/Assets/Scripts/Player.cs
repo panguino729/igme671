@@ -35,8 +35,6 @@ public class Player : Entity
     public string playerDashPath;
 	[FMODUnity.EventRef]
 	public string playerHealthPath;
-    [FMODUnity.ParamRef]
-    public string playerHealthParamPath;
 
     [FMODUnity.EventRef]
     public string whispersPath;
@@ -69,15 +67,14 @@ public class Player : Entity
         playerDash = FMODUnity.RuntimeManager.CreateInstance(playerDashPath);
 		playerHealth = FMODUnity.RuntimeManager.CreateInstance(playerHealthPath);
 
+        playerHealth.getDescription(out playerHealthD);
+        playerHealthD.getParameterDescriptionByName("playerHealth", out playerHealthPD);
+        playerHealthPID = playerHealthPD.id;
+
         whispers = FMODUnity.RuntimeManager.CreateInstance(whispersPath);
 
 		playerHealth.start();
         whispers.start();
-
-        playerHealthD = FMODUnity.RuntimeManager.GetEventDescription(playerHealthPath);
-        playerHealthD.getParameterDescriptionByName(playerHealthParamPath, out playerHealthPD);
-        playerHealthPID = playerHealthPD.id;
-        Debug.Log("playerid: " + playerHealthD);
 
         Physics2D.IgnoreLayerCollision(18, 19, true);
         if (lungeCooldown == 0)
@@ -94,8 +91,12 @@ public class Player : Entity
     void FixedUpdate()
     {
         //playerHealth.setParameterByName("playerHealth", (currHealth / maxHealth
-        playerHealth.setParameterByID(playerHealthPID, (float)(currHealth / maxHealth));
-		//ebug.Log((currHealth / maxHealth));
+        float health = currHealth / maxHealth;
+        playerHealth.setParameterByID(playerHealthPID, (float)health);
+
+        float num;
+        playerHealth.getParameterByID(playerHealthPID, out num);
+        Debug.Log(num);
 
         if(lungeCooldown > 0)
         {
