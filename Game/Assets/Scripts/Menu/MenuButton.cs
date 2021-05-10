@@ -19,12 +19,16 @@ public class MenuButton : MonoBehaviour
     // Audio
     [FMODUnity.EventRef]
     public string buttonClickPath;
+    [FMODUnity.EventRef]
+    public string mainMenuWhooshPath;
 
     private EventInstance buttonClick;
+    private EventInstance mainMenuWhoosh;
 
     public void Start()
     {
         buttonClick = FMODUnity.RuntimeManager.CreateInstance(buttonClickPath);
+        mainMenuWhoosh = FMODUnity.RuntimeManager.CreateInstance(mainMenuWhooshPath);
     }
 
     public void ButtonClicked()
@@ -36,6 +40,7 @@ public class MenuButton : MonoBehaviour
                 SceneManager.LoadSceneAsync(sceneToLoad);
                 break;
             case MenuButtonType.MenuChange:
+                mainMenuWhoosh.start();
                 MenuCamera.Instance.Transition(nextMenuPos);
                 break;
             case MenuButtonType.Quit:

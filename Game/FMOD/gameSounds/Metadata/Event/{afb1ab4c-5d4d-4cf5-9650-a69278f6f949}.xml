@@ -113,6 +113,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{2065b84f-b7ac-4709-9a5e-d4d79d7dea23}">
+		<property name="volume">
+			<value>-10</value>
+		</property>
 		<property name="name">
 			<value>portalEnterChimes</value>
 		</property>
@@ -139,7 +142,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{0378c271-739f-4ee5-af8c-fed6adedb99a}">
 		<property name="volume">
-			<value>-23</value>
+			<value>-33</value>
 		</property>
 		<property name="name">
 			<value>portalEnterWind</value>

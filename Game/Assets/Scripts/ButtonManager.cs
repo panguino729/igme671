@@ -14,6 +14,7 @@ public class ButtonManager : MonoBehaviour
 
     // Audio
     private Bus sfxBus;
+    private Bus ambienceBus;
 
     [FMODUnity.EventRef]
     public string buttonClickPath;
@@ -24,6 +25,8 @@ public class ButtonManager : MonoBehaviour
     void Start()
     {
         sfxBus = FMODUnity.RuntimeManager.GetBus("bus:/SFX");
+        ambienceBus = FMODUnity.RuntimeManager.GetBus("bus:/Ambience");
+        
 
         buttonClick = FMODUnity.RuntimeManager.CreateInstance(buttonClickPath);
 
@@ -64,6 +67,7 @@ public class ButtonManager : MonoBehaviour
     {
         buttonClick.start();
         sfxBus.stopAllEvents(STOP_MODE.IMMEDIATE);
+        ambienceBus.stopAllEvents(STOP_MODE.ALLOWFADEOUT);
         SceneManager.LoadScene("MainMenu");
     }
 }

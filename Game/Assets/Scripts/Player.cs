@@ -113,7 +113,7 @@ public class Player : Entity
 
         float num;
         playerHealth.getParameterByID(playerHealthPID, out num);
-        Debug.Log(num);
+        Debug.Log("Get param: " + num);
 
         if(lungeCooldown > 0)
         {
@@ -359,7 +359,7 @@ public class Player : Entity
 
     public void StopSound()
     {
-        playerHealth.stop(STOP_MODE.IMMEDIATE);
+        playerHealth.stop(STOP_MODE.ALLOWFADEOUT);
         playerHealth.release();
 
         whispers.stop(STOP_MODE.ALLOWFADEOUT);

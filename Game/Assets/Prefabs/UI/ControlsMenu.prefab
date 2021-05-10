@@ -171,6 +171,7 @@ MonoBehaviour:
   sceneToLoad: Level 1
   nextMenuPos: {fileID: 0}
   buttonClickPath: event:/UI/buttonClick
+  mainMenuWhooshPath: event:/UI/mainMenuWhoosh
 --- !u!114 &3794586534246662579
 MonoBehaviour:
   m_ObjectHideFlags: 0

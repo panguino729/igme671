@@ -93,6 +93,7 @@ MonoBehaviour:
   sceneToLoad: Level 2
   nextMenuPos: {fileID: 0}
   buttonClickPath: event:/UI/buttonClick
+  mainMenuWhooshPath: event:/UI/mainMenuWhoosh
 --- !u!114 &2885019282711237672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,6 +241,7 @@ MonoBehaviour:
   sceneToLoad: Level 1
   nextMenuPos: {fileID: 0}
   buttonClickPath: event:/UI/buttonClick
+  mainMenuWhooshPath: event:/UI/mainMenuWhoosh
 --- !u!114 &2885019282994037350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -724,6 +726,7 @@ MonoBehaviour:
   sceneToLoad: Level 3
   nextMenuPos: {fileID: 0}
   buttonClickPath: event:/UI/buttonClick
+  mainMenuWhooshPath: event:/UI/mainMenuWhoosh
 --- !u!114 &2885019283793362011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -871,6 +874,7 @@ MonoBehaviour:
   sceneToLoad: Level 1
   nextMenuPos: {fileID: 0}
   buttonClickPath: event:/UI/buttonClick
+  mainMenuWhooshPath: event:/UI/mainMenuWhoosh
 --- !u!114 &2885019284016061079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1018,6 +1022,7 @@ MonoBehaviour:
   sceneToLoad: Level 4
   nextMenuPos: {fileID: 0}
   buttonClickPath: event:/UI/buttonClick
+  mainMenuWhooshPath: event:/UI/mainMenuWhoosh
 --- !u!114 &2885019284295045158
 MonoBehaviour:
   m_ObjectHideFlags: 0
