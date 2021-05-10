@@ -6,7 +6,7 @@
 [LOG] OutputCoreAudio::init                    : Maximum hardware read size: 1024 samples, Software buffer size: 512 samples, Number of software buffers: 4.
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x8000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0x7ff31c6b8208 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 0x7f88e0ea2608 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -15,382 +15,579 @@
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Thread::initThread                       : Init FMOD profiler thread (recv). Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 131072, Semaphore: No, Sleep Time: 0, Looping: No.
-[LOG] Thread::initThread                       : Init FMOD profiler thread (send). Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 131072, Semaphore: No, Sleep Time: 0, Looping: No.
-[LOG] LiveUpdate::clientConnected              : client = 0x7ff31c715408
-[LOG] LiveUpdate::readPacket                   : Recieved init packet from client 0x7ff31c715408
-[LOG] LiveUpdate::readPacket                   : Accepting init message for client 0x7ff31c715408
-[LOG] LiveUpdate::transitionToConnected        : 
-[LOG] Manager::sendConnectTimeHash             : 
-[LOG] LiveUpdate::sendBankHash                 : 
-[LOG] LiveUpdate::acceptInitPacket             : Client 0x7ff31c715408 connected, entering connected state
 [LOG] SystemI::createSound                     : filename = FMOD/gameSounds/Build/Desktop/Ambience.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
 [LOG] Thread::initThread                       : Init FMOD nonblocking thread (0). Affinity: 0x8000000000000003, Priority: 0xFFFF7FFC, Stack Size: 114688, Semaphore: Yes, Sleep Time: 0, Looping: Yes.
-[LOG] SystemI::createSound                     : setdata soundi = 0x7ff2ad4f7698 : node = 0x7ff2ad4113a0
-[LOG] SystemI::createSound                     : add node to async list : head = 0x7ff2ad4d5f08.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7ff2ad4f7698
+[LOG] SystemI::createSound                     : setdata soundi = 0x7f886666acd8 : node = 0x7f8866668810
+[LOG] SystemI::createSound                     : add node to async list : head = 0x7f8866682028.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f886666acd8
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD/gameSounds/Build/Desktop/Ambience.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 491936
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 5216
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 3968
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7ff2ad4114b0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f8866668920
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3000
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='316797__dimbark1__ghostly-whispers', format=5, channels=1, frequency=48000, lengthbytes=161632, lengthpcm=897989, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.176941.
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='193816__geoneo0__four-voices-whispering-3-wecho', format=5, channels=2, frequency=48000, lengthbytes=227168, lengthpcm=974768, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.334888.
 [LOG] Thread::initThread                       :     Init FMOD file thread. Affinity: 0x8000000000000003, Priority: 0xFFFF7FFC, Stack Size: 49152, Semaphore: No, Sleep Time: 10, Looping: Yes.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7ff2ad4f7698
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-iBdtrL/hotswap_723.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-iBdtrL/hotswap_723.bank'
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f886666acd8
+[LOG] Thread::initThread                       : Init FMOD profiler thread (recv). Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 131072, Semaphore: No, Sleep Time: 0, Looping: No.
+[LOG] Thread::initThread                       : Init FMOD profiler thread (send). Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 131072, Semaphore: No, Sleep Time: 0, Looping: No.
+[LOG] LiveUpdate::clientConnected              : client = 0x7f8875d5cc08
+[LOG] LiveUpdate::readPacket                   : Recieved init packet from client 0x7f8875d5cc08
+[LOG] LiveUpdate::readPacket                   : Accepting init message for client 0x7f8875d5cc08
+[LOG] LiveUpdate::transitionToConnected        : 
+[LOG] Manager::sendConnectTimeHash             : 
+[LOG] LiveUpdate::sendBankHash                 : 
+[LOG] LiveUpdate::acceptInitPacket             : Client 0x7f8875d5cc08 connected, entering connected state
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_0.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_0.bank'
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] SoundI::release                          : 316797__dimbark1__ghostly-whispers (0x7ff2ad4f7698)
-[LOG] SoundI::release                          :     316797__dimbark1__ghostly-whispers (0x7ff2af132748)
-[LOG] SoundI::release                          :     316797__dimbark1__ghostly-whispers (0x7ff2bf337028)
+[LOG] SoundI::release                          : 193816__geoneo0__four-voices-whispering-3-wecho (0x7f886666acd8)
+[LOG] SoundI::release                          :     193816__geoneo0__four-voices-whispering-3-wecho (0x7f88f2255758)
+[LOG] SoundI::release                          :     193816__geoneo0__four-voices-whispering-3-wecho (0x7f88f22558e8)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_1.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_1.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_2.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_2.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_3.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_3.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_4.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_4.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_5.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_5.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_6.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_6.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] SystemI::createSound                     : filename = FMOD/gameSounds/Build/Desktop/Ambience.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 0x7ff2bf4d1fd8 : node = 0x7ff2bf44d7b0
-[LOG] SystemI::createSound                     : add node to async list : head = 0x7ff2ad4d5f08.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7ff2bf4d1fd8
+[LOG] SystemI::createSound                     : setdata soundi = 0x7f8867720128 : node = 0x7f88677202e0
+[LOG] SystemI::createSound                     : add node to async list : head = 0x7f8866682028.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f8867720128
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD/gameSounds/Build/Desktop/Ambience.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 491936
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 5216
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 3968
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7ff2bf44d8c0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f88677203f0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3000
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='193816__geoneo0__four-voices-whispering-3-wecho', format=5, channels=2, frequency=48000, lengthbytes=227168, lengthpcm=974768, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.334888.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f8867720128
+[LOG] SoundI::release                          : 193816__geoneo0__four-voices-whispering-3-wecho (0x7f8867720128)
+[LOG] SoundI::release                          :     193816__geoneo0__four-voices-whispering-3-wecho (0x7f886772f4c8)
+[LOG] SoundI::release                          :     193816__geoneo0__four-voices-whispering-3-wecho (0x7f886770f528)
+[LOG] SystemI::createSound                     : filename = FMOD/gameSounds/Build/Desktop/Ambience.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0x7f88671cec68 : node = 0x7f88671c5800
+[LOG] SystemI::createSound                     : add node to async list : head = 0x7f8866682028.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f88671cec68
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD/gameSounds/Build/Desktop/Ambience.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 491936
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 3968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f88671c5910
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='316797__dimbark1__ghostly-whispers', format=5, channels=1, frequency=48000, lengthbytes=161632, lengthpcm=897989, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.176941.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7ff2bf4d1fd8
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-iBdtrL/hotswap_724.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-iBdtrL/hotswap_724.bank'
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-iBdtrL/hotswap_725.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-iBdtrL/hotswap_725.bank'
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-iBdtrL/hotswap_726.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-iBdtrL/hotswap_726.bank'
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-iBdtrL/hotswap_727.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-iBdtrL/hotswap_727.bank'
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-iBdtrL/hotswap_728.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-iBdtrL/hotswap_728.bank'
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] SoundI::release                          : 316797__dimbark1__ghostly-whispers (0x7ff2bf4d1fd8)
-[LOG] SoundI::release                          :     316797__dimbark1__ghostly-whispers (0x7ff2ad3f7cb8)
-[LOG] SoundI::release                          :     316797__dimbark1__ghostly-whispers (0x7ff2ad3f3b98)
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f88671cec68
 [LOG] SystemI::createSound                     : filename = FMOD/gameSounds/Build/Desktop/Ambience.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 0x7ff2ad3f3dd8 : node = 0x7ff2ad3749a0
-[LOG] SystemI::createSound                     : add node to async list : head = 0x7ff2ad4d5f08.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7ff2ad3f3dd8
+[LOG] SystemI::createSound                     : setdata soundi = 0x7f88665df008 : node = 0x7f88665d8030
+[LOG] SystemI::createSound                     : add node to async list : head = 0x7f8866682028.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f88665df008
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD/gameSounds/Build/Desktop/Ambience.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 491936
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 5216
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 3968
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7ff2ad374ab0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f88665d8140
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3000
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='193816__geoneo0__four-voices-whispering-3-wecho', format=5, channels=2, frequency=48000, lengthbytes=227168, lengthpcm=974768, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.334888.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f88665df008
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_7.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_7.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_8.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_8.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_9.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_9.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_10.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_10.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_11.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_11.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_12.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_12.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_13.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_13.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_14.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_14.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_15.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_15.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_16.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_16.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_17.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_17.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_18.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_18.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_19.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_19.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_20.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_20.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_21.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_21.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] SoundI::release                          : 193816__geoneo0__four-voices-whispering-3-wecho (0x7f88665df008)
+[LOG] SoundI::release                          :     193816__geoneo0__four-voices-whispering-3-wecho (0x7f88671c7dc8)
+[LOG] SoundI::release                          :     193816__geoneo0__four-voices-whispering-3-wecho (0x7f88671d5d88)
+[LOG] SoundI::release                          : 316797__dimbark1__ghostly-whispers (0x7f88671cec68)
+[LOG] SoundI::release                          :     316797__dimbark1__ghostly-whispers (0x7f8867744518)
+[LOG] SoundI::release                          :     316797__dimbark1__ghostly-whispers (0x7f88677446a8)
+[LOG] SystemI::createSound                     : filename = FMOD/gameSounds/Build/Desktop/Ambience.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0x7f8866665ef8 : node = 0x7f886666b0d0
+[LOG] SystemI::createSound                     : add node to async list : head = 0x7f8866682028.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f8866665ef8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD/gameSounds/Build/Desktop/Ambience.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 491936
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 3968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f886666b1e0
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='316797__dimbark1__ghostly-whispers', format=5, channels=1, frequency=48000, lengthbytes=161632, lengthpcm=897989, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.176941.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7ff2ad3f3dd8
-[LOG] SoundI::release                          : 316797__dimbark1__ghostly-whispers (0x7ff2ad3f3dd8)
-[LOG] SoundI::release                          :     316797__dimbark1__ghostly-whispers (0x7ff2e95b10d8)
-[LOG] SoundI::release                          :     316797__dimbark1__ghostly-whispers (0x7ff2e95afb38)
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f8866665ef8
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_22.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_22.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] SoundI::release                          : 316797__dimbark1__ghostly-whispers (0x7f8866665ef8)
+[LOG] SoundI::release                          :     316797__dimbark1__ghostly-whispers (0x7f88665d8358)
+[LOG] SoundI::release                          :     316797__dimbark1__ghostly-whispers (0x7f88665d85b8)
 [LOG] SystemI::createSound                     : filename = FMOD/gameSounds/Build/Desktop/Ambience.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 0x7ff2ad4f7698 : node = 0x7ff2ad487280
-[LOG] SystemI::createSound                     : add node to async list : head = 0x7ff2ad4d5f08.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7ff2ad4f7698
+[LOG] SystemI::createSound                     : setdata soundi = 0x7f8867144aa8 : node = 0x7f886716fc50
+[LOG] SystemI::createSound                     : add node to async list : head = 0x7f8866682028.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f8867144aa8
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD/gameSounds/Build/Desktop/Ambience.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 491936
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 5216
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 3968
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7ff2ad487390
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f886716fd60
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='316797__dimbark1__ghostly-whispers', format=5, channels=1, frequency=48000, lengthbytes=161632, lengthpcm=897989, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.176941.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7ff2ad4f7698
-[LOG] SoundI::release                          : 316797__dimbark1__ghostly-whispers (0x7ff2ad4f7698)
-[LOG] SoundI::release                          :     316797__dimbark1__ghostly-whispers (0x7ff2bf44f7f8)
-[LOG] SoundI::release                          :     316797__dimbark1__ghostly-whispers (0x7ff2bf4a7008)
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f8867144aa8
+[LOG] SystemI::createSound                     : filename = FMOD/gameSounds/Build/Desktop/Ambience.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0x7f88671c0f28 : node = 0x7f88671c6510
+[LOG] SystemI::createSound                     : add node to async list : head = 0x7f8866682028.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f88671c0f28
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD/gameSounds/Build/Desktop/Ambience.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 491936
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 3968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f88671c6620
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3000
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='193816__geoneo0__four-voices-whispering-3-wecho', format=5, channels=2, frequency=48000, lengthbytes=227168, lengthpcm=974768, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.334888.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f88671c0f28
+[LOG] SoundI::release                          : 316797__dimbark1__ghostly-whispers (0x7f8867144aa8)
+[LOG] SoundI::release                          :     316797__dimbark1__ghostly-whispers (0x7f88665d0348)
+[LOG] SoundI::release                          :     316797__dimbark1__ghostly-whispers (0x7f88665d04d8)
+[LOG] SoundI::release                          : 193816__geoneo0__four-voices-whispering-3-wecho (0x7f88671c0f28)
+[LOG] SoundI::release                          :     193816__geoneo0__four-voices-whispering-3-wecho (0x7f8867663fb8)
+[LOG] SoundI::release                          :     193816__geoneo0__four-voices-whispering-3-wecho (0x7f88676268d8)
+[LOG] SystemI::createSound                     : filename = FMOD/gameSounds/Build/Desktop/Ambience.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0x7f8867646b38 : node = 0x7f8865ad4e30
+[LOG] SystemI::createSound                     : add node to async list : head = 0x7f8866682028.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f8867646b38
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD/gameSounds/Build/Desktop/Ambience.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 491936
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 3968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f8865ad4f40
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='316797__dimbark1__ghostly-whispers', format=5, channels=1, frequency=48000, lengthbytes=161632, lengthpcm=897989, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.176941.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f8867646b38
+[LOG] SoundI::release                          : 316797__dimbark1__ghostly-whispers (0x7f8867646b38)
+[LOG] SoundI::release                          :     316797__dimbark1__ghostly-whispers (0x7f8867756ea8)
+[LOG] SoundI::release                          :     316797__dimbark1__ghostly-whispers (0x7f8867756628)
 [LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
 [LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 244512
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 18368
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 17728
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x700002d29954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000088e2954
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1591502ce
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x159150385
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1591503b2
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x159150456
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7ff2bf4314d8
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x152bb02ce
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x152bb0385
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x152bb03b2
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x152bb0456
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7f8867753a78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='flyingDefeat', format=5, channels=2, frequency=48000, lengthbytes=9504, lengthpcm=32945, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.403439.
 [LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
 [LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 244512
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 18368
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 17728
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x700002d29954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000088e2954
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1591502ce
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x159150385
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1591503b2
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x159150456
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7ff2bf4314d8
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x152bb02ce
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x152bb0385
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x152bb03b2
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x152bb0456
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7f8867753a78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='flyingDamage', format=5, channels=2, frequency=48000, lengthbytes=5856, lengthpcm=19601, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.554776.
 [LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
 [LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 244512
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 18368
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 17728
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x700002d29954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000088e2954
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1591502ce
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x159150385
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1591503b2
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x159150456
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7ff2bf4314d8
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x152bb02ce
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x152bb0385
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x152bb03b2
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x152bb0456
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7f8867753a78
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='flyingMovement', format=5, channels=2, frequency=48000, lengthbytes=8512, lengthpcm=29459, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.303177.
 [LOG] SystemI::createSound                     : filename = FMOD/gameSounds/Build/Desktop/Ambience.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 0x7ff2ad4a4d18 : node = 0x7ff2ad487280
-[LOG] SystemI::createSound                     : add node to async list : head = 0x7ff2ad4d5f08.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7ff2ad4a4d18
+[LOG] SystemI::createSound                     : setdata soundi = 0x7f886661b6b8 : node = 0x7f8866643030
+[LOG] SystemI::createSound                     : add node to async list : head = 0x7f8866682028.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f886661b6b8
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD/gameSounds/Build/Desktop/Ambience.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 491936
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 5216
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 3968
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7ff2ad487390
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f8866643140
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='316797__dimbark1__ghostly-whispers', format=5, channels=1, frequency=48000, lengthbytes=161632, lengthpcm=897989, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.176941.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7ff2ad4a4d18
-[LOG] SoundI::release                          : 316797__dimbark1__ghostly-whispers (0x7ff2ad4a4d18)
-[LOG] SoundI::release                          :     316797__dimbark1__ghostly-whispers (0x7ff2e93a4338)
-[LOG] SoundI::release                          :     316797__dimbark1__ghostly-whispers (0x7ff2e84b28e8)
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f886661b6b8
 [LOG] SystemI::createSound                     : filename = FMOD/gameSounds/Build/Desktop/Ambience.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 0x7ff2e95ab088 : node = 0x7ff2adc770b0
-[LOG] SystemI::createSound                     : add node to async list : head = 0x7ff2ad4d5f08.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7ff2e95ab088
+[LOG] SystemI::createSound                     : setdata soundi = 0x7f8870053c08 : node = 0x7f8870053dc0
+[LOG] SystemI::createSound                     : add node to async list : head = 0x7f8866682028.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f8870053c08
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD/gameSounds/Build/Desktop/Ambience.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 491936
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 5216
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 3968
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7ff2adc771c0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f8870053ed0
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3000
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='193816__geoneo0__four-voices-whispering-3-wecho', format=5, channels=2, frequency=48000, lengthbytes=227168, lengthpcm=974768, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.334888.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7ff2e95ab088
-[LOG] SoundI::release                          : 193816__geoneo0__four-voices-whispering-3-wecho (0x7ff2e95ab088)
-[LOG] SoundI::release                          :     193816__geoneo0__four-voices-whispering-3-wecho (0x7ff2ad42f238)
-[LOG] SoundI::release                          :     193816__geoneo0__four-voices-whispering-3-wecho (0x7ff2ad4d8918)
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f8870053c08
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_23.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_23.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_24.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_24.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] SoundI::release                          : 316797__dimbark1__ghostly-whispers (0x7f886661b6b8)
+[LOG] SoundI::release                          :     316797__dimbark1__ghostly-whispers (0x7f88674531f8)
+[LOG] SoundI::release                          :     316797__dimbark1__ghostly-whispers (0x7f8867453388)
+[LOG] SoundI::release                          : 193816__geoneo0__four-voices-whispering-3-wecho (0x7f8870053c08)
+[LOG] SoundI::release                          :     193816__geoneo0__four-voices-whispering-3-wecho (0x7f88f2210188)
+[LOG] SoundI::release                          :     193816__geoneo0__four-voices-whispering-3-wecho (0x7f8866651668)
 [LOG] SystemI::createSound                     : filename = FMOD/gameSounds/Build/Desktop/Ambience.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 0x7ff2ad4a4d18 : node = 0x7ff2ad490e50
-[LOG] SystemI::createSound                     : add node to async list : head = 0x7ff2ad4d5f08.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7ff2ad4a4d18
+[LOG] SystemI::createSound                     : setdata soundi = 0x7f8867758b68 : node = 0x7f8867744a80
+[LOG] SystemI::createSound                     : add node to async list : head = 0x7f8866682028.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f8867758b68
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD/gameSounds/Build/Desktop/Ambience.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 491936
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 5216
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 3968
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7ff2ad490f60
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f8867744b90
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='316797__dimbark1__ghostly-whispers', format=5, channels=1, frequency=48000, lengthbytes=161632, lengthpcm=897989, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.176941.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7ff2ad4a4d18
-[LOG] SoundI::release                          : 316797__dimbark1__ghostly-whispers (0x7ff2ad4a4d18)
-[LOG] SoundI::release                          :     316797__dimbark1__ghostly-whispers (0x7ff2e907cb28)
-[LOG] SoundI::release                          :     316797__dimbark1__ghostly-whispers (0x7ff2e90816d8)
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f8867758b68
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_25.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_25.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] SystemI::createSound                     : filename = FMOD/gameSounds/Build/Desktop/Ambience.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0x7f8866651118 : node = 0x7f88f044aaa0
+[LOG] SystemI::createSound                     : add node to async list : head = 0x7f8866682028.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f8866651118
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD/gameSounds/Build/Desktop/Ambience.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 491936
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 3968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f88f044abb0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3000
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='193816__geoneo0__four-voices-whispering-3-wecho', format=5, channels=2, frequency=48000, lengthbytes=227168, lengthpcm=974768, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.334888.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f8866651118
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_26.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_26.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] SoundI::release                          : 316797__dimbark1__ghostly-whispers (0x7f8867758b68)
+[LOG] SoundI::release                          :     316797__dimbark1__ghostly-whispers (0x7f886661b368)
+[LOG] SoundI::release                          :     316797__dimbark1__ghostly-whispers (0x7f8866651ed8)
+[LOG] SoundI::release                          : 193816__geoneo0__four-voices-whispering-3-wecho (0x7f8866651118)
+[LOG] SoundI::release                          :     193816__geoneo0__four-voices-whispering-3-wecho (0x7f8866651868)
+[LOG] SoundI::release                          :     193816__geoneo0__four-voices-whispering-3-wecho (0x7f886661ba38)
+[LOG] SystemI::createSound                     : filename = FMOD/gameSounds/Build/Desktop/Ambience.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0x7f88f2254e78 : node = 0x7f8866665ad0
+[LOG] SystemI::createSound                     : add node to async list : head = 0x7f8866682028.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f88f2254e78
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD/gameSounds/Build/Desktop/Ambience.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 491936
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 3968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f8866665be0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='316797__dimbark1__ghostly-whispers', format=5, channels=1, frequency=48000, lengthbytes=161632, lengthpcm=897989, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.176941.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f88f2254e78
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_27.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_27.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_28.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_28.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] SoundI::release                          : 316797__dimbark1__ghostly-whispers (0x7f88f2254e78)
+[LOG] SoundI::release                          :     316797__dimbark1__ghostly-whispers (0x7f88665e4b88)
+[LOG] SoundI::release                          :     316797__dimbark1__ghostly-whispers (0x7f88665e4d18)
+[LOG] SystemI::createSound                     : filename = FMOD/gameSounds/Build/Desktop/Ambience.bank : mode 02010082
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] SystemI::createSound                     : setdata soundi = 0x7f88676c92d8 : node = 0x7f88676211d0
+[LOG] SystemI::createSound                     : add node to async list : head = 0x7f8866682028.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f88676c92d8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD/gameSounds/Build/Desktop/Ambience.bank', mode=0x02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 491936
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 3968
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f88676212e0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3000
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='193816__geoneo0__four-voices-whispering-3-wecho', format=5, channels=2, frequency=48000, lengthbytes=227168, lengthpcm=974768, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.334888.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f88676c92d8
+[LOG] SoundI::release                          : 193816__geoneo0__four-voices-whispering-3-wecho (0x7f88676c92d8)
+[LOG] SoundI::release                          :     193816__geoneo0__four-voices-whispering-3-wecho (0x7f8867758008)
+[LOG] SoundI::release                          :     193816__geoneo0__four-voices-whispering-3-wecho (0x7f8867758198)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_29.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_29.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_30.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_30.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_31.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_31.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_32.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_32.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_33.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_33.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_34.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_34.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_35.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_35.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_36.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_36.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_37.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_37.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_38.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_38.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_39.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_39.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_40.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_40.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_41.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_41.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_42.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_42.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_43.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_43.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_44.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_44.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_45.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_45.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_46.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-EAgFrw/hotswap_46.bank'
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
 [LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             : exinfo->length             = 244512
-[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 18368
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 17728
 [LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x700002d29954
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0x7000088e2954
 [LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x1591502ce
-[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x159150385
-[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x1591503b2
-[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x159150456
-[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7ff2ad3e8f18
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 0x152bb02ce
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 0x152bb0385
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 0x152bb03b2
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 0x152bb0456
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0x7f886745a878
 [LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
 [LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
 [LOG] SystemI::createSoundInternal             : Sample 0/1: name='515643__mashedtatoes2__ding2', format=5, channels=2, frequency=48000, lengthbytes=3808, lengthpcm=17014, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=1.033164.
 [LOG] SystemI::createSound                     : filename = FMOD/gameSounds/Build/Desktop/Ambience.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 0x7ff2bf44d458 : node = 0x7ff2bf4c7170
-[LOG] SystemI::createSound                     : add node to async list : head = 0x7ff2ad4d5f08.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7ff2bf44d458
+[LOG] SystemI::createSound                     : setdata soundi = 0x7f886742db18 : node = 0x7f8867447070
+[LOG] SystemI::createSound                     : add node to async list : head = 0x7f8866682028.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f886742db18
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD/gameSounds/Build/Desktop/Ambience.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 491936
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 5216
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 3968
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7ff2bf4c7280
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f8867447180
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='316797__dimbark1__ghostly-whispers', format=5, channels=1, frequency=48000, lengthbytes=161632, lengthpcm=897989, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.176941.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7ff2bf44d458
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f886742db18
 [LOG] SystemI::createSound                     : filename = FMOD/gameSounds/Build/Desktop/Ambience.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 0x7ff2adfc66e8 : node = 0x7ff2e935afd0
-[LOG] SystemI::createSound                     : add node to async list : head = 0x7ff2ad4d5f08.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7ff2adfc66e8
+[LOG] SystemI::createSound                     : setdata soundi = 0x7f888050f508 : node = 0x7f888050f6c0
+[LOG] SystemI::createSound                     : add node to async list : head = 0x7f8866682028.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7f888050f508
 [LOG] SystemI::createSoundInternal             :     Create name='FMOD/gameSounds/Build/Desktop/Ambience.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
 [LOG] SystemI::createSoundInternal             :     exinfo->length             = 491936
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 5216
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 3968
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7ff2e935b0e0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7f888050f7d0
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3000
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
 [LOG] SystemI::createSoundInternal             :     Stream 0/1: name='193816__geoneo0__four-voices-whispering-3-wecho', format=5, channels=2, frequency=48000, lengthbytes=227168, lengthpcm=974768, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.334888.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7ff2adfc66e8
-[LOG] SoundI::release                          : 316797__dimbark1__ghostly-whispers (0x7ff2bf44d458)
-[LOG] SoundI::release                          :     316797__dimbark1__ghostly-whispers (0x7ff2ad3c99f8)
-[LOG] SoundI::release                          :     316797__dimbark1__ghostly-whispers (0x7ff2ad3dc208)
-[LOG] SoundI::release                          : 193816__geoneo0__four-voices-whispering-3-wecho (0x7ff2adfc66e8)
-[LOG] SoundI::release                          :     193816__geoneo0__four-voices-whispering-3-wecho (0x7ff2bf46c2d8)
-[LOG] SoundI::release                          :     193816__geoneo0__four-voices-whispering-3-wecho (0x7ff2bf46cac8)
-[LOG] SystemI::createSound                     : filename = FMOD/gameSounds/Build/Desktop/Ambience.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSound                     : setdata soundi = 0x7ff2ad3dc208 : node = 0x7ff2ad3eb430
-[LOG] SystemI::createSound                     : add node to async list : head = 0x7ff2ad4d5f08.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7ff2ad3dc208
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/gameSounds/Build/Desktop/Ambience.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 491936
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 5216
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0x7ff2ad3eb540
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekposition = 3000
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='193816__geoneo0__four-voices-whispering-3-wecho', format=5, channels=2, frequency=48000, lengthbytes=227168, lengthpcm=974768, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.334888.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7ff2ad3dc208
-[LOG] ProfileClient::recvThreadLoopFunction    : Socket disconnected
-[LOG] ProfileClient::markForDead               : Closing client connection
-[LOG] Thread::callback                         : FMOD profiler thread (recv) finished.
-[LOG] Thread::callback                         : FMOD profiler thread (send) finished.
-[LOG] LiveUpdate::clientDisconnected           : client = 0x7ff31c715408
-[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
-[LOG] Thread::initThread                       : Init FMOD profiler thread (recv). Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 131072, Semaphore: No, Sleep Time: 0, Looping: No.
-[LOG] Thread::initThread                       : Init FMOD profiler thread (send). Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 131072, Semaphore: No, Sleep Time: 0, Looping: No.
-[LOG] LiveUpdate::clientConnected              : client = 0x7ff2ae8dee08
-[LOG] LiveUpdate::readPacket                   : Recieved init packet from client 0x7ff2ae8dee08
-[LOG] LiveUpdate::readPacket                   : Accepting init message for client 0x7ff2ae8dee08
-[LOG] LiveUpdate::transitionToConnected        : 
-[LOG] LiveUpdate::acceptInitPacket             : Client 0x7ff2ae8dee08 connected, entering connected state
-[LOG] ProfileClient::recvThreadLoopFunction    : Socket disconnected
-[LOG] ProfileClient::markForDead               : Closing client connection
-[LOG] Thread::callback                         : FMOD profiler thread (recv) finished.
-[LOG] Thread::callback                         : FMOD profiler thread (send) finished.
-[LOG] LiveUpdate::clientDisconnected           : client = 0x7ff2ae8dee08
-[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
-[LOG] Thread::initThread                       : Init FMOD profiler thread (recv). Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 131072, Semaphore: No, Sleep Time: 0, Looping: No.
-[LOG] Thread::initThread                       : Init FMOD profiler thread (send). Affinity: 0x8000000000000003, Priority: 0xFFFF7FFD, Stack Size: 131072, Semaphore: No, Sleep Time: 0, Looping: No.
-[LOG] LiveUpdate::clientConnected              : client = 0x7ff329c9fe08
-[LOG] LiveUpdate::readPacket                   : Recieved init packet from client 0x7ff329c9fe08
-[LOG] LiveUpdate::readPacket                   : Accepting init message for client 0x7ff329c9fe08
-[LOG] LiveUpdate::transitionToConnected        : 
-[LOG] Manager::sendConnectTimeHash             : 
-[LOG] LiveUpdate::sendBankHash                 : 
-[LOG] LiveUpdate::acceptInitPacket             : Client 0x7ff329c9fe08 connected, entering connected state
-[LOG] SystemI::mixerSuspend                    : Suspending output.
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote//Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-iBdtrL/hotswap_729.bank
-[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file '/Users/katarinatretter/Library/Application Support/FMOD Studio/UnsavedProjects/Hotswap-iBdtrL/hotswap_729.bank'
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0x7ff2ad4d4b18
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7ff2ad4d4b18
-[LOG] SoundI::release                          : 193816__geoneo0__four-voices-whispering-3-wecho (0x7ff2ad3dc208)
-[LOG] SoundI::release                          :     193816__geoneo0__four-voices-whispering-3-wecho (0x7ff2ad452bb8)
-[LOG] SoundI::release                          :     193816__geoneo0__four-voices-whispering-3-wecho (0x7ff2ad4d4b18)
-[LOG] SoundI::release                          :  (0x7ff2e9184c08)
-[LOG] SoundI::release                          :     517868__plumforestpodcast__whisper (0x7ff2e9184d78)
-[LOG] SoundI::release                          :  (0x7ff2e9161a28)
-[LOG] SoundI::release                          :     446083__sophiemezam__whispers (0x7ff2e91470d8)
-[LOG] SoundI::release                          :  (0x7ff2e85b3698)
-[LOG] SoundI::release                          :     rangedDefeat (0x7ff2bf443328)
-[LOG] SoundI::release                          :  (0x7ff2bf4dc388)
-[LOG] SoundI::release                          :     playerDamage (0x7ff2bf4d1a18)
-[LOG] SoundI::release                          :  (0x7ff2bf4dbc68)
-[LOG] SoundI::release                          :     playerJump (0x7ff2bf410318)
-[LOG] SoundI::release                          :  (0x7ff2bf4eb2d8)
-[LOG] SoundI::release                          :     flyingDamage (0x7ff2bf40db68)
-[LOG] SoundI::release                          :  (0x7ff2bf4e24e8)
-[LOG] SoundI::release                          :     playerDash (0x7ff2bf468158)
-[LOG] SoundI::release                          :  (0x7ff2bf4c84a8)
-[LOG] SoundI::release                          :     portalEnterWind (0x7ff2bf40bd18)
-[LOG] SoundI::release                          :  (0x7ff2bf4be048)
-[LOG] SoundI::release                          :     portalEnterChimes (0x7ff2bf428938)
-[LOG] SoundI::release                          :  (0x7ff2bf41f4f8)
-[LOG] SoundI::release                          :     rangedAttack (0x7ff2bf4675f8)
-[LOG] SoundI::release                          :  (0x7ff2ad3c7f38)
-[LOG] SoundI::release                          :     515643__mashedtatoes2__ding2 (0x7ff2ad3cc2f8)
-[LOG] SoundI::release                          :  (0x7ff2bf4fab78)
-[LOG] SoundI::release                          :     flyingMovement (0x7ff2bf459198)
-[LOG] SoundI::release                          :  (0x7ff2bf4c6ac8)
-[LOG] SoundI::release                          :     playerHealth (0x7ff2bf411178)
-[LOG] SoundI::release                          :  (0x7ff2bf4d8508)
-[LOG] SoundI::release                          :     flyingDefeat (0x7ff2bf40d9d8)
-[LOG] SoundI::release                          :  (0x7ff2bf4e3368)
-[LOG] SoundI::release                          :     rangedDamage (0x7ff2bf420588)
-[LOG] SoundI::release                          :  (0x7ff2bf4e29f8)
-[LOG] SoundI::release                          :     playerMeleeAttack (0x7ff2bf423528)
-[LOG] SoundI::release                          :  (0x7ff2bf4787e8)
-[LOG] SoundI::release                          :     playerLand (0x7ff2bf4e8ac8)
-[LOG] SoundI::release                          :  (0x7ff2bf47f3c8)
-[LOG] SoundI::release                          :     playerRangedAttack (0x7ff2bf4de5d8)
-[LOG] SoundI::release                          :  (0x7ff2bf46e348)
-[LOG] SoundI::release                          :     buttonClick (0x7ff2bf4078c8)
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0x7f888050f508
+[LOG] SoundI::release                          : 193816__geoneo0__four-voices-whispering-3-wecho (0x7f888050f508)
+[LOG] SoundI::release                          :     193816__geoneo0__four-voices-whispering-3-wecho (0x7f886650b518)
+[LOG] SoundI::release                          :     193816__geoneo0__four-voices-whispering-3-wecho (0x7f886650b6a8)
+[LOG] SoundI::release                          : 316797__dimbark1__ghostly-whispers (0x7f886742db18)
+[LOG] SoundI::release                          :     316797__dimbark1__ghostly-whispers (0x7f8870050098)
+[LOG] SoundI::release                          :     316797__dimbark1__ghostly-whispers (0x7f8870050228)
+[LOG] SoundI::release                          :  (0x7f886628c188)
+[LOG] SoundI::release                          :     517868__plumforestpodcast__whisper (0x7f88662c57f8)
+[LOG] SoundI::release                          :  (0x7f88674ad668)
+[LOG] SoundI::release                          :     446083__sophiemezam__whispers (0x7f88674ad7d8)
+[LOG] SoundI::release                          :  (0x7f88674ac8c8)
+[LOG] SoundI::release                          :     rangedDefeat (0x7f88674aca38)
+[LOG] SoundI::release                          :  (0x7f88674aa348)
+[LOG] SoundI::release                          :     playerDamage (0x7f88674aa4b8)
+[LOG] SoundI::release                          :  (0x7f88674aa7f8)
+[LOG] SoundI::release                          :     playerJump (0x7f88674aa968)
+[LOG] SoundI::release                          :  (0x7f8867727328)
+[LOG] SoundI::release                          :     flyingDamage (0x7f8867754608)
+[LOG] SoundI::release                          :  (0x7f88674a9e98)
+[LOG] SoundI::release                          :     playerDash (0x7f88674aa008)
+[LOG] SoundI::release                          :  (0x7f88674aaca8)
+[LOG] SoundI::release                          :     portalEnterWind (0x7f88674aae18)
+[LOG] SoundI::release                          :  (0x7f88674ab608)
+[LOG] SoundI::release                          :     portalEnterChimes (0x7f88674ab778)
+[LOG] SoundI::release                          :  (0x7f88674ac418)
+[LOG] SoundI::release                          :     rangedAttack (0x7f88674ac588)
+[LOG] SoundI::release                          :  (0x7f8867434248)
+[LOG] SoundI::release                          :     515643__mashedtatoes2__ding2 (0x7f8867470aa8)
+[LOG] SoundI::release                          :  (0x7f88677541f8)
+[LOG] SoundI::release                          :     flyingMovement (0x7f8867729118)
+[LOG] SoundI::release                          :  (0x7f88674ab158)
+[LOG] SoundI::release                          :     playerHealth (0x7f88674ab2c8)
+[LOG] SoundI::release                          :  (0x7f8867757108)
+[LOG] SoundI::release                          :     flyingDefeat (0x7f8867727768)
+[LOG] SoundI::release                          :  (0x7f88674a9538)
+[LOG] SoundI::release                          :     rangedDamage (0x7f88674a96a8)
+[LOG] SoundI::release                          :  (0x7f88674a99e8)
+[LOG] SoundI::release                          :     playerMeleeAttack (0x7f88674a9b58)
+[LOG] SoundI::release                          :  (0x7f88674abf68)
+[LOG] SoundI::release                          :     playerLand (0x7f88674ac0d8)
+[LOG] SoundI::release                          :  (0x7f88674abab8)
+[LOG] SoundI::release                          :     playerRangedAttack (0x7f88674abc28)
+[LOG] SoundI::release                          :  (0x7f88674acd78)
+[LOG] SoundI::release                          :     buttonClick (0x7f88674acee8)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] ProfileClient::markForDead               : Closing client connection
 [LOG] ProfileClient::recvThreadLoopFunction    : Socket disconnected
 [LOG] Thread::callback                         : FMOD profiler thread (recv) finished.
-[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] Thread::callback                         : FMOD profiler thread (send) finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
 [LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
@@ -398,5 +595,23 @@
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] SystemI::close                           : Closed.
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
+[LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
 [LOG] Manager::readBank                        : fileversion = 135, compatVersion = 132 (oldest = 44, newest = 135)
